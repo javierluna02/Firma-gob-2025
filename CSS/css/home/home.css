@@ -271,13 +271,22 @@
     font-size: 18px;
     
 }
-.chico{
-    width:200px;
+.img-cards-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 400px;
+}
+.img-cards-2 img
+{
+    width:500px ;
 }
 .section-5{
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 100px;
+    
     /* padding-bottom: 50px; */
 }
 .section-5 .div-1{
@@ -313,27 +322,62 @@
     align-items: center;
 }
 .section-5 .div-2 .div-2_div2 img{
-    max-width: 250px;
+    /* max-width: 250px;
     max-height: 250px;
-    object-fit: contain;
+    object-fit: contain; */
 }
 
 .section-5 .div-2 .div-2_div1 .Cards{
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 90%;
+    width: 100%;
 }
 .section-5 .div-2 .div-2_div1 .Cards p{
     color: #003579;
+}
+.Polygon{
+ display: flex;
+ position: relative;
+ justify-content: center;
+ top: 30px;
+
+}
+.poly7{
+    position: relative;
+    z-index: 1;
+    left: 200px;
+}
+.Poly8{
+    position: relative;
+    z-index: 5;
+    right: 520px;
+
+}
+
+.Polygon img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+.Polygon2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -30px;
+}
+.poly10{
+    position: relative;
+    z-index: 0;
+    right: 550px;
 }
 .section-6{
     width: 100%;
 }
 
 .section-6 img{
-    width: 100%;
-    margin-bottom: -27px;
+    /* width: 100%;
+    margin-bottom: -27px; */
 }
 .section-7{
     background-color: #003579;
@@ -404,29 +448,78 @@
 .section-9{
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
     justify-content: space-between;
+    padding: 40px;
 }
-.section-9 .div-1{
-    width: 100%;
-    /* border: 1px solid black; */
+
+.div1-section-9{
     display: flex;
-    /* justify-content: ; */
+    justify-content: center ;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #A6D2FF63;
+    width: 250px;
+    height: 250px;
 }
-.section-9 .div-1 img{
-    max-width: 700px;
+.article-section-9{
+    display: flex;
+    justify-content: start;
+
 }
-.section-9 .div-2 img{
-    max-width: 700px;
+.div2-section-9{
+    width: 40%;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
-.section-9 .div-2{
-    width: 100%;
-    /* border: 1px solid black; */
+.article2-section-9{
     display: flex;
     justify-content: end;
+        margin-left: 400px;
+        gap: 10px;
+
+}
+.div3-section-9{
+    display: flex;
+    flex-direction: column;
+    background-color: #EEF7FF;
+    width: 455px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: start;
+}
+.div3-section-9 h1{
+    color: #0066CC;
+}
+.div3-section-9 p{
+    color: #003579;
+}
+.div4-section-9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background-color: #A6D2FF63;
+}
+.div5-section-9{
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+}
+.div5-section-9 button{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #5EAEFF;
+    border: none;
+
 }
 .section-10{
     display: flex;
@@ -508,12 +601,26 @@
     border: none;
     color: #5EAEFF;
 }
-
+.div1-section-12{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #003579;
+    
+}
 .section-12{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
+    text-align: center;
+    padding: 40px;
 }
+.section-12 span{
+    text-align: center;
+    color: #003579;
+
+}
+
 .section-13 .div-1{
     text-align: center;
     color: #003579;
@@ -525,4 +632,36 @@
 .section-13 .div-2{
     display: flex;
     align-items: center;
+}
+.div2-section-12{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+} 
+.div2-section-12 .img{
+    width: 788px;
+}
+.div3-section-12 {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    width: 283px;
+    border: 4px solid  #7CC713;
+}
+.div6-section-12 {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    width: 283px;
+    border: 4px solid  #000000;
+}
+
+
+.div4-section-12 img{
+    width: 186px ;
 }

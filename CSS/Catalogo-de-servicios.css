@@ -1,0 +1,149 @@
+.div-section-1{
+
+   display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+    background-color: #003579C7;
+  width: 100%;
+     height: 423px;
+
+}
+
+.div-section-1 h1{
+    font-size: 36px;
+}
+.div-section-1 img{
+    width: 272px;
+}
+.section2{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.article-2{
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center;
+   gap: 10px;
+}
+.div1-section-2{
+    display: flex;
+    gap: 20px;
+   
+}
+.div1-section-2 input {
+      width:900px ;
+       border-radius: 50px;
+       height: 40px;
+       border: 1px solid #5EAEFF;
+       text-decoration: #0066CC;
+       outline: none;
+       padding: 5px;
+}
+.article-2 h1 {
+    color: #003579;
+    font-size: 36px;
+}
+.article-2 span{
+    color:#003579A1;
+}
+input::placeholder {
+  color:#5EAEFF;
+  font-size: larger;
+  font-family: 'poppins' sans-serif;
+  text-align: start;
+}
+
+.div1-section-2 button{
+    border-radius: 20px;
+    display: flex;
+    gap: 3px;
+    color: #0066CC;
+    align-items: center;
+    border: 1px solid  #0066CC;
+    background:white;
+    font-weight: 700;
+}
+.search{
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    left: -72px;
+    justify-content: center ;
+    background-color: #5EAEFF;
+}
+.section3{
+    display:flex ;
+    flex-direction: column;
+    padding: 20px;
+}
+.section4{
+    padding: 40px;
+}
+.section3 h1{
+    color: #5EAEFF;
+}
+.article-3{
+    border: 1px solid #D3D3D3;
+    height: 397px;
+    padding: 20px;
+    border-top: 10px solid #003579 ;
+    border-radius: 5px;
+    width: 420px;
+
+}
+.article-3 p{
+  color: #AAAAAA;
+}
+.article-3 span{
+    color:#AAAAAA ;
+}
+.section4{
+    display: flex;
+    gap: 20px;
+    
+}
+.article-3-1{
+ border: 1px solid #D3D3D3;
+ height: 397px;
+    width:420.0027770996094px ;
+    padding: 20px;
+    border-top: 10px solid #5EAEFF ;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.article-3-1 h1{
+    font-size: 20px;
+    font-weight: 900;
+}
+.div3-section-3-select{
+    width: 20%;
+    justify-items: center;
+    display: flex;
+
+}
+.div3-section-3-select select{
+    width: 90px;
+    height: 50px;
+}
+:focus.div3-section-3-select select{
+    
+}
