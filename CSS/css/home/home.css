@@ -675,8 +675,6 @@
 
 
 
-
-
 .container-grid {
   display: flex;
   justify-content: center;
@@ -687,12 +685,11 @@
 }
 
 .card-grid {
-    
-    width: auto;
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 900px;
+  max-width: 1100px; /* ← Aumentado para hacer las tarjetas más anchas */
   flex: 1;
 }
 
@@ -700,8 +697,8 @@
   background-color: #003087;
   color: white;
   border-radius: 15px;
-  padding: 30px 2px;
-  width: calc(25% - 20px);
+  padding: 30px 20px; /* ← Más espacio interno horizontal */
+  width: calc((100% - 60px) / 4); 
   box-sizing: border-box;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -709,7 +706,6 @@
 
 .card img {
   width: 100%;
-
 }
 
 .card h3 {
@@ -721,27 +717,48 @@
   font-size: 14px;
 }
 
-
-
-.card-img{
-    display: none;
-    background-color: white;
-    height: 250px;
-    margin-bottom: 10px;
+.card-img {
+  display: none;
+  background-color: white;
+  height: 250px;
+  margin-bottom: 10px;
 }
 
 .img-firma {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .image-deco img {
- width: 26%;
+  width: 26%;
   object-fit: contain;
   position: absolute;
   z-index: 2;
   transform: translateY(-25%);
-  
-  
 }
+
+
+
+/* 
+@media (max-width: 900px) {
+  .card {
+    width: calc((100% - 20px) / 2); 
+  }
+}
+
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%; 
+  }
+  
+  .image-deco img {
+    position: static;
+    width: 100%;
+    transform: none;
+    margin-top: 20px;
+  }
+}
+
+ */
