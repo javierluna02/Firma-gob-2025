@@ -1,0 +1,53 @@
+      <ul class="pagination">
+                    <li><a href="#">&lt;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="dots">...</li>
+                    <li class="active"><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">&gt;</a></li>
+                </ul>
+
+                <style>
+                     .pagination {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        gap: 5px;
+    }
+
+    .pagination li {
+        display: flex;
+    }
+
+    .pagination a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        text-decoration: none;
+        color: #1a1a1a;
+        border-radius: 5px;
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    .pagination a:hover {
+        background-color: #ddd;
+    }
+
+    .pagination .active a {
+        background-color: #003876; /* Azul */
+        color: white;
+    }
+
+    .pagination .dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+    }
+                </style>
