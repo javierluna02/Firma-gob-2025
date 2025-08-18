@@ -8,6 +8,7 @@ body {
   height: 10px;
   align-items: center;
   padding: 5px;
+  font-size: 12px;
 }
 .primera-seccion-header img {
   width: 30px;
@@ -42,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    left: -40px;
+
 }
 .tercera-seccion-header {
   display: flex;
