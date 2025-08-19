@@ -669,43 +669,96 @@
 
 
 
-.card-container {
-    background-color: #8ce31b;
+
+
+
+
+
+
+.container-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 7%;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-
-.card {
-    background-color: #FFC000;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.card-container {
+.card-grid {
+  width: auto;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 80%; /* ajusta según necesidad */
-  margin: auto;
-  gap: 10px;
-  padding: 20px;
-  box-sizing: border-box;
+  gap: 20px;
+  max-width: 1100px; /* ← Aumentado para hacer las tarjetas más anchas */
+  flex: 1;
 }
 
 .card {
-  flex: 1 1 calc(25% - 10px); /* 4 columnas: 100 / 4 = 25% */
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #003087;
+  color: white;
+  border-radius: 15px;
+  padding: 30px 20px; /* ← Más espacio interno horizontal */
+  width: calc((100% - 60px) / 4); 
   box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Card-8 con imagen */
-.card-8 img {
+.card img {
   width: 100%;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.card-img {
+  display: none;
+  background-color: white;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.img-firma {
+  max-width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+.image-deco img {
+  width: 26%;
+  object-fit: contain;
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-25%);
+}
+
+
+
+/* 
+@media (max-width: 900px) {
+  .card {
+    width: calc((100% - 20px) / 2); 
+  }
+}
+
+
+@media (max-width: 500px) {
+  .card {
+    width: 100%; 
+  }
+  
+  .image-deco img {
+    position: static;
+    width: 100%;
+    transform: none;
+    margin-top: 20px;
+  }
+}
+
+ */
