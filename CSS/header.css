@@ -1,18 +1,26 @@
+/* -------------------
+   ESTILOS BASE
+------------------- */
 body {
-  padding: 0;
   margin: 0;
-     font-family: 'Poppins', sans-serif;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
+
 .primera-seccion-header {
   display: flex;
-  height: 10px;
+  height: 25px;
   align-items: center;
-  padding: 5px;
+  padding: 5px 10px;
   font-size: 12px;
+  gap: 10px;
+  background-color: #f5f5f5;
 }
+
 .primera-seccion-header img {
   width: 30px;
 }
+
 .segunda-seccion-header {
   background-color: #003876;
   height: 71px;
@@ -21,93 +29,165 @@ body {
   justify-content: space-between;
   padding: 0 20px;
 }
+
 .logo {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
 .logo img {
   width: 140px;
-  height: 98px;
-}
-.buscador {
-  display: flex;
-  align-items: center;
-}
-.i{
-    background-color: #EE2A24;
-    transform: translateX(-2.7rem);
-    color: white;
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  height: auto;
 
 }
+
 .tercera-seccion-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  gap: 15px;
+  height: 70px;
 }
-.buscador input{
-  
-    width: 246px;
-    height: 39px;
-    border-radius: 20px ;
-    border: none;
-    padding-left: 10px;
-    outline: none;
-}
-.menu {
+
+.buscador {
   display: flex;
   align-items: center;
-  gap: 20px;
-  border: 1px solid #003876;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  padding: 15px;
+  position: relative;
 }
-.menu img {
+
+.buscador input {
+  width: 246px;
+  height: 39px;
+  border-radius: 20px;
+  border: none;
+  padding-left: 10px;
+  outline: none;
+}
+
+.i {
+  background-color: #EE2A24;
+  position: absolute;
+  right: 0;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu img {
   width: 30px;
-    height: 30px;
+  height: 30px;
+  border-left: 1px solid #D3D3D3 ;
+  border-right: 1px solid #D3D3D3;
+  padding: 10px ;
 }
-.button-header{
-    background:white;
-    color: #003876;
-    font-weight: bold;
-    border: 1px solid    #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+.button-header {
+  background: white;
+  color: #003876;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cuarta-seccion-header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  padding: 10px;
+  height: 20px;
+  font-weight: bold;
+}
+
+.cuarta-seccion-header a {
+  text-decoration: none;
+  color: #003876;
+}
+
+.cuarta-seccion-header select {
+  border: none;
+  font-family: Poppins;
+  color: #003876;
+  font-size: 14px;
+}
+
+/* -------------------
+   MEDIA QUERIES
+------------------- */
+
+/* Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+  .segunda-seccion-header {
+    flex-direction: column;
+    height: auto;
     padding: 10px;
-    width: 144px;
-    height:39px;
-}
-.div-button-header button{
-    display: flex;
-    align-items: center;
+    gap: 10px;
+  }
+
+  .tercera-seccion-header {
+    flex-wrap: wrap;
     justify-content: center;
-    border-radius: 20px;
+  }
+
+  .buscador input {
+    width: 200px;
+  }
+
+  .button-header {
+    width: auto;
+  }
 }
-.cuarta-seccion-header{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 20px;
-    padding: 10px;
-    height: 55px;
-    font-weight: bold;
-}
-.cuarta-seccion-header a{
-   text-decoration: none;
-   color: #003876;
-}
-.cuarta-seccion-header  select{
-   border: none;
-   font-family: Poppins;
-   color: #003876;
+
+/* Celulares (hasta 767px) */
+@media (max-width: 767px) {
+  .primera-seccion-header {
+    flex-direction: column;
+    height: auto;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .segunda-seccion-header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .tercera-seccion-header {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .buscador input {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .button-header {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
+  }
+
+  .cuarta-seccion-header {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    height: auto;
+  }
 }

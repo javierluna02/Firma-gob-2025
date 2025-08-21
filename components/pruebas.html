@@ -1,53 +1,135 @@
-      <ul class="pagination">
-                    <li><a href="#">&lt;</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li class="dots">...</li>
-                    <li class="active"><a href="#">8</a></li>
-                    <li><a href="#">9</a></li>
-                    <li><a href="#">&gt;</a></li>
-                </ul>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi proyecto con Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+  <h1 class="text-center mt-5">¡Hola, Bootstrap!</h1>
+<section 
+    class="container-fluid border-top border-bottom border-secondary px-2 py-5 mt-5 "
+    style="color: #003869; width: 100%;">
+    
+    <div class="row align-items-start">
+        <!-- Logos -->
+        <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center border-lg-end border-secondary gap-4 mb-4 mb-lg-0">
+            <?php
+            $first_logo_id = get_field('first_logo_footer', 'option');
+            $first_logo_url = wp_get_attachment_image_url($first_logo_id, 'full');
+            $second_logo_id = get_field('second_logo_footer', 'option');
+            $second_logo_url = wp_get_attachment_image_url($second_logo_id, 'full');
+            ?>
+            <div class="me-4">
+                <img src="<?php echo $first_logo_url; ?>" alt="Logo 1" class="img-fluid"
+                style="width: 200px; height: 100px; object-fit: contain;">
+            </div>
+            <div>
+                <img src="<?php echo $second_logo_url; ?>" alt="Logo 2" class="img-fluid"
+                style="width: 200px; height: 100px; object-fit: contain;">
+            </div>
+        </div>
 
-                <style>
-                     .pagination {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        gap: 5px;
-    }
+        <!-- Información -->
+        <div class="col-12 col-lg-8">
+            <div class="row justify-content-center justify-content-lg-between g-4">
+                <div class="col-6 col-lg-3" style="min-height: 170px; text-align: start;">
+                    <h4 class="my-3">CONÓCENOS</h4>
+                    <p style="font-size: 0.9rem;"><?php the_field('name ', 'option'); ?></p>
+                </div>
+                <div class="col-6 col-lg-3" style="min-height: 170px; text-align: start;">
+                    <h4 class="my-3">CONTÁCTANOS</h4>
+                    <p style="font-size: 0.9rem;">
+                        <?php the_field('tel', 'option'); ?><br>
+                        <?php the_field('fax', 'option'); ?><br>
+                        <?php the_field('email', 'option'); ?>
+                    </p>
+                </div>
+                <div class="col-6 col-lg-3" style="min-height: 170px; text-align: start;">
+                    <h4 class="my-3">BÚSCANOS</h4>
+                    <p style="font-size: 0.9rem;">
+                        <?php the_field('address', 'option'); ?><br>
+                    </p>
+                </div>
+                <div class="col-6 col-lg-3" style="min-height: 170px; text-align: start;">
+                    <h4 class="my-3">INFÓRMATE</h4>
+                    <a href="#" class="text-decoration-none d-block mb-2" style="color: #003869;">Términos de Uso</a>
+                    <a href="#" class="text-decoration-none d-block mb-2" style="color: #003869;">Políticas de Privacidad</a>
+                    <a href="#" class="text-decoration-none d-block mb-2" style="color: #003869;">Preguntas Frecuentes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    .pagination li {
-        display: flex;
-    }
 
-    .pagination a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 35px;
-        height: 35px;
-        text-decoration: none;
-        color: #1a1a1a;
-        border-radius: 5px;
-        background-color: #f4f4f4;
-        font-weight: bold;
-    }
+<footer>
+    <!-- Certificaciones -->
+    <div class="px-3 px-md-5 pt-3 pt-md-4 pb-2" style="color: #003869;">
+        <span class="fw-bold fs-5">Certificaciones Obtenidas</span>
+        <div class="mt-2 mt-md-3 d-flex flex-wrap gap-2">
+            <?php if (have_rows('stamps', 'option')): ?>
 
-    .pagination a:hover {
-        background-color: #ddd;
-    }
+                <?php while (have_rows('stamps', 'option')):
+                    the_row(); ?>
+                    <div class="sellos">
+                        <a href="<?php echo the_sub_field('href'); ?>" target="_blank" title="<?php the_sub_field('name'); ?>"
+                            class="stamp-link">
 
-    .pagination .active a {
-        background-color: #003876; /* Azul */
-        color: white;
-    }
+                            <div class="iframe-wrapper">
+                                <iframe src="<?php the_sub_field('src'); ?>" height="100" width="100" frameborder="0"
+                                    scrolling="no" style="pointer-events: none;"></iframe>
+                            </div>
 
-    .pagination .dots {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 35px;
-        height: 35px;
-        background-color: transparent;
-    }
-                </style>
+                        </a>
+                    </div>
+                <?php endwhile; ?>
+
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <!-- Derechos / Redes Sociales -->
+    <div class="py-3" style="background-color: #003869; color: white;">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
+            <p class="mb-2 mb-md-0 text-center text-md-start">© 2025 Todos los Derechos Reservados. Desarrollado por
+            </p>
+            <div class="d-flex align-items-center fw-bold flex-wrap justify-content-center">
+                <p class="mb-0 me-3">SÍGUENOS</p>
+
+                <?php if (get_field('facebook', 'option')): ?>
+                    <a href="<?php the_field('facebook', 'option'); ?>" class="text-white text-decoration-none me-2 fs-5"><i
+                            class="bi bi-facebook"></i></a>
+                <?php endif; ?>
+
+                <?php if (get_field('youtube', 'option')): ?>
+                    <a href="<?php the_field('youtube', 'option'); ?>" class="text-white text-decoration-none me-2 fs-5"><i
+                            class="bi bi-youtube"></i></a>
+                <?php endif; ?>
+
+                <?php if (get_field('twitter', 'option')): ?>
+                    <a href="<?php the_field('twitter', 'option'); ?>" class="text-white text-decoration-none me-2 fs-5"><i
+                            class="bi bi-twitter-x"></i></a>
+                <?php endif; ?>
+
+                <?php if (get_field('instagram', 'option')): ?>
+                    <a href="<?php the_field('instagram', 'option'); ?>"
+                        class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-instagram"></i></a>
+                <?php endif; ?>
+
+                <?php if (get_field('linkedin', 'option')): ?>
+                    <a href="<?php the_field('linkedin', 'option'); ?>" class="text-white text-decoration-none me-2 fs-5"><i
+                            class="bi bi-linkedin"></i></a>
+                <?php endif; ?>
+                <?php if (get_field('flickr', 'option')): ?>
+                    <a href="<?php the_field('flickr', 'option'); ?>" class="text-white text-decoration-none">logo
+                        Flickr</a>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

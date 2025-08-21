@@ -1,0 +1,300 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.soporte-capa {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  background-color: rgba(0, 53, 121, 0.78);
+  gap: 10%;
+  align-items: center;
+  justify-content: space-between;
+}
+.soporte-section-1 {
+  width: 100%;
+  height: 250px;
+  background-image: url("../img/Rectangle 75.svg");
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: white;
+}
+.div2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.div2 h1 {
+  font-size: 36px;
+  margin-left: 300px;
+}
+.div3-img {
+  width: 272px;
+}
+.div-soporte-img1 {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+}
+.div2-soporte-2 {
+  height: 85px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.soporte-section-2 {
+  width: 100%;
+  height: 430px;
+  background: #003579;
+}
+.div3-soporte {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.div-donde {
+  width: 476px;
+  height: 61px;
+  color: white;
+  background-color: #0066cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 23px;
+}
+.line1 {
+  display: flex;
+  justify-content: end;
+}
+.line2 {
+  display: flex;
+  justify-content: start;
+  position: relative;
+  top: -20px;
+}
+.aside-soporte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 0px 0px 150px ;
+}
+.article-soporte-1 {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+.article-soporte-2 {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.soporte-section-3-div1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  top: 40px;
+}
+.soporte-section-3 {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.soporte-section-3-div1 h1 {
+  color: #003579;
+  font-size: 36px;
+}
+.soporte-section-3-div1 span {
+  color: #003579a1;
+}
+.accordion {
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0px 100px 0px 100px;
+  height: 400px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.accordion-item {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.accordion-item button {
+  background-color: white;
+  color: black;
+  border: 1px solid #bdd1ec;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  background: #0055a4;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.accordion-header .arrow {
+  transition: transform 0.3s ease;
+}
+
+.accordion-header.active .arrow {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  background: #f9f9f9;
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-content.open {
+  padding: 15px;
+  max-height: 300px; /* ajusta según el contenido */
+}
+
+.guia-plataforma {
+  position: relative;
+  background: #003579; /* azul de fondo */
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  font-family: "poppins", sans-serif;
+}
+
+.guia-plataforma .contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.guia-plataforma .video {
+  flex: 1;
+}
+
+.guia-plataforma .texto {
+  flex: 1;
+  gap: 20px;
+}
+
+.guia-plataforma h2 span {
+  background: #ffc107;
+  color: #003579;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 50px;
+}
+
+.soporte-section-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.soporte-section-4 h1 {
+  color: #003579;
+  font-size: 36px;
+}
+.soporte-section-4 p {
+  color: #003579a1;
+}
+.soporte-section-final{
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0px 100px 0px 100px;
+  height: 100px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .segunda-seccion-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .tercera-seccion-header {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .soporte-section-1 h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+
+/* Celulares */
+@media (max-width: 767px) {
+  .primera-seccion-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .segunda-seccion-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tercera-seccion-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .soporte-section-1 h1 {
+    font-size: 20px;
+  }
+
+  .div2-soporte-2 {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+ .footer-links-sections {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

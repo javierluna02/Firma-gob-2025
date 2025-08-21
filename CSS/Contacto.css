@@ -1,0 +1,15 @@
+.contacto-section1{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.contacto-div1{
+width: 179px;
+height: 37px;
+border-radius: 50px;
+background:#003579 ;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+}
