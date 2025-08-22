@@ -1,15 +1,183 @@
-.contacto-section1{
+
+.contacto-section-3{
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-direction: column ;
+    align-items: center ;
 }
-.contacto-div1{
-width: 179px;
-height: 37px;
-border-radius: 50px;
-background:#003579 ;
-color: white;
-display: flex;
-justify-content: center;
+.contacto-section1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 90px;
+  
+}
+.contacto-div1 {
+  width: 179px;
+  height: 37px;
+  border-radius: 50px;
+  background: #003579;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacto-section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contacto-section2 span {
+  color: #003579a1;
+  font-size: 20px;
+}
+.contacto-section2 h1 {
+  color: #003579;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+ .contacto-div2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #003579;
+    gap: 10px;
+    margin-top: 20px;
+
+}
+ .contacto-div2 span{
+    font-weight: 600;
+    color: #003579;
+    
+ }
+.contenedor {
+  width: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #707070;
+  border-radius: 15px;
+  margin: 20px;
+  background-color: white;
+  transform: scale(0.9);
+
+}
+
+h3{
+    color:#0066CC ;
+    font-size:15px ;
+}
+.campos {
+  margin: 20px;
+  color: #0035796B;
+  text-align: start;
+  display: flex;
+  justify-content: start;
+}
+.section2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.cont1-input input {
+  width: 705px;
+  border: 2px solid #EBEBEB;
+    font-family: "Poppins", sans-serif;
+
+}
+.cont2-input input {
+  width: 271px;
+  border: 2px solid #EBEBEB;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.cont3-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+.cont3-input h3 {
+  text-align: center;
+  display: flex;
+  justify-content: start;
+}
+.cont3-input input {
+  width: 1000px;
+  height: 183px;
+  display: flex;
+  text-align: start;
+  border: 2px solid #EBEBEB;
+}
+.cont3-input input::placeholder{
+    display: flex;
+    align-items: start;
+    text-align: start;  
+    position: relative;
+    top: -60px;
+      font-family: "Poppins", sans-serif;
+
+}
+.div-text {
+  display: flex;
+  padding: 20px;
+  color: #8fafd9;
+}
+.div-text2 {
+  display: flex;
+  justify-content: center;
+  color: #1a579a;
+  padding: 20px;
+}
+.div-text3 span {
+  color: #0080ff;
+}
+.check{
+  display: flex;
+  gap: 5px;
+  
+
+}
+.check span {
+    color: #003579;
+    
+}
+.checkbox{
+  width: 42px;
+}
+.deseas-recibir{
+  font-size: 20px;
+}
+.footer-modal{
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+}
+.footer-modal button{
+    background: #013579;
+    color: white;
+    width: 169px;
+    height: 40px;
+    border: none;
+    border-radius: 27px;
+}
+input{
+    height: 34px;
+    outline: none;
+    padding: 2px;
+    border-radius: 5px;
+}
+input::placeholder {
+  color: #707070;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
 align-items: center;
 }
