@@ -812,6 +812,7 @@ Tablet (768px - 1199px)
     padding: 15px;
   }
 
+
   .section-2 button {
     padding: 8px 15px;
     font-size: 0.9rem;
@@ -984,7 +985,9 @@ Tablet (768px - 1199px)
     font-size: clamp(0.5rem, 6vw, 2rem);
     text-align: center;
   }
-
+  .flecha{
+    width: 0px;
+  }
   .section-1 .div-2 .div-2_div div {
     height: 120px;
     width: 120px;
@@ -1095,30 +1098,54 @@ Tablet (768px - 1199px)
 
   .div3-section-12,
   .div6-section-12 {
-    max-width: 250px;
+    flex-direction: column;
   }
 
   .div4-section-12 img {
-    width: 150px;
+    width: 100px;
   }
 }
 
 /* Mobile pequeño (320px - 480px) */
 @media (max-width: 480px) {
-  /* Ajustes adicionales para pantallas muy pequeñas */
+  /* ----------- TEXTO ----------- */
   .section-1 .div-2 .div-2_div h1 {
-    font-size: clamp(1.3rem, 7vw, 1.8rem);
+    font-size: clamp(1.3rem, 7vw, 1.8rem); /* más fluido */
+    text-align: center;
   }
-  .segunda-seccion-header{
+.section11-div1{
+  width: 0px;
+  height: 0px;
+  position: relative;
+  z-index: 0;
+}
+  .segunda-seccion-header {
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    flex-wrap: wrap;
   }
+
+  /* ----------- SECCIÓN 1 ----------- */
   .section-1 .div-2 .div-2_div div {
     height: 100px;
     width: 100px;
   }
 
+  /* ----------- SECCIÓN 3 ----------- */
+  .section-3 {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .section-3 .div-2 .containerCards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .section-3 .div-2 .containerCards .Cards {
+    width: 90%;
     padding: 10px;
   }
 
@@ -1127,18 +1154,70 @@ Tablet (768px - 1199px)
     width: 60px;
   }
 
-  .card {
-    padding: 15px 10px;
+  .section-3 .div-3 button {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 0.8rem;
+    font-size: clamp(0.9rem, 4vw, 1rem);
   }
 
+  /* ----------- CARDS ----------- */
+  .card {
+    padding: 15px 10px;
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+  }
+
+  /* ----------- LOGOS ----------- */
   .section-7 .div-2 .div-2_div1 .Logo {
     height: 50px;
     width: 50px;
   }
 
+  /* ----------- SECCIÓN 9 ----------- */
   .div1-section-9,
   .div4-section-9 {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+  }
+
+  /* ----------- SECCIÓN 12 ----------- */
+  .div2-section-12 {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  /* ----------- SECCIÓN 5 ----------- */
+  .section-5 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* ----------- SECCIÓN 6 ----------- */
+  .section-6 {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  /* ----------- DIV-2 ----------- */
+  .div-2,
+  .div-2_div2 {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  /* ----------- PROGRESS BARS ----------- */
+  .section-3 .div-2 .containerCards .bar-1,
+  .section-3 .div-2 .containerCards .bar-2 {
+    width: 100%;
+    max-width: 300px;
+    height: 8px;
+  }
+
+  .bar-2 .inBar {
+    width: 70%; /* ejemplo: porcentaje de progreso */
+    height: 100%;
   }
 }
