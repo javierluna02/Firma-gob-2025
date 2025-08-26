@@ -228,3 +228,286 @@
   background-color: #003876; /* Azul */
   color: white;
 }
+
+/* ========================================
+   MEDIA QUERIES RESPONSIVE PARA CATÁLOGO
+   ======================================== */
+
+/* Tablet (768px - 1199px) */
+@media (max-width: 1199px) {
+  .section1 {
+    height: 300px;
+  }
+
+  .capa {
+    height: 300px;
+  }
+
+  .div-section-1 h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  .div-section-1 img {
+    width: 140px;
+  }
+
+  .section2 {
+    padding: 30px 20px;
+  }
+
+  .div1-section-2 {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .div1-section-2 input {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .article-2 h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+  }
+
+  .article-section3 {
+    padding: 30px 20px;
+  }
+
+  .div-titulo {
+    padding-left: 50px;
+  }
+
+  .section4 {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .article-3,
+  .article-3-1 {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 350px;
+  }
+
+  .select-pagination {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .div3-section-3-select {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
+  .section1 {
+    height: 250px;
+  }
+
+  .capa {
+    height: 250px;
+  }
+
+  .div-section-1 h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .div-section-1 img {
+    width: 120px;
+  }
+
+  .section2 {
+    padding: 20px 15px;
+  }
+
+  .article-2 {
+    gap: 15px;
+  }
+
+  .div1-section-2 {
+    gap: 10px;
+  }
+
+  .div1-section-2 input {
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .div1-section-2 button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .article-2 h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .article-2 span {
+    font-size: 0.9rem;
+  }
+
+  .search {
+    width: 45px;
+    height: 45px;
+    left: -60px;
+  }
+
+  .article-section3 {
+    padding: 20px 15px;
+  }
+
+  .section3 h1 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+
+  .div-titulo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .div3-section-3 {
+    gap: 15px;
+  }
+
+  .article-3,
+  .article-3-1 {
+    width: 100%;
+    padding: 15px;
+    height: auto;
+    min-height: 300px;
+  }
+
+  .article-3-1 h1 {
+    font-size: 1.1rem;
+  }
+
+  .div-article-3-1 {
+    top: -30px;
+  }
+
+  .select-pagination {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .pagination {
+    gap: 3px;
+  }
+
+  .pagination a {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .div3-section-3-select select {
+    width: 80px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile pequeño (320px - 480px) */
+@media (max-width: 480px) {
+  .section1 {
+    height: 200px;
+  }
+
+  .capa {
+    height: 200px;
+  }
+
+  .div-section-1 h1 {
+    font-size: clamp(1.3rem, 7vw, 1.8rem);
+  }
+
+  .div-section-1 img {
+    width: 100px;
+  }
+
+  .section2 {
+    padding: 15px 10px;
+  }
+
+  .div1-section-2 input {
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .div1-section-2 button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .article-2 h1 {
+    font-size: clamp(1.3rem, 7vw, 1.8rem);
+  }
+
+  .search {
+    width: 40px;
+    height: 40px;
+    left: -50px;
+  }
+
+  .article-section3 {
+    padding: 15px 10px;
+  }
+
+  .div-titulo {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .article-3,
+  .article-3-1 {
+    padding: 12px;
+    min-height: 250px;
+  }
+
+  .article-3-1 h1 {
+    font-size: 1rem;
+  }
+
+  .pagination a {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .div3-section-3-select select {
+    width: 70px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Orientación landscape en mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .section1 {
+    height: 180px;
+  }
+
+  .capa {
+    height: 180px;
+  }
+
+  .div-section-1 h1 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+
+  .section2 {
+    padding: 15px 20px;
+  }
+
+  .article-section3 {
+    padding: 15px 20px;
+  }
+}

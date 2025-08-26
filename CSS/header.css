@@ -1,75 +1,81 @@
-/* -------------------
+/* ------------------- 
    ESTILOS BASE
 ------------------- */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  font-size: 1rem; /* ✅ base */
 }
 
 .primera-seccion-header {
   display: flex;
-  height: 25px;
+  height: 1.5rem; 
   align-items: center;
-  padding: 5px 10px;
-  font-size: 12px;
-  gap: 10px;
+  padding: 0.3rem 0.6rem; 
+  font-size: 0.75rem; 
+  gap: 0.6rem; 
   background-color: #ffffff;
 }
 
 .primera-seccion-header img {
-  width: 30px;
+  width: 1.8rem; 
 }
 
 .segunda-seccion-header {
   background-color: #003876;
-  height: 71px;
+  min-height: 4.4rem; 
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 1.2rem; 
+  width: 100%; /* ✅ añadido */
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.6rem; 
 }
 
 .logo img {
-  width: 140px;
+  width: 30%; /* ✅ porcentaje en vez de fijo */
+  max-width: 8.7rem; 
   height: auto;
-
 }
 
 .tercera-seccion-header {
   display: flex;
   align-items: center;
-  gap: 15px;
-  height: 70px;
+  gap: 0.9rem; 
+  min-height: 4.3rem; 
 }
 
 .buscador {
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%; /* ✅ fluido */
+  max-width: 20rem; 
 }
 
 .buscador input {
-  width: 246px;
-  height: 39px;
-  border-radius: 20px;
+  width: 100%; 
+  max-width: 15rem;
+  height: 2rem; 
+  border-radius: 1.2rem; 
   border: none;
-  padding-left: 10px;
+  padding-left: 0.6rem; 
   outline: none;
+  font-size: 0.9rem; /* ✅ escalable */
 }
 
 .i {
   background-color: #EE2A24;
   position: absolute;
-  right: 0;
-  width: 43px;
-  height: 43px;
+  right: -0.6rem;
+  width: 2.7rem; 
+  height: 2.7rem; 
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -77,11 +83,11 @@ body {
 }
 
 .menu img {
-  width: 30px;
-  height: 30px;
-  border-left: 1px solid #D3D3D3 ;
-  border-right: 1px solid #D3D3D3;
-  padding: 10px ;
+  width: 1.8rem; 
+  height: 1.8rem;
+  border-left: 0.05rem solid #D3D3D3;
+  border-right: 0.05rem solid #D3D3D3;
+  padding: 0.6rem; 
 }
 
 .button-header {
@@ -89,70 +95,100 @@ body {
   color: #003876;
   font-weight: 600;
   border: none;
-  border-radius: 20px;
+  border-radius: 1.2rem; 
   cursor: pointer;
-  padding: 8px 15px;
+  padding: 0.5rem 1rem; 
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3rem; 
+  font-size: 0.9rem; /* ✅ escalable */
 }
 
+/* ====== Sección de cabecera cuarta ====== */
 .cuarta-seccion-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: start;
-  gap: 20px;
-  padding: 10px;
-  height: 20px;
+  justify-content: flex-start;
+  gap: 1.2rem; 
+  padding: 0.6rem; 
+  min-height: 2.5rem; 
   font-weight: bold;
+  background-color: #fff;
+  border-bottom: 0.05rem solid #ddd;
 }
 
 .cuarta-seccion-header a {
   text-decoration: none;
   color: #003876;
+  font-size: 0.9rem; 
+  font-family: "Poppins", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.cuarta-seccion-header a:hover {
+  color: #0056b3;
 }
 
 .cuarta-seccion-header select {
   border: none;
-  font-family: Poppins;
-  color: #003876;
-  font-size: 14px;
-}
-
-input{
-    height: 34px;
-    outline: none;
-    padding: 2px;
-}
-input::placeholder {
-  color: #707070;
-  font-size: 15px;
+  outline: none;
   font-family: "Poppins", sans-serif;
-  display: flex;
-align-items: center;
+  color: #003876;
+  font-size: 0.9rem; 
+  background: transparent;
+  cursor: pointer;
 }
 
-/* -------------------
-   MEDIA QUERIES
-------------------- */
+.cuarta-seccion-header input {
+  height: 2rem;
+  padding: 0.3rem 0.6rem; 
+  border: 0.05rem solid #ccc;
+  border-radius: 0.4rem; 
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem; 
+  transition: border-color 0.3s ease;
+}
 
-/* Tablets (hasta 1024px) */
-@media (max-width: 1024px) {
+.cuarta-seccion-header input:focus {
+  border-color: #003876;
+}
+
+.cuarta-seccion-header input::placeholder {
+  color: #707070;
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 
+   MEDIA QUERIES 
+*/
+
+/* Tablets */
+@media (max-width: 64rem) { 
   .segunda-seccion-header {
+    display: flex;
     flex-direction: column;
     height: auto;
-    padding: 10px;
-    gap: 10px;
+    padding: 0.6rem;
+    gap: 0.6rem;
   }
 
   .tercera-seccion-header {
+    display: flex;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
     justify-content: center;
   }
 
+  .buscador {
+    max-width: 80%;
+    display: flex;
+  }
+
   .buscador input {
-    width: 200px;
+    max-width: 12.5rem; 
+    display: flex;
   }
 
   .button-header {
@@ -160,48 +196,52 @@ align-items: center;
   }
 }
 
-/* Celulares (hasta 767px) */
-@media (max-width: 767px) {
+/* Móviles */
+@media (max-width: 48rem) { 
   .primera-seccion-header {
-    flex-direction:column-reverse;
-    height: auto;
-    font-size: 10px;
-    text-align: center;
+    font-size: 0.3rem; 
+    display: flex;
   }
 
   .segunda-seccion-header {
-    flex-direction: column;
     height: auto;
-    padding: 15px;
-    gap: 15px;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
   }
 
   .logo img {
-    width: 100px;
+    width: 50%; /* ✅ fluido */
+    max-width: 6.2rem;
   }
 
   .tercera-seccion-header {
-    flex-direction: column;
     width: 100%;
-    gap: 12px;
+    gap: 0.8rem; 
+  display: flex;
+  }
+
+  .buscador {
+    width: 100%;
+    max-width: 50%;
+    display: flex;
   }
 
   .buscador input {
     width: 100%;
-    max-width: 280px;
+    max-width: 17.5rem; 
   }
 
   .button-header {
     width: 100%;
-    max-width: 250px;
+    max-width: 15.6rem; 
     justify-content: center;
   }
 
   .cuarta-seccion-header {
-    flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 10px;
-    height: auto;
+    gap: 0.6rem;
+    height: 6px;
   }
 }

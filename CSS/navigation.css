@@ -1,0 +1,69 @@
+/* Navigation Styles */
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: opacity 0.3s ease;
+}
+
+.logo a:hover {
+    opacity: 0.8;
+}
+
+.div-button-header a {
+    text-decoration: none;
+}
+
+.div-button-header a:hover .button-header {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+.cuarta-seccion-header a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.cuarta-seccion-header a:hover {
+    color: #003876;
+    font-weight: 500;
+}
+
+/* Section 2 navigation buttons */
+.section-2 a {
+    text-decoration: none;
+}
+
+.section-2 a button {
+    transition: all 0.3s ease;
+}
+
+.section-2 a:hover button {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Service card links */
+.article-3 a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.article-3 a:hover {
+    transform: translateY(-5px);
+}
+
+/* Back button styles */
+.btn1-section2 {
+    transition: all 0.3s ease;
+}
+
+.btn1-section2:hover {
+    transform: translateX(-3px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+

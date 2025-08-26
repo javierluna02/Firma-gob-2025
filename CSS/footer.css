@@ -8,16 +8,17 @@
     --light-border: #1E4675;
 }
 
-
+/* CONTENEDOR GENERAL */
 .container {
-    max-width: 1200px;
+    max-width: 90%; /* antes 1200px */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem; /* antes 20px */
 }
 
+/* FOOTER TOP */
 .main-footer .footer-top {
     background-color: var(--dark-blue-bg);
-    padding: 40px 0;
+    padding: 2.5rem 0; /* antes 40px */
     color: var(--light-grey-text);
     display: flex;
 }
@@ -33,6 +34,7 @@
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
+    gap: 2rem; /* en vez de padding manual */
 }
 
 .main-footer .footer-column-with-logos {
@@ -40,38 +42,38 @@
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
-    margin-right: 50px;
+    margin-right: 3rem; /* antes 50px */
 }
 
 .main-footer .footer-main-logos-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem; /* antes 20px */
 }
 
 .main-footer .firma-gob-logo {
-    max-width: 250px;
+    max-width: 15rem; /* antes 250px */
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 0.75rem; /* antes 10px */
 }
 
 .main-footer .ogtic-logos {
     display: flex;
-    gap: 15px;
+    gap: 1rem; /* antes 15px */
     align-items: center;
 }
 
 .main-footer .ogtic-small-logo,
 .main-footer .gobierno-digital-logo {
-    max-height: 400px;
+    max-height: 25vh; /* antes 400px */
     width: auto;
 }
 
 .main-footer .footer-column {
     flex: 1;
-    min-width: 150px;
-    padding-right: 30px;
+    min-width: 10rem; /* antes 150px */
+    padding-right: 2rem; /* antes 30px */
 }
 
 .main-footer .footer-column:last-child {
@@ -80,7 +82,7 @@
 
 .main-footer .footer-links-sections .footer-column:nth-child(2) {
     position: relative;
-    padding-left: 50px;
+    padding-left: 3rem; /* antes 50px */
     margin-left: 0;
 }
 
@@ -90,25 +92,26 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 1px;
+    width: 0.1rem; /* antes 1px */
     background-color: var(--light-border);
 }
 
 .main-footer .footer-column h4 {
     color: var(--white-text);
     font-size: 1.1em;
-    margin-bottom: 15px;
+    margin-bottom: 1rem; /* antes 15px */
     text-transform: uppercase;
     white-space: nowrap;
 }
 
+/* LISTAS */
 .main-footer .footer-column ul {
     list-style: none;
     padding: 0;
 }
 
 .main-footer .footer-column ul li {
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem; /* antes 8px */
 }
 
 .main-footer .footer-column ul li a {
@@ -122,10 +125,11 @@
     color: var(--white-text);
 }
 
+/* FOOTER BOTTOM LOGOS */
 .main-footer .footer-bottom-logos {
     background-color: var(--footer-bottom-bg);
-    padding: 25px 0;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 1.5rem 0; /* antes 25px */
+    border-bottom: 0.05rem solid #e0e0e0; /* antes 1px */
 }
 
 .main-footer .footer-bottom-logos .container {
@@ -133,43 +137,43 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.5rem; /* antes 20px */
 }
 
 .main-footer .sector-logos {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 1rem; /* antes 15px */
     justify-content: flex-start;
     flex-grow: 1;
-    margin-right: 50px;
+    margin-right: 3rem; /* antes 50px */
 }
 
 .main-footer .sector-logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 0;
+    width: 3rem;  /* antes 50px */
+    height: 3rem; /* antes 50px */
     object-fit: contain;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+    box-shadow: 0 0.125rem 0.3rem rgba(0, 0, 0, 0.1); /* antes px */
+    border: 0.05rem solid #ddd; /* antes 1px */
 }
 
 .main-footer .accreditation-logos {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1.5rem; /* antes 20px */
     flex-shrink: 0;
 }
 
 .main-footer .accreditation-logo {
-    max-height: 50px;
+    max-height: 3rem; /* antes 50px */
     width: auto;
 }
 
+/* COPYRIGHT + SOCIAL */
 .main-footer .footer-copyright-social {
     background-color: var(--copyright-bg);
-    padding: 15px 0;
+    padding: 1rem 0; /* antes 15px */
     font-size: 0.9em;
     color: #666;
 }
@@ -179,158 +183,106 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 1rem; /* antes 15px */
 }
 
 .main-footer .copyright-info {
     display: flex;
     align-items: center;
-    gap: 5px;
-}
-
-.main-footer .copyright-info p {
-    margin: 0;
-    display: flex;
-    align-items: center;
+    gap: 0.3rem; /* antes 5px */
 }
 
 .main-footer .ogtic-inline-logo {
-    max-height: 18px;
+    max-height: 1.2rem; /* antes 18px */
     width: auto;
-    margin-left: 5px;
+    margin-left: 0.3rem; /* antes 5px */
 }
 
 .main-footer .social-media {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.6rem; /* antes 10px */
 }
 
 .main-footer .social-media span {
     font-weight: bold;
-    margin-right: 5px;
+    margin-right: 0.3rem; /* antes 5px */
     color: #333;
 }
 
 .main-footer .social-media a {
     color: var(--white-text);
     background-color: var(--social-icon-color);
-    border: none;
     font-size: 1.2em;
     text-decoration: none;
-    width: 30px;
-    height: 30px;
+    width: 2rem; /* antes 30px */
+    height: 2rem; /* antes 30px */
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: none;
 }
 
-.main-footer .social-media a:hover {
-    background-color: var(--social-icon-color);
-    color: var(--white-text);
-    transform: none;
-}
-
-@media (max-width: 992px) {
+/* RESPONSIVE QUERIES */
+@media (max-width: 62rem) { /* antes 992px */
     .main-footer .footer-top .container {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
     .main-footer .footer-links-sections {
         flex-direction: column;
         align-items: center;
         text-align: center;
         width: 100%;
-        padding-left: 0;
     }
-
     .main-footer .footer-links-sections .footer-column:nth-child(2)::before {
         display: none;
     }
-
     .main-footer .footer-column-with-logos {
         margin-right: 0;
-        margin-bottom: 30px;
+        margin-bottom: 2rem; /* antes 30px */
         align-items: center;
         width: 100%;
-        max-width: 300px;
+        max-width: 18rem; /* antes 300px */
     }
-
-    .main-footer .footer-main-logos-group {
-        align-items: center;
-    }
-
-    .main-footer .footer-column {
-        width: 100%;
-        max-width: 300px;
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    .main-footer .footer-links-sections .footer-column:nth-child(2) {
-        margin-left: 0;
-    }
-
-    .main-footer .footer-column h4 {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
     .main-footer .footer-bottom-logos .container {
         flex-direction: column;
         align-items: center;
     }
-
     .main-footer .sector-logos {
         justify-content: center;
         margin-right: 0;
-        margin-bottom: 20px;
-        width: 100%;
+        margin-bottom: 1.5rem; /* antes 20px */
     }
-
     .main-footer .accreditation-logos {
         justify-content: center;
         width: 100%;
     }
-
-    .main-footer .footer-copyright-social .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .main-footer .social-media {
         justify-content: center;
         width: 100%;
-        margin-top: 15px;
+        margin-top: 1rem; /* antes 15px */
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 36rem) { /* antes 576px */
     .main-footer {
-        padding: 20px 0;
+        padding: 1.25rem 0; /* antes 20px */
     }
-
     .main-footer .footer-top {
-        padding: 20px 0;
+        padding: 1.25rem 0; /* antes 20px */
     }
-
     .main-footer .footer-main-logos-group {
-        margin-bottom: 15px;
+        margin-bottom: 1rem; /* antes 15px */
     }
-
     .main-footer .footer-links-sections {
-        gap: 15px;
+        gap: 1rem; /* antes 15px */
     }
-
     .main-footer .footer-bottom-logos {
-        padding: 15px 0;
+        padding: 1rem 0; /* antes 15px */
     }
-
     .main-footer .footer-copyright-social {
-        padding: 10px 0;
+        padding: 0.6rem 0; /* antes 10px */
     }
 }
