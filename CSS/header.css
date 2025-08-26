@@ -197,17 +197,13 @@ body {
 }
 
 /* Móviles */
-@media (max-width: 48rem) { 
+@media (max-width: 480px) { 
   .primera-seccion-header {
-    font-size: 0.3rem; 
-    display: flex;
+   
   }
 
   .segunda-seccion-header {
-    height: auto;
-    padding: 1rem;
-    gap: 1rem;
-    display: flex;
+   display: flex;
   }
 
   .logo img {
@@ -226,6 +222,12 @@ body {
     max-width: 50%;
     display: flex;
   }
+
+ .look{
+  
+  
+ }
+  
 
   .buscador input {
     width: 100%;
