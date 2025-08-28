@@ -4,78 +4,78 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem; /* ✅ base */
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
 }
 
 .primera-seccion-header {
   display: flex;
-  height: 1.5rem; 
+  min-height: 2rem; 
   align-items: center;
-  padding: 0.3rem 0.6rem; 
-  font-size: 0.75rem; 
-  gap: 0.6rem; 
+  font-size: 0.75rem;
+  gap: 0.6rem;
   background-color: #ffffff;
+  max-width: 100%;
+  padding: 0.2rem 0;
 }
 
 .primera-seccion-header img {
-  width: 1.8rem; 
+  width: 1.8rem;
 }
 
 .segunda-seccion-header {
   background-color: #003876;
-  min-height: 4.4rem; 
+  min-height: 4.4rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 0 1.2rem; 
-  width: 100%; /* ✅ añadido */
+  padding: 0 1.2rem;
+  width: 97.5%;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem; 
+  gap: 0.6rem;
 }
 
 .logo img {
-  width: 30%; /* ✅ porcentaje en vez de fijo */
-  max-width: 8.7rem; 
+  width: 50%;
+  max-width: 8.7rem;
   height: auto;
 }
 
 .tercera-seccion-header {
   display: flex;
   align-items: center;
-  gap: 0.9rem; 
-  min-height: 4.3rem; 
+  gap: 0.9rem;
+  min-height: 4.3rem;
 }
 
 .buscador {
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%; /* ✅ fluido */
-  max-width: 20rem; 
+  width: 100%;
+  max-width: 20rem;
 }
 
 .buscador input {
-  width: 100%; 
+  width: 100%;
   max-width: 15rem;
-  height: 2rem; 
-  border-radius: 1.2rem; 
+  height: 2rem;
+  border-radius: 1.2rem;
   border: none;
-  padding-left: 0.6rem; 
   outline: none;
-  font-size: 0.9rem; /* ✅ escalable */
+  font-size: 0.9rem;
+  padding-left: 0.6rem; 
 }
-
 .i {
-  background-color: #EE2A24;
+  background-color: #ee2a24;
   position: absolute;
-  right: -0.6rem;
-  width: 2.7rem; 
-  height: 2.7rem; 
+  right: 0rem; 
+  width: 2.7rem;
+  height: 2.7rem;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -83,11 +83,11 @@ body {
 }
 
 .menu img {
-  width: 1.8rem; 
+  width: 1.8rem;
   height: 1.8rem;
-  border-left: 0.05rem solid #D3D3D3;
-  border-right: 0.05rem solid #D3D3D3;
-  padding: 0.6rem; 
+  border-left: 0.05rem solid #d3d3d3;
+  border-right: 0.05rem solid #d3d3d3;
+  padding: 0.6rem;
 }
 
 .button-header {
@@ -95,13 +95,19 @@ body {
   color: #003876;
   font-weight: 600;
   border: none;
-  border-radius: 1.2rem; 
+  border-radius: 1.2rem;
   cursor: pointer;
-  padding: 0.5rem 1rem; 
+  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
-  gap: 0.3rem; 
-  font-size: 0.9rem; /* ✅ escalable */
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease; 
+}
+
+.button-header:hover {
+  background: #003876;
+  color: #fff;
 }
 
 /* ====== Sección de cabecera cuarta ====== */
@@ -110,9 +116,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 1.2rem; 
-  padding: 0.6rem; 
-  min-height: 2.5rem; 
+  gap: 1.2rem;
+  padding: 0.6rem;
+  min-height: 2.5rem;
   font-weight: bold;
   background-color: #fff;
   border-bottom: 0.05rem solid #ddd;
@@ -121,7 +127,7 @@ body {
 .cuarta-seccion-header a {
   text-decoration: none;
   color: #003876;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
   font-family: "Poppins", sans-serif;
   transition: color 0.3s ease;
 }
@@ -135,19 +141,19 @@ body {
   outline: none;
   font-family: "Poppins", sans-serif;
   color: #003876;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
   background: transparent;
   cursor: pointer;
 }
 
 .cuarta-seccion-header input {
   height: 2rem;
-  padding: 0.3rem 0.6rem; 
+  padding: 0.3rem 0.6rem;
   border: 0.05rem solid #ccc;
-  border-radius: 0.4rem; 
+  border-radius: 0.4rem;
   outline: none;
   font-family: "Poppins", sans-serif;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
   transition: border-color 0.3s ease;
 }
 
@@ -161,14 +167,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* 
-   MEDIA QUERIES 
-*/
+
 
 /* Tablets */
-@media (max-width: 64rem) { 
+@media (max-width: 64rem) {
   .segunda-seccion-header {
-    display: flex;
     flex-direction: column;
     height: auto;
     padding: 0.6rem;
@@ -176,19 +179,16 @@ body {
   }
 
   .tercera-seccion-header {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .buscador {
     max-width: 80%;
-    display: flex;
   }
 
   .buscador input {
-    max-width: 12.5rem; 
-    display: flex;
+    max-width: 12.5rem;
   }
 
   .button-header {
@@ -197,46 +197,30 @@ body {
 }
 
 /* Móviles */
-@media (max-width: 480px) { 
-  .primera-seccion-header {
-   
-  }
-
-  .segunda-seccion-header {
-   display: flex;
-  }
-
+@media (max-width: 480px) {
   .logo img {
-    width: 50%; /* ✅ fluido */
+    width: 50%;
     max-width: 6.2rem;
   }
 
   .tercera-seccion-header {
     width: 100%;
-    gap: 0.8rem; 
-  display: flex;
+    gap: 0.8rem;
   }
 
   .buscador {
     width: 100%;
-    max-width: 50%;
-    display: flex;
+    max-width: 100%; 
   }
-
- .look{
-  
-  
- }
-  
 
   .buscador input {
     width: 100%;
-    max-width: 17.5rem; 
+    max-width: 100%;
   }
 
   .button-header {
     width: 100%;
-    max-width: 15.6rem; 
+    max-width: 15.6rem;
     justify-content: center;
   }
 
@@ -244,6 +228,7 @@ body {
     justify-content: center;
     text-align: center;
     gap: 0.6rem;
-    height: 6px;
+    min-height: 2rem;
+    padding: 0.4rem 0;
   }
 }

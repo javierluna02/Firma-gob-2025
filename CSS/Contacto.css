@@ -1,4 +1,8 @@
 /* ----------- SECCIÓN CONTACTO ----------- */
+*{
+  padding: 0;
+  margin: 0;
+}
 .contacto-section-3 {
   display: grid;
   justify-content: center;
@@ -381,10 +385,14 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     padding:5px;
+    max-width: 100%;
   }
 
   h3 {
     font-size: 0.85rem;
+  }
+   .gestor{
+     flex-direction: column;
   }
 
   .campos {

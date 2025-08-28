@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @import url("../responsive-base.css");
 
 :root {
@@ -406,6 +406,7 @@
   display: flex;
   align-items: center;
   gap: 50px;
+  flex-wrap: wrap;
 }
 
 .section-7 .div-2 .div-2_div1 .Logo {
@@ -437,7 +438,7 @@
 .section-9 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   padding: 40px;
 }
 
@@ -770,48 +771,62 @@
    MEDIA QUERIES ESPECÍFICAS PARA HOME
    ======================================== */
 
-Tablet (768px - 1199px)
 @media (max-width: 1199px) {
 
-
-  .section-1 {
+ .section-1 {
     flex-direction: column;
     min-height: 60vh;
   }
 
   .section-1 .div-2 {
-    position: relative;
     width: 100%;
-    height: auto;
-    padding: 30px 20px;
-    background: rgba(0, 53, 121, 0.8);
-  }
-
-  .section-1 .div-2 .div-2_div h1 {
-    width: 100%;
-    transform: none;
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
     text-align: center;
   }
 
   .section-1 .div-2 .div-2_div {
-    padding-left: 20px;
-    padding-right: 20px;
-    align-items: center;
+  }
+  .image-deco img{
+    display: none;
+  }
+  .Polygon img{
+    display: none;
   }
 
-  .section-1 .div-2 .div-2_div div {
-    height: 150px;
-    width: 150px;
+  .section-1 .div-2 .div-2_div h1 {
+    text-align: center;
+    justify-content: center;
+  }
+.section-1 .div-2 .div-2_div div img{
+  width: 50%;
+  height: 50%;
+}
+.section-11 .div-2{
+  flex-direction: column;
+
+}
+.section-11-div1{
+display: none;
+}
+
+  .logo-section1 img {
+    width: 120px;
+    height: 120px;
   }
 
   /* Section 2 - Botones de navegación */
   .section-2 {
     flex-wrap: wrap;
     gap: 15px;
-    padding: 15px;
+    padding-top: 40px;
+  }
+  .div-2{
+    flex-direction: column;
+    justify-content: center;
   }
 
+  .flecha{
+    display: none;
+  }
 
   .section-2 button {
     padding: 8px 15px;
@@ -820,7 +835,7 @@ Tablet (768px - 1199px)
 
   /* Section 3 - Cards de información */
   .section-3 .div-2 {
-    flex-direction: column;
+    flex-direction: row;
     gap: 30px;
     padding: 0 20px;
   }
@@ -940,6 +955,7 @@ Tablet (768px - 1199px)
   .div4-section-9 {
     width: 250px;
     height: 250px;
+    justify-content: end;
   }
 
   /* Section 11 - Casos de éxito */
@@ -950,7 +966,7 @@ Tablet (768px - 1199px)
   }
 
   .section-11 .div-2 .Cards {
-    width: 100%;
+    width: 80%;
     max-width: 500px;
   }
 
@@ -982,15 +998,23 @@ Tablet (768px - 1199px)
 @media (max-width: 767px) {
   /* Section 1 - Hero */
   .section-1 .div-2 .div-2_div h1 {
-    font-size: clamp(0.5rem, 6vw, 2rem);
+    font-size: clamp(1rem, 6vw, 2rem);
     text-align: center;
+    line-height: 1.3;
   }
-  .flecha{
-    width: 0px;
+
+  .flecha {
+    display: none;
   }
-  .section-1 .div-2 .div-2_div div {
-    height: 120px;
+
+  .logo-section1 img {
     width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-top: 1rem;
+  }
+  .image-deco img{
+    display: none;
   }
 
   /* Section 2 - Botones */
@@ -1027,7 +1051,21 @@ Tablet (768px - 1199px)
     height: 80px;
     width: 80px;
   }
+    .section-3 .div-2 {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+  }
+ .inBar{
+  display: none;
+ }
+.bar-1{
+  display: none;
+}
 
+.bar-2{
+  display: none;
+}
   /* Cards grid */
   .card {
     width: 100%;
@@ -1047,13 +1085,13 @@ Tablet (768px - 1199px)
     font-size: 13px;
   }
 
-  .image-deco img {
+  /* .image-deco img {
     position: static;
     width: 100%;
     max-width: 250px;
     transform: none;
     margin-top: 20px;
-  }
+  } */
 
   /* Section 5 - Beneficios */
   .section-5 .div-2 .div-2_div1 .Cards {
@@ -1109,28 +1147,41 @@ Tablet (768px - 1199px)
 /* Mobile pequeño (320px - 480px) */
 @media (max-width: 480px) {
   /* ----------- TEXTO ----------- */
-  .section-1 .div-2 .div-2_div h1 {
-    font-size: clamp(1.3rem, 7vw, 1.8rem); /* más fluido */
-    text-align: center;
-  }
-.section11-div1{
-  width: 0px;
-  height: 0px;
-  position: relative;
-  z-index: 0;
+.section-1 .div-2 .div-2_div {
+  display: flex;
+  flex-direction: column;   /* apila el h1 y otros elementos */
+  justify-content: center;  /* centra vertical */
 }
-  .segunda-seccion-header {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+.section-1 .div-2 .div-2_div h1 {
+  font-size: clamp(1.3rem, 7vw, 1.8rem);
+  text-align: center;
+  padding: 0;
+  color: black;
+  max-width: 300px;
+  line-height: 1.3;
+  display: none;
+}
+.poly7{
+  display: none;
+}
+.Polygon img{
+  display: none;
+}
+.image-deco img{
+    display: none;
   }
 
-  /* ----------- SECCIÓN 1 ----------- */
-  .section-1 .div-2 .div-2_div div {
-    height: 100px;
-    width: 100px;
-  }
-
+.section-1 .div-2 .div-2_div img,
+.section11-div1,
+.image-deco {
+  display: none; /* ocultamos imágenes decorativas */
+}
+ .section-2 button{
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 200px;
+ }
   /* ----------- SECCIÓN 3 ----------- */
   .section-3 {
     flex-direction: column;
@@ -1153,7 +1204,10 @@ Tablet (768px - 1199px)
     height: 60px;
     width: 60px;
   }
-
+  .inBar{
+    display: none;
+  }
+ 
   .section-3 .div-3 button {
     width: 100%;
     max-width: 300px;
@@ -1161,6 +1215,7 @@ Tablet (768px - 1199px)
     padding: 0.8rem;
     font-size: clamp(0.9rem, 4vw, 1rem);
   }
+  
 
   /* ----------- CARDS ----------- */
   .card {
