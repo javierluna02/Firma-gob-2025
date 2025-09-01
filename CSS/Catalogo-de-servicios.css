@@ -277,6 +277,7 @@
   .div-titulo {
     padding-left: 50px;
   }
+ 
 
   .section4 {
     flex-direction: column;
@@ -334,6 +335,9 @@
 
   .div1-section-2 {
     gap: 10px;
+  }
+   .chico{
+    display: none ;
   }
 
   .div1-section-2 input {
@@ -424,6 +428,9 @@
   .capa {
     height: 200px;
   }
+  .div-section-1{
+    flex-direction: row;
+  }
 
   .div-section-1 h1 {
     font-size: clamp(1.3rem, 7vw, 1.8rem);
@@ -440,6 +447,7 @@
   .div1-section-2 input {
     height: 40px;
     font-size: 0.85rem;
+    width: 90%;
   }
 
   .div1-section-2 button {
@@ -496,7 +504,7 @@
   }
 
   .capa {
-    height: 180px;
+    height: 250px;
   }
 
   .div-section-1 h1 {

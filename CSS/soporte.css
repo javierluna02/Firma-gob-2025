@@ -476,6 +476,7 @@
 /* Mobile pequeño (320px - 480px) */
 @media (max-width: 480px) {
   .soporte-capa {
+    flex-direction: row;
   }
 
   .soporte-section-1 {
