@@ -1,6 +1,12 @@
-/* ------------------- 
-   ESTILOS BASE
-------------------- */
+/*
+Theme Name: Firma Gob
+Author: OGTIC
+Description: Plantilla para Firmas Gubernamentales
+Version: 1.0
+License: MIT
+*/
+/* Reset default styles */
+
 body {
   margin: 0;
   padding: 0;
