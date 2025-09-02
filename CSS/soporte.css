@@ -140,6 +140,7 @@
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
 }
 .accordion-item button {
@@ -263,7 +264,7 @@
   .soporte-section-1 {
     height: auto;
     min-height: 200px;
-    padding: 20px;
+    padding: 0;
   }
 
   .div2 h1 {
@@ -273,6 +274,7 @@
 
   .div3-img {
     width: 200px;
+    display: none;
   }
 
   .div-donde {
@@ -480,7 +482,7 @@
   }
 
   .soporte-section-1 {
-    padding: 10px;
+    padding: 0;
   }
 
   .div2 h1 {

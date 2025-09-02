@@ -30,19 +30,20 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 1.2rem;
-  width: 97.5%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 .logo img {
-  width: 50%;
-  max-width: 8.7rem;
-  height: auto;
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
 }
 
 .tercera-seccion-header {
