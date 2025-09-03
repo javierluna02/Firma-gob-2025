@@ -435,19 +435,52 @@
         <span>El portafirmas estÁ disponible para dispositivos móviles en cualquier sistema operativo</h1>
             <div class="div1-section-12">
                 <h1 class="">Disponibilidad móvil</h1>
-                <div class="div2-section-12">
-                    <img class="img" src="/img/smartmockups_lhkytam5 1.svg" alt="">
 
 
-                    <div class="div3-section-12">
-                        <div class="div4-section-12">ANDROID</div>
-                        <div class="div5-section-12"><img src="/img/image 7.svg" alt=""></div>
+                <article class="mobile-content">
+                    <div class="devices-wrapper">
+                        <img src="/img/smartmockups_lhkytam5 1.svg" alt="Dispositivos Firma GOB">
+                        
+                        <div class="download-options">
+                            <div class="platform-option">
+                                <div class="div4-section-12">ANDROID</div>
+                                <div class="div3-section-12">
+                                    <div class="div5-section-12">
+                                        <img src="/img/image 7.svg" alt="QR Android">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="platform-option">
+                                <div class="div7-section-12">APPLE</div>
+                                <div class="div6-section-12">
+                                    <div class="div8-section-12">
+                                        <img src="/img/image 7.svg" alt="QR Apple">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="div6-section-12">
-                        <div class="div7-section-12">APPLE</div>
-                        <div class="div8-section-12"><img src="/img/image 7.svg" alt=""></div>
+                </article>
+
+                <article class="cta-section">
+                    <h1>¡Únete a Firma GOB hoy!</h1>
+                    <div class="floating-buttons">
+                        <button class="chat-button">
+                            <img src="/img/icons8-mensaje-100 2.svg" alt="Chat">
+                        </button>
+                        <button class="back-to-top">
+                            <img src="/img/Vector 20.svg" alt="Volver arriba">
+                        </button>
                     </div>
-                </div>
+                </article>
+
+
+
+
+
+
+
     </Section>
 
 
@@ -782,12 +815,13 @@
                 }
             }
 
-          
 
-        
 
-              
 
+
+
+
+            // Función para volver arriba
             function scrollToTop() {
                 window.scrollTo({
                     top: 0,
@@ -795,10 +829,34 @@
                 });
             }
 
-            
+            // Inicializar botón de volver arriba y otros botones que usan scrollToTop
+            document.addEventListener('DOMContentLoaded', function () {
+                const integrationBtn = document.getElementById('integrationBtn');
 
+                // Mostrar/ocultar botón según el scroll
+                // (backToTopBtn is not defined in your code, so this block is commented out or can be removed)
+                // window.addEventListener('scroll', () => {
+                //     if (backToTopBtn) {
+                //         if (window.pageYOffset > 300) {
+                //             backToTopBtn.style.display = 'flex';
+                //             backToTopBtn.style.opacity = '1';
+                //         } else {
+                //             backToTopBtn.style.opacity = '0';
+                //             setTimeout(() => {
+                //                 if (window.pageYOffset <= 300) {
+                //                     backToTopBtn.style.display = 'none';
+                //                 }
+                //             }, 300);
+                //         }
+                //     }
+                // });
 
-           
+                // Asignar evento click a los botones
+                if (integrationBtn) {
+                    integrationBtn.addEventListener('click', scrollToTop);
+                }
+            });
+        } // <-- Add this closing brace to end the showJSWorking function
     </script>
 
 </body>

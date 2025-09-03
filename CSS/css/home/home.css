@@ -592,13 +592,15 @@
   flex-direction: column;
   text-align: center;
   color: #003579;
+  width: 100%;
 }
 .section-12 {
   display: flex;
   justify-content: center;
   align-items: start;
   text-align: center;
-  padding: 40px;
+  flex-direction: column;
+  width: 100%;
 }
 .section-12 span {
   text-align: center;
@@ -616,38 +618,127 @@
   display: flex;
   align-items: center;
 }
-.div2-section-12 {
+.mobile-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  margin: 40px 0;
 }
-.div2-section-12 .img {
+
+.devices-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.devices-wrapper img {
   width: 688px;
+  height: auto;
 }
-.div3-section-12 {
+
+.download-options {
+  display: flex;
+  gap: 20px;
+}
+
+.platform-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div3-section-12, .div6-section-12 {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 50px;
   align-items: center;
   width: 283px;
+  padding: 20px;
+}
+
+.div3-section-12 {
   border: 4px solid #7cc713;
 }
+
 .div6-section-12 {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  border-radius: 20px;
-  align-items: center;
-  width: 283px;
   border: 4px solid #000000;
 }
 
-.div4-section-12 img {
-  width: 186px;
+.div4-section-12, .div7-section-12 {
+  color: white;
+  width: 249px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 34px;
+  margin: 20px;
 }
 
+.div4-section-12 {
+  background-color: #7CC713;
+}
+
+.div7-section-12 {
+  background-color: #000000;
+}
+
+.div5-section-12 img, .div8-section-12 img {
+  width: 186px;
+  height: auto;
+}
+
+.cta-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.cta-section h1 {
+  color: #003579;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.floating-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating-buttons button {
+  width: 72px;
+  height: 72px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chat-button {
+  background-color: #0066CC;
+}
+
+.back-to-top {
+  background-color: #5EAEFF;
+}
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 34px;
+  margin: 20px;
+}
 .container-grid {
   display: flex;
   justify-content: center;

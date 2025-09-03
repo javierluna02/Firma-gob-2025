@@ -1,0 +1,178 @@
+/* Section 12 - Mobile Availability */
+.section-12 {
+  padding: 60px 20px;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+}
+
+.section-12 .section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  
+  align-items: center;
+}
+
+.section-12 header {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.section-12 .section-description {
+  color: #003579;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.section-12 .section-title {
+  color: #003579;
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.section-12 .devices-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.section-12 .devices-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.section-12 .platforms-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.section-12 .platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.section-12 .platform.android {
+  border: 4px solid #7cc713;
+}
+
+.section-12 .platform.apple {
+  border: 4px solid #000000;
+}
+
+.section-12 .platform-label {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+}
+
+.section-12 .android .platform-label {
+  background-color: #7cc713;
+  color: white;
+}
+
+.section-12 .apple .platform-label {
+  background-color: #000000;
+  color: white;
+}
+
+.section-12 .qr-container img {
+  width: 150px;
+  height: 150px;
+}
+
+.section-12 .join-message {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.section-12 .join-message h3 {
+  color: #003579;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.section-12 .floating-buttons {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+.section-12 .floating-buttons button {
+  width: 72px;
+  height: 72px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.section-12 .chat-button {
+  background-color: #0066cc;
+}
+
+.section-12 .back-to-top {
+  background-color: #5eaeff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .section-12 .platforms-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-12 .platform {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .section-12 .platform-label {
+    font-size: 1.2em;
+    padding: 12px 30px;
+  }
+
+  .section-12 .floating-buttons {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .section-12 .floating-buttons button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .section-12 .section-description {
+    font-size: 1em;
+    padding: 0 20px;
+  }
+
+  .section-12 .section-title {
+    font-size: 2em;
+  }
+}
