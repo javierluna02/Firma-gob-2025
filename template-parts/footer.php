@@ -4,10 +4,10 @@
             <div class="footer-links-sections">
                 <div class="footer-column footer-column-with-logos">
                     <div class="footer-main-logos-group">
-                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/' . urlencode('firma_Mesa de trabajo 1 copia 6 3.svg')); ?>" alt="Firma GOB Logo" class="firma-gob-logo">
+                        <img src="<?php echo esc_url(get_template_directory_uri() . '/img/firma_Mesa de trabajo 1 copia 6 3.svg'); ?>" alt="Firma GOB Logo" class="firma-gob-logo">
                         <div class="ogtic-logos">
-                            <img class="footer-Ogtic" src="<?php echo esc_url(get_template_directory_uri() . '/img/' . urlencode('Sin título-1-03 1.svg')); ?>" alt="ogtic Logo" class="ogtic-small-logo">
-                            <img class="gobierno-digital-logo" src="<?php echo esc_url(get_template_directory_uri() . '/img/' . urlencode('Sin título-1-02 1.svg')); ?>" alt="Gobierno Digital Logo">
+                            <img class="footer-Ogtic" src="<?php echo esc_url(get_template_directory_uri() . '/img/Sin título-1-03 1.svg'); ?>" alt="ogtic Logo" class="ogtic-small-logo">
+                            <img class="gobierno-digital-logo" src="<?php echo esc_url(get_template_directory_uri() . '/img/Sin título-1-02 1.svg'); ?>" alt="Gobierno Digital Logo">
                         </div>
                     </div>
 

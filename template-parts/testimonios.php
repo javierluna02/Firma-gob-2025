@@ -7,7 +7,7 @@
  */
 ?>
 
-<section class="section-11">
+<section style="position: relative;" class="section-11">
     <div class="section11-div1">
         <div class="section-11-div1" style="height: 400px; background: #8ce31b; clip-path: polygon(0 0, 50% 0, 0 100%);"></div>
     </div>
@@ -37,8 +37,8 @@
         </button>
     </div>
 
-    <div class="div-3">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 13.svg" alt="Vector decorativo">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 12.svg" alt="Vector decorativo">
+    <div style="padding:  0; position: absolute;" class="div-3">
+        <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 18.svg" alt="Vector decorativo">
+        <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 13.svg" alt="Vector decorativo">
     </div>
 </section>
