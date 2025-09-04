@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/css/home/home.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+
     <section class="section-1">
         <div class="div-1">
-            <img src="/img/9479378e080c060d5c155b7fc1381ac84d50a61b.png" alt="backImg">
+            <img src="<?= get_template_directory_uri(); ?>/img/9479378e080c060d5c155b7fc1381ac84d50a61b.png" alt="backImg">
         </div>
         <div class="div-2">
-            <img class="img-div-2" src="/img/Vector 1.svg" alt="">
+            <img class="img-div-2" src="<?= get_template_directory_uri(); ?>/img/Vector 1.svg" alt="">
             <div class="div-2_div">
                 <h1>
                     En OGTIC
@@ -26,7 +15,7 @@
                     </span>
                 </h1>
                 <div class="logo-section1">
-                    <img src="/img/firma_Mesa de trabajo 1 copia 6 3.svg" alt="Img Firma">
+                    <img src="<?= get_template_directory_uri(); ?>/img/firma_Mesa de trabajo 1 copia 6 3.svg" alt="Img Firma">
                 </div>
             </div>
         </div>
