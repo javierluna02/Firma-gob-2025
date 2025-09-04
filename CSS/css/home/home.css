@@ -836,7 +836,6 @@ div4-section-12
   min-height: 360px;
 
   display: grid;
-  grid-template-columns: var(--col-w) 1fr var(--col-w);
   align-items: start;
   column-gap: var(--gap);
 }
