@@ -38,7 +38,7 @@
     </div>
 
     <div class="div-3">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/icons/Vector 13.svg" alt="Vector decorativo">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/icons/Vector 12.svg" alt="Vector decorativo">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 13.svg" alt="Vector decorativo">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 12.svg" alt="Vector decorativo">
     </div>
 </section>
