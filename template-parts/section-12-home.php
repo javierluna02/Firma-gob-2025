@@ -16,13 +16,25 @@
                     <img class="img" src="<?php echo get_template_directory_uri(); ?>/img/smartmockups_lhkytam5 1.svg" alt="">
 
 
-                    <div class="div3-section-12">
+                    
+                    
+
+                    <div>
                         <div class="div4-section-12">ANDROID</div>
-                        <div class="div5-section-12"><img src="<?php echo get_template_directory_uri(); ?>/img/image 7.svg" alt=""></div>
+                        <div class="div3-section-12">
+                            <div class="div5-section-12"><img src="<?php echo get_template_directory_uri(); ?>/img/image 7.svg" alt=""></div>
+                        </div>
+
                     </div>
-                    <div class="div6-section-12">
-                        <div class="div7-section-12">APPLE</div>
-                        <div class="div8-section-12"><img src="<?php echo get_template_directory_uri(); ?>/img/image 7.svg" alt=""></div>
+
+
+                    <div>
+                         <div class="div7-section-12">APPLE</div>
+                        <div class="div6-section-12">
+                           
+                            <div class="div8-section-12"><img src="<?php echo get_template_directory_uri(); ?>/img/image 7.svg" alt=""></div>
+                        </div>
+
                     </div>
                 </div>
     </Section>
