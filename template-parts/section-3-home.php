@@ -1,15 +1,4 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/css/home/home.css">
-    <title>Document</title>
- </head>
- <body>
-    
- </body>
- </html>
+
  
  <section class="section-3">
         <div class="div-1">
@@ -25,7 +14,7 @@
                 </div>
                 <article class="Cards">
                     <div class="header">
-                        <img src="/img/Rectangle 18.svg" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/img/Rectangle 18.svg" alt="">
                     </div>
                     <div class="body">
                         <span class="T1">¿QUÉ ES?</span>
@@ -37,12 +26,12 @@
             </div>
             
             <div class="div-2">
-                <img class="flecha" src="/img/Vector 28.svg" alt="">
+                <img class="flecha" src="<?= get_template_directory_uri(); ?>/img/Vector 28.svg" alt="">
             </div>
             <div class="containerCards">
                 <article class="Cards">
                     <div class="header">
-                        <img src="/img/Rectangle 24.svg" alt="">
+                        <img src="<?= get_template_directory_uri(); ?>/img/Rectangle 24.svg" alt="">
                     </div>
                     <div class="body">
                         <span class="T2">OBJETIVOS</span>

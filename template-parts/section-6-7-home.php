@@ -1,30 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/css/home/home.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+
 
 
 <article class="Polygon">
-        <img class="poly7" src="/img/Polygon 7.svg" alt="">
-        <img class="Poly8" src="/img/Polygon 8.svg" alt="">
+        <img class="poly7" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 7.svg" alt="">
+        <img class="Poly8" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 8.svg" alt="">
     </article>
 
 
     <section class="section-6">
-        <img src="img/Group 6.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/Group 6.svg" alt="">
     </section>
     <section class="section-7" id="instituciones">
         <div class="div-1">
             <h3>¿Estás inspirado? ¡Ponte en contacto con nosotros!</h3>
-            <h2>Instituciones que confían</h2>
+            <h2>Instituciones que confían</h2>1
         </div>
         <div class="div-2">
             <button class="btn">
@@ -36,19 +25,19 @@
             </button>
             <div class="div-2_div1">
                 <article class="Logo">
-                    <img src="/img/image 2.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/image 2.svg" alt="">
                 </article>
                 <article class="Logo">
-                    <img src="/img/image 3.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/image 3.svg" alt="">
                 </article>
                 <article class="Logo">
-                    <img src="/img/image 4.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/image 4.svg" alt="">
                 </article>
                 <article class="Logo">
-                    <img src="/img/image 5.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/image 5.svg" alt="">
                 </article>
                 <article class="Logo">
-                    <img src="/img/logo-12-1-e1677264157702 1.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo-12-1-e1677264157702 1.svg" alt="">
                 </article>
             </div>
             <button class="btn">
@@ -62,6 +51,6 @@
     </section>
 
     <article class="Polygon2">
-        <img class="poly7" src="/img/Polygon 9.svg" alt="">
-        <img class="poly10" src="/img/Polygon 10.svg" alt="">
+        <img class="poly7" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 9.svg" alt="">
+        <img class="poly10" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 10.svg" alt="">
     </article>

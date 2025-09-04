@@ -767,6 +767,175 @@
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
 }
 
+
+
+/* ----- Variables para afinar rápido (colores, tamaños) */
+:root{
+  --gray-bubble-bg: #F3F4F6;      /* globo gris claro */
+  --blue-card-bg:   #EAF3FF;      /* tarjeta azul muy clara */
+  --title-blue:     #0F67D5;      /* título de la tarjeta */
+  --text-dark:      #2B2F38;
+  --text-muted:     #485266;
+
+  --radius: 14px;                 /* radio de los globos */
+  --shadow: 0 12px 28px rgba(13, 40, 80, .10);
+
+  /* anchos y espaciamiento pensados para desktop de la captura */
+  --wrap-max: 1140px;
+  --col-w:  300px;                /* ancho “columna” izquierda/derecha */
+  --gap:     48px;                /* separación entre columnas y centro */
+
+  --left-figure: 220px;           /* diámetro figura izquierda */
+  --right-figure: 280px;          /* diámetro figura derecha (más grande) */
+
+  --bubble-left-w: 430px;         /* ancho del globo gris */
+  --card-w:        500px;         /* ancho de la tarjeta azul */
+}
+
+/* ----- Sección contenedora */
+.sec-integracion{
+  padding: 72px 16px 24px;
+}
+.int-wrap{
+  max-width: var(--wrap-max);
+  margin: 0 auto;
+  position: relative;
+  min-height: 360px;
+
+  display: grid;
+  grid-template-columns: var(--col-w) 1fr var(--col-w);
+  align-items: start;
+  column-gap: var(--gap);
+}
+
+/* ----- Columnas laterales */
+.int-col{
+  position: relative;
+}
+.int-figure{
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+.int-figure--left{
+  width: var(--left-figure);
+  position: relative;
+  left: 12px;                     /* pequeño ajuste como en la captura */
+}
+.int-figure--right{
+  width: var(--right-figure);
+  margin-left: auto;
+  position: relative;
+  right: 6px;
+}
+
+/* ----- Globo base */
+.bubble{
+  position: absolute;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  line-height: 1.45;
+  color: var(--text-dark);
+}
+
+/* Globo gris (arriba y a la izquierda del centro) */
+.bubble--left{
+  background: var(--gray-bubble-bg);
+  width: var(--bubble-left-w);
+  padding: 14px 18px;
+  top: 6px;
+  left: calc(var(--col-w) + 26px);    /* arranca justo después de la figura izq */
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: .1px;
+}
+.bubble--left::before{                 /* “cola” hacia la izquierda */
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 18px;
+  width: 0; height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 14px solid var(--gray-bubble-bg);
+  filter: drop-shadow(-2px 4px 6px rgba(13, 40, 80, .10));
+}
+
+/* Tarjeta azul (más abajo, centrada, con cola a la derecha) */
+.bubble--card{
+  background: var(--blue-card-bg);
+  width: var(--card-w);
+  padding: 18px 22px;
+  top: 116px;
+  left: calc(var(--col-w) + 60px);
+  color: var(--text-muted);
+  font-size: 13.5px;
+}
+.bubble--card::after{                  /* “cola” hacia la figura derecha */
+  content: "";
+  position: absolute;
+  right: -18px;
+  top: 30px;
+  width: 0; height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid var(--blue-card-bg);
+  filter: drop-shadow(2px 6px 8px rgba(13, 40, 80, .10));
+}
+.bubble--card h3{
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--title-blue);
+  font-weight: 700;
+}
+
+/* ----- Responsivo: apilar en pantallas estrechas manteniendo proporciones */
+@media (max-width: 1024px){
+  :root{
+    --col-w: 220px;
+    --left-figure: 190px;
+    --right-figure: 220px;
+    --bubble-left-w: 360px;
+    --card-w: 420px;
+  }
+  .bubble--card{ top: 100px; }
+}
+@media (max-width: 768px){
+  .int-wrap{
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+    min-height: auto;
+  }
+  .int-left, .int-right{ justify-self: center; }
+  .int-figure--left,
+  .int-figure--right{
+    right: 0; left: 0; margin: 0 auto;
+  }
+  .bubble--left,
+  .bubble--card{
+    position: relative;
+    left: 0; right: 0; top: 0;
+    width: min(92vw, 560px);
+    margin: 0 auto;
+  }
+  .bubble--left::before{
+    left: 22px; top: -16px;
+    border-right-color: transparent;
+    border-bottom-color: var(--gray-bubble-bg);
+    transform: rotate(0deg);
+  }
+  .bubble--card::after{
+    right: auto; left: 22px; top: -18px;
+    border-left-color: transparent;
+    border-bottom-color: var(--blue-card-bg);
+  }
+}
+
+
 /* ========================================
    MEDIA QUERIES ESPECÍFICAS PARA HOME
    ======================================== */
