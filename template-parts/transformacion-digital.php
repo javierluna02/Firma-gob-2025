@@ -12,7 +12,8 @@
                 </div>
                 <article class="Cards">
                     <div class="header">
-                        <img src="/img/Rectangle 18.svg" alt="">
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Rectangle 18.svg"
+                    alt="">
                     </div>
                     <div class="body">
                          <span class="T1">¿QUÉ ES?</span>
@@ -24,12 +25,14 @@
             </div>
 
             <div class="div-2">
-                <img class="flecha" src="/img/Vector 28.svg" alt="">
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/vector 28.svg"
+                    alt="">
             </div>
             <div class="containerCards">
                 <article class="Cards">
                     <div class="header">
-                        <img src="/img/Rectangle 24.svg" alt="">
+                           <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Rectangle 24.svg"
+                    alt="">
                     </div>
                     <div class="body">
                         <span class="T2">OBJETIVOS</span>
