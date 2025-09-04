@@ -22,8 +22,9 @@
                             <li><a href="#">Política de Privacidad</a></li>
                             <li><a href="#">Preguntas Frecuentes</a></li>
                         </ul>
-                        
-                        <h4>INFORMACIÓN</h4>
+                    </div>
+                    <div class="footer-column">
+                         <h4>INFORMACIÓN</h4>
                         <ul>
                             <li><a href="#">Firma GOB</a></li>
                             <li><a href="#">Portal Informativo</a></li>
