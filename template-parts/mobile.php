@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-     <Section class="section-12" id="disponibilidad">
+     <Section  class="section-12" id="disponibilidad">
         <span>El portafirmas estÁ disponible para dispositivos móviles en cualquier sistema operativo</h1>
             <div class="div1-section-12">
                 <h1 class="">Disponibilidad móvil</h1>
