@@ -63,6 +63,7 @@
   gap: 3rem;     /* antes 50px */
     padding: 1.25rem; /* antes 20px */
     justify-items: center;
+    justify-content: center;
     display: flex;
     align-items: center;
 }
