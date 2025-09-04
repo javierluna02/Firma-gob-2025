@@ -1,22 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/CSS/footer.css">
-</head>
-<body>
+
+
         <footer class="main-footer">
         <div class="footer-top">
             <div class="container">
                 <div class="footer-links-sections">
                     <div class="footer-column footer-column-with-logos">
                         <div class="footer-main-logos-group">
-                            <img src="/img/firma_Mesa de trabajo 1 copia 6 3.svg" alt="Firma GOB Logo" class="firma-gob-logo">
+                            <img src="<?= get_template_directory_uri(); ?>/img/firma_Mesa de trabajo 1 copia 6 3.svg" alt="Firma GOB Logo" class="firma-gob-logo">
                             <div class="ogtic-logos">
-                                <img class="footer-Ogtic" src="/img/Sin título-1-03 1.svg" alt="ogtic Logo" class="ogtic-small-logo">
-                                <img src="/img/Sin título-1-02 1.svg" alt="Gobierno Digital Logo" class="gobierno-digital-logo">
+                                <img class="footer-Ogtic" src="<?= get_template_directory_uri(); ?>/img/Sin título-1-03 1.svg" alt="ogtic Logo" class="ogtic-small-logo">
+                                <img class="gobierno-digital-logo" src="<?= get_template_directory_uri(); ?>/img/Sin título-1-02 1.svg" alt="Gobierno Digital Logo">
                             </div>
                         </div>
                       
@@ -55,11 +48,11 @@
         <div class="footer-bottom-logos">
             <div class="container">
                 <div class="sector-logos">
-                    <img src="/img/Trazado 4528.svg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/img/Trazado 4528.svg" alt="">
                 </div>
                 <div class="accreditation-logos">
-                    <img src="/img/Imagen 59.svg" alt="Accreditation Logo 1" class="accreditation-logo">
-                
+                    <img src="<?= get_template_directory_uri(); ?>/img/Imagen 59.svg" alt="Accreditation Logo 1" class="accreditation-logo">
+
                 </div>
             </div>
         </div>
@@ -67,14 +60,14 @@
         <div class="footer-copyright-social">
             <div class="container">
                 <div class="copyright-info">
-                    <p>© 2023 Todos los Derechos Reservados. Desarrollado por <img src="/img/Grupo 3827.svg" alt="ogtic" class="ogtic-inline-logo"></p>
+                    <p>© 2023 Todos los Derechos Reservados. Desarrollado por <img src="<?= get_template_directory_uri(); ?>/img/Grupo 3827.svg" alt="ogtic" class="ogtic-inline-logo"></p>
                 </div>
                 <div class="social-media">
                     <span>SÍGUENOS</span>
-                    <img src="/img/Shape.svg" alt="">
-                  <img src="/img/youtube-brands.svg" alt="">
-                  <img src="/img/Shape2.svg" alt="">
-                  <img src="/img/Sustracción 1.svg" alt="">
+                    <img src="<?= get_template_directory_uri(); ?>/img/Shape.svg" alt="">
+                  <img src="<?= get_template_directory_uri(); ?>/img/youtube-brands.svg" alt="">
+                  <img src="<?= get_template_directory_uri(); ?>/img/Shape2.svg" alt="">
+                  <img src="<?= get_template_directory_uri(); ?>/img/Sustracción 1.svg" alt="">
                 </div>
             </div>
         </div>
