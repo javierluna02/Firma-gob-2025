@@ -4,7 +4,7 @@
         <h2>¿Por qué Firma GOB?</h2>
     </div>
 
-    <section style="display: flex; margin-left: 20px;" class="container-grid">
+    <section style="display: flex; " class="container-grid">
         <div class="card-grid">
             <div class="card">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/icon-nube.svg" alt="Nube" />
