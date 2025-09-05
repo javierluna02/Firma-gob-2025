@@ -7,11 +7,11 @@
  */
 ?>
 
-<section class="section-12" id="disponibilidad">
+<section class="mobile" style="justify-content: center; display: flex; flex-direction: column; align-items: center;" class="section-12" id="disponibilidad">
     <span>El portafirmas está disponible para dispositivos móviles en cualquier sistema operativo</span>
+
     <div class="div1-section-12">
         <h1>Disponibilidad móvil</h1>
-
         <article class="mobile-content">
             <div class="div2-section-12">
                 <img class="img" src="<?php echo get_template_directory_uri(); ?>/img/smartmockups_lhkytam5 1.svg" alt="Mockup dispositivo móvil">

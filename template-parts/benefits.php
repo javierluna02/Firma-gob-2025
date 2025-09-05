@@ -1,7 +1,7 @@
 
     <div class="section-5">
-        <h3>LA FIRMA DIGITAL ADAPTADA A CUALQUIER NECESIDAD</h3>
-        <h2>¿Por qué Firma GOB?</h2>
+        <h3 style="color: #5EAEFF; display: flex; justify-content: center; font-size: 20px;">LA FIRMA DIGITAL ADAPTADA A CUALQUIER NECESIDAD</h3>
+        <h2 style="color: #003579; display: flex; justify-content: center; font-size: 36px;" >¿Por qué Firma GOB?</h2>
     </div>
 
     <section style="display: flex; justify-content: start; margin-left: 20px;" class="container-grid">

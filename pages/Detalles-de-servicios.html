@@ -202,9 +202,9 @@ async function abrirModal() {
 
     const modal = document.getElementById("mymodal");
     modal.style.display = "flex";
-    // contenedor.style.backgroundColor = "black-red(0, 0 ,0, 0.5)"
 
-    // Cerrar al hacer clic en "×"
+
+
     const btnCerrar = modal.querySelector(".close");
     if (btnCerrar) {
         btnCerrar.addEventListener("click", () => {
@@ -240,9 +240,9 @@ document.getElementById("myBtn").addEventListener("click", abrirModal);
 
     </div>
 
-    <!-- <script>
+    <script>
         async function abrirModal() {
-            const res = await fetch("/components/modal.html"); // cargas modal externo
+            const res = await fetch("/components/modal.html"); //cargas modal externo
             const html = await res.text();
             document.getElementById("contenedor-modal").innerHTML = html;
 
@@ -252,7 +252,7 @@ document.getElementById("myBtn").addEventListener("click", abrirModal);
             modal.style.display = "block";
             contenedor.style.color = "red"
 
-            // Botón de cerrar dentro del modal
+            // Botón de cerrar dentro del modal 
             const btnCerrar = modal.querySelector(".close"); // asumiendo que tienes <span class="close">&times;</span>
             if (btnCerrar) {
                 btnCerrar.addEventListener("click", () => {
@@ -267,7 +267,7 @@ document.getElementById("myBtn").addEventListener("click", abrirModal);
                 }
             });
         }
-    </script> -->
+    </script>
 
 
 
