@@ -5,14 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="<?= get_template_directory_uri()  ?>/CSS/css/home/home.css">
-    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/CSS/header.css">
-    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/CSS/responsive-base.css">
-    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/CSS/navigation.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/CSS/footer.css">
+        <!-- Estilos principales -->
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/header.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/footer.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/navigation.css">
+        <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/modal.css"> -->
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive-base.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/catalogo-de-servicios.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/contacto.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/detalles-de-servicios.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/css/home/home.css">
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/soporte.css">
+
+        <!-- Estilos de home -->
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/css/home/section-12.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 </head>
