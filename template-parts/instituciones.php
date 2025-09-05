@@ -13,7 +13,7 @@
     <section class="section-7" id="instituciones">
         <div class="div-1">
             <h3>¿Estás inspirado? ¡Ponte en contacto con nosotros!</h3>
-            <h2>Instituciones que confían</h2>1
+            <h2>Instituciones que confían</h2>
         </div>
         <div class="div-2">
             <button class="btn">
@@ -52,5 +52,5 @@
 
     <article style="position: relative; top: -50px;" class="Polygon2">
         <img height="100px" width="50%" class="poly9" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 9.svg" alt="">
-        <img height="70px" width="50%" class="poly10" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 10.svg" alt="">
+        <img height="63.0px" width="50%" class="poly10" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 10.svg" alt="">
     </article>
