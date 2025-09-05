@@ -50,7 +50,7 @@
         </div>
     </section>
 
-    <article class="Polygon2">
-        <img class="poly7" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 9.svg" alt="">
-        <img class="poly10" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 10.svg" alt="">
+    <article style="position: relative; top: -50px;" class="Polygon2">
+        <img height="100px" width="50%" class="poly9" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 9.svg" alt="">
+        <img height="70px" width="50%" class="poly10" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 10.svg" alt="">
     </article>
