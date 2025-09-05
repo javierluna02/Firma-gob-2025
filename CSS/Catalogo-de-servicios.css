@@ -16,7 +16,7 @@
   text-align: center;
   color: white;
   width: 100%;
-  height: 350px;
+
   background-image: url("../img/Rectangle 75.svg");
   background-size: cover;
   object-fit: cover;
@@ -24,7 +24,7 @@
 .capa {
   background-color:rgba(0, 53, 121, 0.78);
   width: 100%;
-  height: 350px;
+
   display: flex;
   justify-content: center;
   align-items: center;
