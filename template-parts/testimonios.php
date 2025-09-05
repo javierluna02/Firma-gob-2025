@@ -8,6 +8,7 @@
 ?>
 
 <section style="position: relative; display: flex; justify-content: center;" class="section-11">
+    
     <div class="section11-div1">
         <div class="section-11-div1"
             style="height: 400px; background: #8ce31b; clip-path: polygon(0 0, 50% 0, 0 100%);"></div>
@@ -73,9 +74,9 @@
         <img style="padding: 0; position: relative; top: -1px;"
             src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 19.svg" alt="Vector decorativo">
     </div>
-        <div style="padding:  0; position: absolute; right:  0px;;   bottom: -121px;" class="div-3">
+        <div style="padding:  0; position: absolute; left:  128px;;   bottom: 232px;" class="div-3">
         <img style="padding: 0; position: relative; top: -1px;"
-            src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Grpoup 27.svg" alt="Vector decorativo">
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Group 27.svg" alt="Vector decorativo">
     </div>
 
 </section>
