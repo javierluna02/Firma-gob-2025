@@ -23,7 +23,7 @@
     
 
     <!-- Segundo artículo -->
-    <article>
+    <article style=" backgroung-color:red; justify-content:end;">
       <!-- Tarjeta azul (contenido) -->
       <div class="bubble bubble--card">
         <h3>Capacidad de integración mediante<br> Sistema API</h3>
@@ -31,8 +31,8 @@
       </div>
 
       <!-- Círculo/figura derecha -->
-      <div style="background-color: #A6D2FF; border-radius: 50%; width: 400px; height: 400px; display: flex; justify-content: center; align-items: center;">
-        <div class="int-col int-right" style="background-color: #0066CC; border-radius: 50%; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
+      <div style="background-color: #A6D2FF; border-radius: 50%; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
+        <div class="int-col int-right" style="background-color: #0066CC; border-radius: 50%; width: 250px; height: 250px;  ">
           <img class="int-figure int-figure--right"
                src="<?php echo get_template_directory_uri(); ?>/img/Ellipse 21.svg"
                alt="Persona derecha" style="max-width: 100%; height: auto;">
