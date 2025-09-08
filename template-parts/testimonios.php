@@ -24,7 +24,7 @@
 
         <article class="Cards">
             <div class="header">
-                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Rectangle 18.svg"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Rectangle 65.svg"
                     alt="Imagen de testimonio">
                 <div class="text">
                     <h3>Lorem ipsum dolor sit</h3>
