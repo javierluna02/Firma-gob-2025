@@ -7,7 +7,7 @@
  */
 ?>
 
-<section class="section-1">
+<section class="home-section-1">
     <div class="div-1">
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/9479378e080c060d5c155b7fc1381ac84d50a61b.png" alt="backImg">
     </div>
