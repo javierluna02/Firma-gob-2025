@@ -8,7 +8,7 @@
      
     <article>
       <!-- Círculo/figura izquierda -->
-      <div style="background-color: #A6D2FF63; display: flex; justify-content: center; align-items: center; height: 250px; width: 250px; border-radius: 50%;">
+      <div style="background-color: #A6D2FF63; display: flex; justify-content: center; align-items: center; height: 250px; width: 250px; border-radius: 50%; transform: translate(40px, -10%);">
         
         <div class="int-col int-left" style="border-radius: 50%; background-color:#5EAEFF; height: 200px; width: 200px; display: flex; justify-content: center; align-items: center;">
           <img class="int-figure int-figure--left"
@@ -16,7 +16,7 @@
                alt="Persona izquierda" style="max-width: 90%; height: auto;">
         </div>
       </div>
-      <div style="transform: translate(100px, -90%);">
+      <div style="transform: translate(130px, -110%);">
          <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
       </div>
       
@@ -40,7 +40,7 @@
 
       <!-- Círculo/figura derecha -->
 
-      <div transform: translate (100px, -90%);>
+      <div style="transform: translate(50px, -40%);">
             <div style="background-color: #A6D2FF; border-radius: 50%; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
             <div class="int-col int-right" style="background-color:#5EAEFF; border-radius: 50%; width: 250px; height: 250px;  ">
               
