@@ -16,7 +16,7 @@
 
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/header.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/footer.css">
+    <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/footer.css"> -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/navigation.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive-base.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/catalogo-de-servicios.css">
@@ -83,7 +83,7 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-white" style="padding-left: 0px;">
+    <nav class="navbar navbar-expand-lg" style="padding-left: 0px; background-color: #003579;">
         <div class="container-md">
             <a class="navbar-brand d-flex align-items-center " href="<?php echo home_url(); ?>">
 
@@ -133,7 +133,7 @@
                 <div onclick="closeMenu(event)">
                     <div class="menu-icon" onclick="toggleMenu(event)">
                         <i class="svg-icon">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1"
+                            <svg stroke="white" fill="white" stroke-width="0" version="1.1"
                                 viewBox="0 0 17 17" height="36px" width="36px" xmlns="http://www.w3.org/2000/svg">
                                 <g></g>
                                 <path
