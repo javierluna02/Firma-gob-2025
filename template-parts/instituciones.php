@@ -52,5 +52,5 @@
 
     <article style="position: relative; top: -50px;" class="Polygon2">
         <img height="100px" width="50%" class="poly9" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 9.svg" alt="">
-        <img height="63.0px" width="50%" class="poly10" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 10.svg" alt="">
+        <img height="53.0px" width="50%" class="poly10" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 10.svg" alt="">
     </article>

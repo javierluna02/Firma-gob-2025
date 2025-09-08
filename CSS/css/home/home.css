@@ -376,13 +376,11 @@ display: flex;
   z-index: 1;
   width: 50%;
   left:100px;
-  top: -1000px;
 }
 .poly10 {
    position: relative;
   z-index: 5;
   right: 130px;
-  top: -1000px;
   width: 50%;
 }
 .section-6 {
