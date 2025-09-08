@@ -14,37 +14,22 @@
     </div>
     <div class="div-2">
         <div class="div-2_div1">
+
+        <?php if (have_rows('beneficios', 'option')) : ?>
+            <?php while (have_rows('beneficios', 'option')) : the_row(); ?>
             <article class="Cards">
                 <div class="header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/check.svg" alt="Flujos de Firma">
+                    <img src="<?php  echo the_sub_field('icono_beneficio'); ?>" alt="Flujos de Firma" style="width: 40px; height: 40px;">
                 </div>
-                <p><b>Flujos de Firma:</b> Creación de flujos de firmas en cascada, simultáneos y vistos buenos.
-                </p>
+                <p><b><?php the_sub_field('beneficio'); ?></b> <?php the_sub_field('detalle_del_beneficio'); ?></p>
             </article>
-            <article class="Cards">
-                <div class="header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/check.svg" alt="Firma desde cualquier lugar">
-                </div>
-                <p><b>Firma desde cualquier lugar:</b> Plataforma adaptable a dispositivos móviles, permitiendo
-                    firmar desde donde se encuentre. </p>
-            </article>
-            <article class="Cards">
-                <div class="header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/check.svg" alt="Seguridad e Integridad">
-                </div>
-                <p><b>Seguridad e Integridad:</b> Los documentos firmados no pueden ser modificados, por lo que se
-                    garantiza la autenticidad de este. </p>
-            </article>
-            <article class="Cards">
-                <div class="header">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/check.svg" alt="Ahorro de papel">
-                </div>
-                <p><b>Ahorro de papel:</b> El portafirmas evitar el uso de papel, costes de impresión, transporte de
-                    documentos, etc.</p>
-            </article>
+
+            <?php endwhile; ?>
+        <?php endif; ?>
+         
         </div>
         <div class="div-2_div2">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/Group 5.svg" alt="Beneficios ilustración">
+            <img src="<?php echo get_field('imagen_beneficios', 'option'); ?>" alt="Beneficios ilustración">
         </div>
     </div>
 </section>

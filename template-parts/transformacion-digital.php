@@ -17,9 +17,10 @@
                     </div>
                     <div class="body">
                          <span class="T1">¿QUÉ ES?</span>
-                        <p>Es una plataforma de portafirmas que facilita la gestión de documentos pendientes por firmar,
-                            dotándolos de un flujo de firmas y/o visto bueno, permitiendo la visualización, firma
-                            digital, validación y custodia de todo tipo de documentos en formato electrónico.</p>
+                         <p>
+
+                             <?php echo get_field('que_es','option'); ?>
+                         </p>
                     </div>
                 </article>
             </div>
@@ -36,9 +37,7 @@
                     </div>
                     <div class="body">
                         <span class="T2">OBJETIVOS</span>
-                        <p>Proveer organismos gubernamentales de un sistema de gestión de solicitudes de firmas. Firma
-                            Gob ofrece un todo incluido de firma digital segura-cualificada en la nube y un gestor de
-                            documentos digitales firmados, garantizando la seguridad e integridad de los datos.</p>
+                        <p><?php echo get_field('objetivos','option'); ?></p>
                     </div>
                 </article>
                 <div class="bar-1">
