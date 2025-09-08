@@ -22,12 +22,12 @@
   align-items: end;
   color: white;
 }
-.div2 {
+.soporte-div2{
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.div2 h1 {
+.soporte-div2 h1 {
   font-size: 36px;
   margin-left: 300px;
 }
