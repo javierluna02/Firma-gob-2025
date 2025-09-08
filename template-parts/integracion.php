@@ -1,8 +1,8 @@
- <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
-6
+
 
 <section class="sec-integracion" id="integracion">
   <div class="int-wrap">
+    
 
     <!-- Primer artículo -->
      
@@ -15,6 +15,9 @@
                src="<?php echo get_template_directory_uri(); ?>/img/Ellipse 22.svg"
                alt="Persona izquierda" style="max-width: 90%; height: auto;">
         </div>
+      </div>
+      <div style="transform: translate(100px, -90%);">
+         <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
       </div>
       
       <!-- Globo gris (mensaje) -->
@@ -36,17 +39,23 @@
       </div>
 
       <!-- Círculo/figura derecha -->
-        <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
 
-      <div style="background-color: #A6D2FF; border-radius: 50%; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
-        <div class="int-col int-right" style="background-color:#5EAEFF; border-radius: 50%; width: 250px; height: 250px;  ">
-          
-          <img class="int-figure int-figure--right"
-               src="<?php echo get_template_directory_uri(); ?>/img/Ellipse 21.svg"
-               alt="Persona derecha" style="max-width: 100%; height: auto;">
-               
-        </div>
+      <div transform: translate (100px, -90%);>
+            <div style="background-color: #A6D2FF; border-radius: 50%; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
+            <div class="int-col int-right" style="background-color:#5EAEFF; border-radius: 50%; width: 250px; height: 250px;  ">
+              
+              <img class="int-figure int-figure--right"
+                  src="<?php echo get_template_directory_uri(); ?>/img/Ellipse 21.svg"
+                  alt="Persona derecha" style="max-width: 100%; height: auto;">
+                  
+            </div>
+            
+          </div>
+          <div style="transform: translate(100px, -80%);">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
+          </div>
       </div>
+      
   
     </article>   
   </div>
