@@ -46,14 +46,14 @@
         </button>
     </div>
 
-    <div style="padding:  0; position: absolute;left:  0px;  bottom: 109px;" class="div-3">
+    <div style="padding:  0; position: absolute;left:  0px;  bottom: 135px;" class="div-3">
         <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 16.svg"
             alt="Vector decorativo">
         <img style="padding: 0; position: relative; top: -1px;"
             src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 15.svg" alt="Vector decorativo">
     </div>
 
-    <div style="padding:  0; position: absolute; right:  0px;   bottom: 109px;" class="div-3">
+    <div style="padding:  0; position: absolute; right:  0px;   bottom: 135px;" class="div-3">
         <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 18.svg"
             alt="Vector decorativo">
         <img style="padding: 0; position: relative; top: -1px;"
@@ -63,14 +63,14 @@
     <div style="padding:  0; position: absolute; left:  0px;;   bottom: -91px;" class="div-3">
         <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 14.svg"
             alt="Vector decorativo">
-        <img style="padding: 0; position: relative; top: -1px;"
+        <img style="padding: 0; position: relative; top: -1px;z-index: 1;"
             src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 17.svg" alt="Vector decorativo">
     </div>
 
     <div style="padding:  0; position: absolute; right:  0px;;   bottom: -121px;" class="div-3">
         <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 12.svg"
             alt="Vector decorativo">
-        <img style="padding: 0; position: relative; top: -1px;"
+        <img style="padding: 0; position: relative; top: -1px; z-index: 1;"
             src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 19.svg" alt="Vector decorativo">
     </div>
      

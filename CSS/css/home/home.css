@@ -814,7 +814,7 @@ div4-section-12
   object-fit: contain;
   position: absolute;
   z-index: 2;
-  transform: translateY(-25%);
+  transform: translateY(-11%);
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
