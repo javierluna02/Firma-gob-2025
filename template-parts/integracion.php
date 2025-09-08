@@ -1,5 +1,5 @@
  <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
-
+6
 
 <section class="sec-integracion" id="integracion">
   <div class="int-wrap">
