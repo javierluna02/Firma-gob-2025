@@ -13,7 +13,7 @@
             style="height: 400px; background: #8ce31b; clip-path: polygon(0 0, 50% 0, 0 100%);"></div>
     </div>
 <?php if( have_rows('testimonios','option') ): ?>
-<div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+<div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
     <!-- Indicadores rectangulares -->
     <div class="carousel-indicators">
