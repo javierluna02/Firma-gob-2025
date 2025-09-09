@@ -5,6 +5,19 @@
   font-family: "Inter", sans-serif;
 }
 
+
+.carousel-indicators [data-bs-target] {
+  width: 30px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #ffffff; /* color base */
+  
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #FFC000; /* color activo */
+}
 .home-section-1 {
   display: flex;
   /* border: 1px solid black; */
