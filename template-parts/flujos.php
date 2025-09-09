@@ -18,9 +18,9 @@
         <?php if (have_rows('beneficios', 'option')) : ?>
             <?php while (have_rows('beneficios', 'option')) : the_row(); ?>
             <article class="Cards">
-                <div class="header">
+               
                     <img src="<?php  echo the_sub_field('icono_beneficio'); ?>" alt="Flujos de Firma" style="width: 40px; height: 40px;">
-                </div>
+                
                 <p><b><?php the_sub_field('beneficio'); ?></b> <?php the_sub_field('detalle_del_beneficio'); ?></p>
             </article>
 
