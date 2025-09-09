@@ -1,49 +1,33 @@
+<div style=" text-align:center; margin: 50px; " class="section-5">
+    <h3 style="color: #5eaeff;">LA FIRMA DIGITAL ADAPTADA A CUALQUIER NECESIDAD</h3>
+    <h2 style="color: #003579;">¿Por qué Firma GOB?</h2>
+</div>
 
-    <div style=" text-align:center; margin: 50px; " class="section-5" >
-        <h3  style="color: #5eaeff;">LA FIRMA DIGITAL ADAPTADA A CUALQUIER NECESIDAD</h3>
-        <h2 style="color: #003579;">¿Por qué Firma GOB?</h2>
-    </div>
+<section style="display: flex; " class="container-grid">
+    <div class="card-grid">
 
-    <section style="display: flex; " class="container-grid">
-        <div class="card-grid">
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Rectangle 51.svg" alt="Nube" />
-                <h3>NUBE</h3>
-                <p>Se puede firmar con Certificado en la nube.</p>
-            </div>
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Rectangle 52.svg" alt="Organización" />
-                <h3>ORGANIZACIÓN</h3>
-                <p>Organización por cargos de acuerdo a la institución.</p>
-            </div>
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Rectangle 53.svg" alt="QR" />
-                <h3>QR</h3>
-                <p>Código QR para verificación de documentos.</p>
-            </div>
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Rectangle 27.svg" alt="Colectividad" />
-                <h3>COLECTIVIDAD</h3>
-                <p>Alertas y notificaciones a los diferentes firmantes.</p>
-            </div>
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Rectangle 27.svg" alt="Firma" />
-                <h3>FIRMA</h3>
-                <p>Permite la firma en lotes, delegada y desatendida.</p>
-            </div>
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Rectangle 55.svg" alt="Adaptación" />
-                <h3>ADAPTACIÓN</h3>
-                <p>Se adapta a todos los flujos de firma.</p>
-            </div>
-            <div class="card">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Rectangle 56.svg" alt="Facilidad" />
-                <h3>FACILIDAD</h3>
-                <p>Funciona como tu bandeja de correo habitual.</p>
-            </div>
+        <?php if (have_rows('necesidades', 'option')): ?>
 
+            <?php while (have_rows('necesidades', 'option')):
+                the_row(); ?>
+                <div class="card">
+                    <div class="d-flex align-items-center p-2">
+                        <img src="<?php echo get_sub_field('imagen_necesidad'); ?>"
+                            alt="<?php echo get_sub_field('imagen_de_la_necesidad') ?>" />
+                        <h3><?php echo get_sub_field('titulo_necesidad'); ?></h3>
+                    </div>
+
+                    <p><?php echo get_sub_field('detalle_necesidad'); ?></p>
+                </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
+
+
+        <?php if (get_field('imagen_de_la_seccion', 'option')): ?>
             <div style="margin-right: 100px; width: 50px;" class="image-deco">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/Group-3.svg" alt="Persona usando teléfono">
+                <img src="<?php echo esc_url(get_field('imagen_de_la_seccion', 'option')['url']); ?>"
+                    alt="<?php echo esc_attr(get_field('imagen_de_la_seccion', 'option')['alt']); ?>">
 
             </div>
-    </section>
+        <?php endif; ?>
+</section>
