@@ -7,14 +7,17 @@
  */
 ?>
 
+<?php if (have_rows('Botones', 'option')) : ?>
 <section class="section-2">
-    <button data-section="acerca-de">ACERCA DE</button>
-    <a href="<?php echo esc_url(home_url('/servicios/beneficios/')); ?>">
-        <button>BENEFICIOS</button>
+
+<?php while (have_rows('Botones', 'option')) : the_row(); ?>
+
+
+
+    <a href="<?php echo the_sub_field('url_del_boton'); ?>">
+        <button><?php echo the_sub_field('nombre_boton'); ?></button>
     </a>
-    <a href="<?php echo esc_url(home_url('/servicios/instituciones/')); ?>">
-        <button>INSTITUCIONES</button>
-    </a>
-    <button data-section="integracion">INTEGRACIÓN</button>
-    <button data-section="disponibilidad">DISPONIBILIDAD</button>
+
+    <?php endwhile; ?>
 </section>
+<?php endif; ?>
