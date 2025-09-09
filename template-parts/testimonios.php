@@ -7,7 +7,7 @@
  */
 ?>
 
-<section style="position: relative; display: flex; justify-content: center;" class="section-11">
+<section style="position: relative; display: flex; justify-content: center; height: 430px;" class="section-11">
     <div class="section11-div1">
         <div class="section-11-div1"
             style="height: 400px; background: #8ce31b; clip-path: polygon(0 0, 50% 0, 0 100%);"></div>
