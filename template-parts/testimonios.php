@@ -12,98 +12,47 @@
         <div class="section-11-div1"
             style="height: 400px; background: #8ce31b; clip-path: polygon(0 0, 50% 0, 0 100%);"></div>
     </div>
+<?php if( have_rows('testimonios','option') ): ?>
+<div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="div-2">
-
-
-
-
-                    <article class="Cards">
-                        <div class="header">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Rectangle 65.svg"
-                                alt="Imagen de testimonio">
-                            <div class="text">
-                                <h3>Lorem ipsum dolor sit</h3>
-                                <p>vehicula purus sit ametvehicula purus sit amet, dictum orci. Proin sit amet turpis
-                                    sed turpis
-                                    tempor dictum at eget orci. Mauris fermentum mollis risus, vitae dignissim sapien
-                                    pharetra
-                                    non.pharetra non., dictum orci. Proin sit amet turpis sed turpis </p>
-                            </div>
-                        </div>
-                        <p>vehicula purus sit amet, dictum orci. Proin sit amet turpis sed turpis tempor dictum at eget
-                            orci. Mauris
-                            fermentum mollis risus, vitae dignissim sapien pharetra non.</p>
-                    </article>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="div-2">
-
-
-
-
-                    <article class="Cards">
-                        <div class="header">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Rectangle 65.svg"
-                                alt="Imagen de testimonio">
-                            <div class="text">
-                                <h3>Lorem ipsum dolor sit</h3>
-                                <p>vehicula purus sit ametvehicula purus sit amet, dictum orci. Proin sit amet turpis
-                                    sed turpis
-                                    tempor dictum at eget orci. Mauris fermentum mollis risus, vitae dignissim sapien
-                                    pharetra
-                                    non.pharetra non., dictum orci. Proin sit amet turpis sed turpis </p>
-                            </div>
-                        </div>
-                        <p>vehicula purus sit amet, dictum orci. Proin sit amet turpis sed turpis tempor dictum at eget
-                            orci. Mauris
-                            fermentum mollis risus, vitae dignissim sapien pharetra non.</p>
-                    </article>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="div-2">
-
-
-
-
-                    <article class="Cards">
-                        <div class="header">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Rectangle 65.svg"
-                                alt="Imagen de testimonio">
-                            <div class="text">
-                                <h3>Lorem ipsum dolor sit</h3>
-                                <p>vehicula purus sit ametvehicula purus sit amet, dictum orci. Proin sit amet turpis
-                                    sed turpis
-                                    tempor dictum at eget orci. Mauris fermentum mollis risus, vitae dignissim sapien
-                                    pharetra
-                                    non.pharetra non., dictum orci. Proin sit amet turpis sed turpis </p>
-                            </div>
-                        </div>
-                        <p>vehicula purus sit amet, dictum orci. Proin sit amet turpis sed turpis tempor dictum at eget
-                            orci. Mauris
-                            fermentum mollis risus, vitae dignissim sapien pharetra non.</p>
-                    </article>
-
-                </div>
-            </div>
-        </div>
-   
+    <!-- Indicadores rectangulares -->
+    <div class="carousel-indicators">
+        <?php $i=0; while( have_rows('testimonios','option') ): the_row(); ?>
+            <button type="button" data-bs-target="#testimoniosCarousel" data-bs-slide-to="<?php echo $i; ?>"
+                class="<?php echo $i === 0 ? 'active' : ''; ?>" aria-current="<?php echo $i === 0 ? 'true' : 'false'; ?>"
+                aria-label="Slide <?php echo $i+1; ?>"></button>
+        <?php $i++; endwhile; ?>
     </div>
+
+    <!-- Items -->
+    <div class="carousel-inner">
+        <?php $i=0; reset_rows(); while( have_rows('testimonios','option') ): the_row(); 
+            $titulo = get_sub_field('titulo');
+            $texto_principal = get_sub_field('texto_principal');
+            $texto_extra = get_sub_field('texto_extra');
+            $imagen = get_sub_field('imagen'); // ACF image field
+        ?>
+        <div class="carousel-item <?php echo $i === 0 ? 'active' : ''; ?>">
+            <div class="div-2">
+                <article class="Cards">
+                    <div class="header">
+                        <?php if($imagen): ?>
+                            <img src="<?php echo esc_url($imagen['url']); ?>" alt="<?php echo esc_attr($imagen['alt']); ?>">
+                        <?php endif; ?>
+                        <div class="text">
+                            <h3><?php echo esc_html($titulo); ?></h3>
+                            <p><?php echo esc_html($texto_principal); ?></p>
+                        </div>
+                    </div>
+                    <p><?php echo esc_html($texto_extra); ?></p>
+                </article>
+            </div>
+        </div>
+        <?php $i++; endwhile; ?>
+    </div>
+</div>
+<?php endif; ?>
+
 
     <div style="padding:  0; position: absolute;left:  0px;  bottom: 135px;" class="div-3">
         <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 16.svg"
