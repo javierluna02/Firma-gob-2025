@@ -6,12 +6,21 @@
  * @package Firma-gob-2025
  */
 ?>
+<section style=" 
+    background-image: url('<?php echo esc_url(get_template_directory_uri()); ?>/img/Group 107.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+" class="section-11">
 
-<section style="position: relative; display: flex; justify-content: center; height: 430px;" class="section-11">
-    <div class="section11-div1">
-        <div class="section-11-div1"
-            style="height: 400px; background: #8ce31b; clip-path: polygon(0 0, 50% 0, 0 100%);"></div>
-    </div>
+
+    <div style="" class="section11-div1">
 <?php if( have_rows('testimonios','option') ): ?>
 <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
@@ -25,7 +34,7 @@
     </div>
 
     <!-- Items -->
-    <div class="carousel-inner">
+    <div style="transform: scale(0.6);" class="carousel-inner">
         <?php $i=0; reset_rows(); while( have_rows('testimonios','option') ): the_row(); 
             $titulo = get_sub_field('titulo');
             $texto_principal = get_sub_field('texto_principal');
@@ -44,7 +53,7 @@
                             <p><?php echo esc_html($texto_principal); ?></p>
                         </div>
                     </div>
-                    <p><?php echo esc_html($texto_extra); ?></p>
+                    <p><?php echo esc_html($texto_extra); ?></p
                 </article>
             </div>
         </div>
@@ -54,7 +63,7 @@
 <?php endif; ?>
 
 
-    <div style="padding:  0; position: absolute;left:  0px;  bottom: 135px;" class="div-3">
+    <!-- <div style="padding:  0; position: absolute;left:  0px;  bottom: 135px;" class="div-3">
         <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 16.svg"
             alt="Vector decorativo">
         <img style="padding: 0; position: relative; top: -1px;"
@@ -81,6 +90,6 @@
         <img style="padding: 0; position: relative; top: -1px; z-index: 1;"
             src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 19.svg" alt="Vector decorativo">
     </div>
-
+ -->
 
 </section>
