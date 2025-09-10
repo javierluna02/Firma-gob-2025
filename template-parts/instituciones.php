@@ -1,11 +1,6 @@
 
 
 
-<article class="Polygon">
-        <img class="poly7" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 7.svg" alt="">
-        <img class="Poly8" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 8.svg" alt="">
-    </article>
-z
 
    <?php
 $rows = get_field('logos_instituciones', 'option'); // o sin 'option' si está en un post/página
@@ -14,10 +9,12 @@ if ($rows && is_array($rows)):
   $logos_por_slide = 5;
   $chunks = array_chunk($rows, $logos_por_slide);
 ?>
-<section class="py-5 text-center" style="background-color:#0A2C74; color:#fff;">
+
+<section  class="py-5 text-center" style=" display: flex; align-items: center; justify-content: center; color:#fff; height: 80vh; background-image: url('<?php echo get_template_directory_uri(); ?>/img/Group 106.png'); background-size: cover; background-position: end; ">
+
   <div class="container">
     <h5 class="mb-2">¿ESTÁS INSPIRADO? ¡PONTE EN CONTACTO CON NOSOTROS!</h5>
-    <h3 class="fw-bold mb-4">Instituciones que confían</h3>
+    <h3 style="color: white;" class="fw-bold mb-4">Instituciones que confían</h3>
 
     <div id="logosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
       <div class="carousel-inner">
@@ -66,7 +63,3 @@ if ($rows && is_array($rows)):
 </section>
 <?php endif; ?>
 
-    <article style="position: relative; top: -50px;" class="Polygon2">
-        <img height="100px" width="50%" class="poly9" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 9.svg" alt="">
-        <img height="53.0px" width="50%" class="poly10" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 10.svg" alt="">
-    </article>
