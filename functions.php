@@ -7,15 +7,15 @@
 //  */
 
 // custom post types
-// require_once get_template_directory() . '/custom-posts-types/services.php';
-// require_once get_template_directory() . '/custom-posts-types/gallery.php';
-// require_once get_template_directory() . '/custom-posts-types/transparencia.php';
+require_once get_template_directory() . '/custom-posts-types/services.php';
+require_once get_template_directory() . '/custom-posts-types/gallery.php';
+require_once get_template_directory() . '/custom-posts-types/transparencia.php';
 
 
 // // roles (The order is important)
-// include "custom-roles/index.php";
-// include "custom-roles/RAI.php";
-// include "custom-roles/web-master.php";
+include "custom-roles/index.php";
+include "custom-roles/RAI.php";
+include "custom-roles/web-master.php";
 
 function register_navwalker()
 {
