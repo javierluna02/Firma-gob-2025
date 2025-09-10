@@ -7,9 +7,9 @@
 //  */
 
 // custom post types
-// require_once get_template_directory() . '/custom-posts-types/services.php';
-// require_once get_template_directory() . '/custom-posts-types/gallery.php';
-// require_once get_template_directory() . '/custom-posts-types/transparencia.php';
+require_once get_template_directory() . '/custom-posts-types/services.php';
+require_once get_template_directory() . '/custom-posts-types/gallery.php';
+require_once get_template_directory() . '/custom-posts-types/transparencia.php';
 
 
 // // roles (The order is important)
