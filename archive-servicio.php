@@ -6,7 +6,7 @@ get_template_part('template-parts/header'); ?>
 
     <div class="capa">
 
-        <img class="chico" src="<?= get_template_directory_uri(); ?>/img/banner-archive-servicios.png" alt="">
+        <img class="chico" src="<?= get_template_directory_uri(); ?>/img/banner-archive-servicio.png" alt="">
     </div>
 </section>
 
@@ -39,12 +39,12 @@ get_template_part('template-parts/header'); ?>
 
             <article class="article-3">
                 <a href="/pages/Detalles-de-servicios.html" style="text-decoration: none; color: inherit;">
-                    <div style=" height: 128px; display:  flex; justify-content:start; padding-left: 0px;">
+                    <div style=" height: 128px; display:  flex; justify-content:start; padding-left: 0px; border-bottom: solid 0.13rem  #6A707E;">
                         <img src="<?= get_template_directory_uri(); ?>/img/logo-firma.png" alt="">
                     </div>
 
                     <div class="div3-section-3">
-                        <span>
+                        <span style="text-align: left;">
                             OGTIC
                         </span>
                         <h1>Portafirmas Firma GOB</h1>

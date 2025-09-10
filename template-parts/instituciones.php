@@ -5,7 +5,7 @@
         <img class="poly7" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 7.svg" alt="">
         <img class="Poly8" src="<?php echo get_template_directory_uri(); ?>/img/Polygon 8.svg" alt="">
     </article>
-
+z
 
    <?php
 $rows = get_field('logos_instituciones', 'option'); // o sin 'option' si está en un post/página
