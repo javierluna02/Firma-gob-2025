@@ -10,7 +10,7 @@
   align-items: center;
   text-align: center;
 }
-.section1 {
+/* .section1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +21,8 @@
   background-image: url("../img/Rectangle 75.svg");
   background-size: cover;
   object-fit: cover;
-}
-.capa {
+} */
+/* .capa {
   background-color:rgba(0, 53, 121, 0.78);
   width: 100%;
 
@@ -30,7 +30,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+} */
 
 .div-section-1 h1 {
   font-size: 36px;
@@ -58,10 +58,10 @@
   display: flex;
   gap: 20px;
 }
-.capaemzima {
+/* .capaemzima {
   background-image: url("../img/Vector 3.svg");
   background-size: cover;
-}
+} */
 
 .div1-section-2 input {
   width: 900px;
