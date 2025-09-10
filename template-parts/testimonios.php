@@ -25,7 +25,7 @@
     </div>
 
     <!-- Items -->
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="">
         <?php $i=0; reset_rows(); while( have_rows('testimonios','option') ): the_row(); 
             $titulo = get_sub_field('titulo');
             $texto_principal = get_sub_field('texto_principal');

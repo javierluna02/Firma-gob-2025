@@ -1,13 +1,13 @@
+<!-- 
 
-
-<section class="sec-integracion" id="integracion">
+<section class="sec-integracion" id="integracion" style=":height: 100px; background-color:red;">
   <div class="int-wrap">
     
 
-    <!-- Primer artículo -->
+    <!-- Primer artículo ->
      
     <article>
-      <!-- Círculo/figura izquierda -->
+      <!-- Círculo/figura izquierda ->
       <div style="background-color: #A6D2FF63; display: flex; justify-content: center; align-items: center; height: 250px; width: 250px; border-radius: 50%; transform: translate(40px, -10%);">
         
         <div class="int-col int-left" style="border-radius: 50%; background-color:#5EAEFF; height: 200px; width: 200px; display: flex; justify-content: center; align-items: center;">
@@ -20,25 +20,20 @@
          <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
       </div>
       
-      <!-- Globo gris (mensaje) -->
+      <!-- Globo gris (mensaje) ->
       <div class="bubble bubble--left">
         <span>Háblame sobre la capacidad de integración</span>
       </div>
     </article>
 
-
-
-    
-
-    <!-- Segundo artículo -->
     <article style=" display: flex;  justify-content:end;">
-      <!-- Tarjeta azul (contenido) -->
+      <!-- Tarjeta azul (contenido) ->
       <div class="bubble bubble--card">
         <h3>Capacidad de integración mediante<br> Sistema API</h3>
         <p>El portafirmas es integrable con aquellos gestores de documentos utilizados en la institución.</p>
       </div>
 
-      <!-- Círculo/figura derecha -->
+      <!-- Círculo/figura derecha ->
 
       <div style="transform: translate(50px, -40%);">
             <div style="background-color: #A6D2FF; border-radius: 50%; width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
@@ -55,8 +50,47 @@
             <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
           </div>
       </div>
+
+
+    
+
+    <!-- Segundo artículo ->
+    
       
   
     </article>   
   </div>
 </section>
+
+
+ -->
+
+ <section style="background-color:red; width:100%; height:auto;">
+    <div class=" container">
+      <article class="d-flex">
+    <div class="int-left" 
+     style="position: relative; border-radius: 50%; background-color:#5EAEFF; height: 200px; width: 200px; display: flex; justify-content: center; align-items: center;">
+
+    <img class="int-figure int-figure--left"
+       src="<?php echo get_template_directory_uri(); ?>/img/Ellipse 22.svg"
+       alt="Persona izquierda" style="max-width: 90%; height: auto;">
+
+  <!-- Imagen abajo a la derecha -->
+  <div style="position: absolute; bottom: 0; right: 0;">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
+  </div>
+
+</div>
+
+
+
+
+      <div class="  burbuja-left bubble">
+        <span>Háblame sobre la capacidad de integración</span>
+      </div>
+    </article>
+    </div>
+ </section>
+
+
+ 
