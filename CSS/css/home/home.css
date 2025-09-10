@@ -1194,7 +1194,7 @@ display: none;
 
   .section-11 .div-2 .Cards {
     width: 80%;
-    max-width: 500px;
+ 
   }
 
   /* Section 12 - Disponibilidad móvil */
@@ -1479,6 +1479,8 @@ display: none;
   .section-11 .Cards{
     position: relative;
     z-index: 999;
+       transform: scale(0.3);
+    transform: translate(0, -20px);
   }
   .section-12{
     position: relative;

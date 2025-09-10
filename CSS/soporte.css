@@ -1,4 +1,6 @@
 * {
+  padding: 0;
+  margin: 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -80,8 +82,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 0px 0px 0px 150px ;
+  padding: 0px 0px 0px 10px ;
 }
 .article-soporte-1 {
   height: 200px;
