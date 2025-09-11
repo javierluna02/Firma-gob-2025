@@ -560,9 +560,9 @@ display: flex;
   align-items: end;
 }
 .section-11 {
-  background: #003579;
   display: flex;
   justify-content: space-between;
+
 }
 .section-11 .div-1 {
   display: flex;
@@ -1127,7 +1127,7 @@ div4-section-12
 
 }
 .section-11-div1{
-display: none;
+
 }
 
   .logo-section1 img {
@@ -1489,23 +1489,12 @@ display: none;
 .home-section-1 .div-2 .div-2_div div{
   display: none;
 }
-.poly7{
-  display: none;
-}
-.Polygon img{
-  display: none;
-}
-.poligon2 img{
-  display: none;
-}
-.image-deco img{
-    display: none;
-  }
+
 
 .home-section-1 .div-2 .div-2_div img,
 .section11-div1,
 .image-deco {
-  display: none; /* ocultamos imágenes decorativas */
+  display: none; 
 }
  .section-2 button{
   flex-wrap: wrap;
@@ -1567,16 +1556,8 @@ display: none;
   }
 
   /* ----------- SECCIÓN 12 ----------- */
-  .section-11 img{
-    position: relative;
-    z-index: 1;
-  }
-  .section-11 .Cards{
-    position: relative;
-    z-index: 999;
-       transform: scale(0.3);
-    transform: translate(0, -20px);
-  }
+  
+  
   .section-12{
     position: relative;
     z-index: 1000;
