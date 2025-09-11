@@ -65,22 +65,21 @@
 
  -->
 
- <section style="background-color:red; width:100%; height:auto;">
-    <div class=" container">
-      <article class="d-flex">
-    <div class="int-left" 
-     style="position: relative; border-radius: 50%; background-color:#5EAEFF; height: 200px; width: 200px; display: flex; justify-content: center; align-items: center;">
+<section style="background-color:red; width:100%; height:auto;">
+  <div class=" container">
+    <article class="d-flex">
+      <div class="int-left"
+        style="position: relative; border-radius: 50%; background-color:#5EAEFF; height: 200px; width: 200px; display: flex; justify-content: center; align-items: center;">
 
-    <img class="int-figure int-figure--left"
-       src="<?php echo get_template_directory_uri(); ?>/img/Ellipse 22.svg"
-       alt="Persona izquierda" style="max-width: 90%; height: auto;">
+        <img class="int-figure int-figure--left" src="<?php echo get_template_directory_uri(); ?>/img/Ellipse 22.svg"
+          alt="Persona izquierda" style="max-width: 90%; height: auto;">
 
-  <!-- Imagen abajo a la derecha -->
-  <div style="position: absolute; bottom: 0; right: 0;">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
-  </div>
+        <!-- Imagen abajo a la derecha -->
+        <div style="position: absolute; bottom: 0; right: 0;">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
+        </div>
 
-</div>
+      </div>
 
 
 
@@ -89,8 +88,5 @@
         <span>Háblame sobre la capacidad de integración</span>
       </div>
     </article>
-    </div>
- </section>
-
-
- 
+  </div>
+</section>
