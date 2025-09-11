@@ -54,7 +54,7 @@
 
     
 
-    <!-- Segundo artículo ->
+    <!=-- Segundo artículo ->
     
       
   
@@ -65,8 +65,8 @@
 
  -->
 
-<section style="background-color:red; width:100%; height:auto;">
-  <div class=" container">
+<section class="container" style="; width:100%; height:auto;">
+  <div class="">
     <article class="d-flex">
       <div class="int-left"
         style="position: relative; border-radius: 50%; background-color:#5EAEFF; height: 200px; width: 200px; display: flex; justify-content: center; align-items: center;">
@@ -84,9 +84,37 @@
 
 
 
-      <div class="  burbuja-left bubble">
+      <div class="  burbuja-left bubble bubble--card">
         <span>Háblame sobre la capacidad de integración</span>
       </div>
     </article>
   </div>
+
+
+
+  <div style="display:flex; justify-content:end;">
+    <article class="d-flex">
+
+      <div class=" burbuja-right bubble bubble--target  ">
+        <h3>Capacidad de integración mediante<br> Sistema API</h3>
+        <p>El portafirmas es integrable con aquellos gestores de documentos utilizados en la institución.</p>
+      </div>
+      <div class="int-col int-right"
+        style="background-color:#5EAEFF; border-radius: 50%; width: 250px; height: 250px;  ">
+
+        <img class="int-figure int-figure--right" src="<?php echo get_template_directory_uri(); ?>/img/Ellipse 21.svg"
+          alt="Persona derecha" style="max-width: 100%; height: auto;">
+
+          <div style="position: absolute; bottom: 0; right: 0;">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/Group 27.svg" alt="">
+        </div>
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+
 </section>

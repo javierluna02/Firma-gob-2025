@@ -893,6 +893,70 @@ div4-section-12
 }
 
 
+
+
+
+
+
+
+
+.burbuja-right{
+  background: var(--gray-bubble-bg);
+  width: var(--bubble-left-w);
+  padding: 14px 18px;
+  top: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: .1px;
+  height: fit-content;
+  margin: 0px 40px 40px 0px;
+}
+
+.burbuja-right::before{                 /* “cola” hacia la izquierda */
+  
+  position: absolute;
+  left: -14px;
+  top: 18px;
+ 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 14px solid var(--gray-bubble-bg);
+  filter: drop-shadow(-2px 4px 6px rgba(13, 40, 80, .10));
+}
+
+
+
+
+
+.bubble--target{
+  background: var(--blue-card-bg);
+  width: var(--card-w);
+  padding: 18px 22px;
+  top: 116px;
+  left: calc(var(--col-w) + 60px);
+  color: var(--text-muted);
+  font-size: 13.5px;
+}
+.bubble--target::after{                  /* “cola” hacia la figura derecha */
+  content: "";
+  position: absolute;
+  right: -18px;
+  top: 30px;
+  width: 0; height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid var(--blue-card-bg);
+  filter: drop-shadow(2px 6px 8px rgba(13, 40, 80, .10));
+}
+.bubble--target h3{
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--title-blue);
+  font-weight: 700;
+}
+
+
 /* /* Globo gris (arriba y a la izquierda del centro) /
 .bubble--left{
   background: var(--gray-bubble-bg);
@@ -917,6 +981,11 @@ div4-section-12
   filter: drop-shadow(-2px 4px 6px rgba(13, 40, 80, .10));
 }
  */
+
+
+
+
+
 
 
 
