@@ -162,9 +162,9 @@
     <nav class="container-md navbar navbar-expand-lg bg-white w-100" style="padding-left: 0px;">
         <div class="container-fluid">
             <div class="container-fluid collapse navbar-collapse pd-l-none" id="mainMenu">
-                <div class="navbar-interes showOnMobile accordion">
+                <!-- <div class="navbar-interes showOnMobile accordion">
                     <?= $menuInteres;?>
-                </div>
+                </div> -->
                 <?php wp_nav_menu(array(
                     'theme_location' => 'header-menu',
                     'menu_class' => 'navbar-nav mb-2 mb-lg-0'
