@@ -7,5 +7,5 @@
  */
 ?>
 
- <img src="<?php echo esc_url(get_field('imagen_de_la_seccion', 'option')['url']); ?>"
-                    alt="<?php echo esc_attr(get_field('imagen_de_la_seccion', 'option')['alt']); ?>">
+        <img class="chico" src="<?= get_template_directory_uri(); ?>/img/Group 105.png" alt="">
+
