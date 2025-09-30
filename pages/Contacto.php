@@ -181,6 +181,7 @@ get_template_part('template-parts/header');
         color: #707070;
         font-size: 1rem;
         font-family: "Poppins", sans-serif;
+
     }
 
     /* ========================================
@@ -413,6 +414,7 @@ get_template_part('template-parts/header');
 
         input::placeholder {
             font-size: 0.85rem;
+
         }
     }
 
@@ -448,10 +450,20 @@ get_template_part('template-parts/header');
 
     <section class="contacto-section2">
         <span>¿PODEMOS HACER ALGO POR TI?</span>
+
         <h1>¿Estás inspirado? ¡Ponte en contacto con nosotros!</h1>
     </section>
 
+
     </section>
+
+    <div style="margin-top:20px; display: flex; justify-content:center; gap: 15px; align-items: flex-start;">
+        <img src="<?= get_template_directory_uri(); ?>/img/check.svg" alt="" style="width: 20px; height: 20px;">
+        <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
+            <strong>Envianos un mensaje:</strong> Completa el siguiente formulario y te respoderemos dentro de las 24 horas luego de emitido el formulario
+        </p>
+    </div>
+
 
     <section style="display: flex; justify-content: center;">
         <article id="" class="contenedor">
@@ -486,7 +498,7 @@ get_template_part('template-parts/header');
             </section>
             <section style="" class="cont3-input">
                 <h3>Mensaje:</h3>
-                <input placeholder="Asunto" type="text">
+                <textarea placeholder="Asunto" style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"></textarea>
             </section>
 
             <div class="div-text">
@@ -535,18 +547,21 @@ get_template_part('template-parts/header');
             style="display: flex; align-items: center; justify-content: center; padding: 0.2rem; flex-direction: column; width: 100%; height:252px ; border-radius: 20px; background: #FFFFFF;">
             <div>¿Deseas recibir información sobre las promociones de Firma GOB?</div>
             <div style=" flex-wrap: wrap; display: flex; align-items: center; justify-content: center; text-align: center; ">
-                <img src="/img/Rectangle 119.png" alt="">
-                <img src="/img/Rectangle 118.png" alt="">
-                <img src="/img/Rectangle 117.png" alt="">
-                <img src="/img/Rectangle 116.png" alt="">
+                <?php
+                echo '<img src="/img/Rectangle 119.png" alt="">';
+                echo '<img src="/img/Rectangle 118.png" alt="">';
+                echo '<img src="/img/Rectangle 117.png" alt="">';
+                echo '<img src="/img/Rectangle 116.png" alt="">';
+                ?>
+
             </div>
         </div>
     </section>
 
-    <section style="display: flex ; justify-content: center; flex-direction: column; padding-top: 20px;">
+    <section style="display: flex ; justify-content: center; flex-direction: column; padding-top: 20px; padding:100;">
         <div style=" text-align:center; display: flex; justify-content: center; flex-direction: column;">
             <span style="color: #003579;">ESTAMOS MÁS CERCA DE TI</span>
-            <h1 style="font-size: 36px; padding-bottom: 30px; color: #003579; line-height: 100%; ">
+            <h1 style="font-size: 36px; padding-bottom: 30px; color: #003579; line-height: 100%;  ">
                 Conoce nuestra ubicación
             </h1>
         </div>
@@ -565,7 +580,7 @@ get_template_part('template-parts/header');
         <h1>Fácil Integración</h1>
         <div class="gestor" style=" display: flex; justify-content: center;  align-items: center; gap: 20px;">
             <div style="padding:0px;">
-            <img style="padding: 20px;" src="<?= get_template_directory_uri(); ?>/img/Rectangle 112.png" alt="">
+                <img style="padding: 20px;" src="<?= get_template_directory_uri(); ?>/img/Rectangle 112.png" alt="">
             </div>
             <div style="display: flex; flex-direction: column; gap: 20px;">
                 <span style="width: 310px;">Con tu gestor documental o cualquier otra herramienta eBusiness</span>
