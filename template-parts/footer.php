@@ -1,7 +1,8 @@
 
 
-<div>
-    <div class="">
+<div style=" display:flex; justify-content:end; " >
+    <div  style=" background-color: #0066CC ; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;   ">
+                 <img  style="   " src="<?= get_template_directory_uri(); ?>/img/icons8-mensaje-100 2.png" alt="">
 
     </div>
 </div>
