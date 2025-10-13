@@ -547,12 +547,20 @@ get_template_part('template-parts/header');
             style="display: flex; align-items: center; justify-content: center; padding: 0.2rem; flex-direction: column; width: 100%; height:252px ; border-radius: 20px; background: #FFFFFF;">
             <div>¿Deseas recibir información sobre las promociones de Firma GOB?</div>
             <div style=" flex-wrap: wrap; display: flex; align-items: center; justify-content: center; text-align: center; ">
+                <img style="   " src="<?= get_template_directory_uri(); ?>/img/Rectangle 119.png" alt="">
+                <img style="   " src="<?= get_template_directory_uri(); ?>/img/Rectangle 118.png" alt="">
+                <img style="   " src="<?= get_template_directory_uri(); ?>/img/Rectangle 117.png" alt="">
+                <img style="   " src="<?= get_template_directory_uri(); ?>/img/Rectangle 116.png" alt="">
+
+
+
+<!-- 
                 <?php
                 echo '<img src="/img/Rectangle 119.png" alt="">';
                 echo '<img src="/img/Rectangle 118.png" alt="">';
                 echo '<img src="/img/Rectangle 117.png" alt="">';
                 echo '<img src="/img/Rectangle 116.png" alt="">';
-                ?>
+                ?> -->
 
             </div>
         </div>

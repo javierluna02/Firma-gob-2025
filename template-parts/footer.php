@@ -1,14 +1,21 @@
 
 
-<div style=" display:flex; justify-content:end; " >
+<div style=" display:flex; align-items: end; gap: 5px;  justify-content:end; flex-direction: column; " >
+
+
     <div  style=" background-color: #0066CC ; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;   ">
                  <img  style="   " src="<?= get_template_directory_uri(); ?>/img/icons8-mensaje-100 2.png" alt="">
+
+    </div>
+
+     <div  style=" background-color: #0066CC ; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;   ">
+                 <img  style="   " src="<?= get_template_directory_uri(); ?>/img/Vector 20.png" alt="">
 
     </div>
 </div>
 
 
-<section class="container-fluid border-top border-bottom border-secondary px-2 py-5 mt-5"
+<section class="container-fluid  border-top border-bottom border-secondary px-2 py-5 mt-5"
     style="color: white; width: 100%; background-color: #012E6C;">
 
     <!-- Layout para dispositivos grandes -->
