@@ -413,6 +413,7 @@
     padding: 15px;
   }
 
+
   .soporte-section-3-div1 h1 {
     font-size: clamp(1.5rem, 6vw, 2rem);
     text-align: center;
@@ -477,7 +478,7 @@
 }
 
 /* Mobile pequeño (320px - 480px) */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .soporte-capa {
     flex-direction: row;
   }
@@ -493,6 +494,7 @@
   .div3-img {
     width: 120px;
   }
+ 
 
   .div2-soporte-2 {
     padding: 10px;
@@ -537,6 +539,7 @@
 
   .guia-plataforma {
     padding: 15px;
+    background-color: #003579;
   }
 
   .soporte-section-4 {
@@ -561,7 +564,7 @@
 }
 
 /* Orientación landscape en mobile */
-@media (max-width: 767px) and (orientation: landscape) {
+/* @media (max-width: 767px) and (orientation: landscape) {
   .soporte-capa {
     flex-direction: row;
     padding: 10px 20px;
@@ -580,4 +583,4 @@
     flex-direction: row;
     padding: 0 30px;
   }
-}
+} */

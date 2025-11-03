@@ -7,5 +7,5 @@
  */
 ?>
 
-        <img class="chico" src="<?= get_template_directory_uri(); ?>/img/Group 105.png" alt="">
+        <img class="" src="<?= get_template_directory_uri(); ?>/img/Group 105.png" alt="">
 
