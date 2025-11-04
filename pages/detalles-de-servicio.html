@@ -96,7 +96,7 @@
                         </i>
                     </div>
 
-
+                 
                 </div>
             </div>
         </div>
@@ -309,9 +309,10 @@
 
 
         </section>
-
-        <!-- Botón para abrir el modal -->
-        <button onclick="openContactModal()" style="width: 198px; height: 43px   
+        
+  <!-- Botón para abrir el modal -->
+  <button onclick="openContactModal()"
+    style="width: 198px; height: 43px   
     ;  color: #0066CC; border: 1px solid #0066CC; border-radius:50px; background-color: white; "">
     servicios
   </button>
@@ -320,613 +321,567 @@
 
 
   <!-- Modal -->
-  <div id=" contactModal"
-            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center; ">
-
-            <div
-                style="background: white; display: flex; flex-direction: column; border-radius: clamp(12px, 3vw, 20px);  max-width: min(95%, 1200px); width: 100%; max-height: min(95vh, 900px); overflow-y: auto; position: relative; box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);">
-                <div
-                    style=" background-color: #003579; width: 100%; height: 100px; padding: 10px; display: flex; justify-content: space-between;">
-                    <div>
-                        <h1 style="color: white;">Solicitud de servicio</h1>
-                        <span style="color: white;">> Ambiente de prueba</span>
-                    </div>
-
+  <div id="contactModal"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center; ">
+    
+    <div
+      style="background: white; display: flex; flex-direction: column; border-radius: clamp(12px, 3vw, 20px);  max-width: min(95%, 1200px); width: 100%; max-height: min(95vh, 900px); overflow-y: auto; position: relative; box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);">
+      <div style=" background-color: #003579; width: 100%; height: 100px; padding: 10px; display: flex; justify-content: space-between;" >
+        <div>
+            <h1 style="color: white;" >Solicitud de servicio</h1>
+           <span style="color: white;">> Ambiente de prueba</span>
+        </div>
+           
 
 
             <button onclick="closeContactModal()"
-            style="  color: #0066CC; display: flex;  height: 47px; width:196px ;  font-size:20px; border-radius:50px;   border: 1px solid #0066CC  ; background: white; justify-content: center; "
-            class=""><img style=" " src="/img/3c706ae16f6df13449764633b36a3f780e49c408.png" alt="">Servicios</button>
+            style="  color: #0066CC; display: flex;  height: 47px; width:196px ;  font-size:20px; border-radius:50px;   border: 1px solid #0066CC  ; background: white; justify-content: center; align-items: center; gap: 5px;"
+            class="" ><img style=" height: 80%;  " src="/img/3c706ae16f6df13449764633b36a3f780e49c408.png" alt="">Servicios</button>
             
       </button>
 
-    </div>
+       </div>
 
 
-    <!-- Encabezado del modal -->
-    <section style="display: flex; justify-content: center;">
-        <article class="contenedor">
+      <!-- Encabezado del modal -->
+       
+      <section style="display: flex; justify-content: center;">
+        <article id="" class="contenedor">
+          <div class="campos">
+            <span>*Todos los campos marcados son obligatorios</span>
+          </div>
 
-            <!-- EmailJS -->
-            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-            <script>
-                (function () {
-                    emailjs.init("k_dj0q-aMGtiKRBzT"); // Tu PUBLIC KEY
-                })();
-            </script>
+          <section class="section2">
+            <article class="cont1-input">
+              <div class="div-input1">
+                <h3>Nombre:</h3>
+                <input placeholder="Nombre Completo" type="text">
+              </div>
+              <div class="div-input2">
+                <h3>Institución</h3>
+                <input placeholder="Institución" type="text">
+              </div>
+            </article>
 
-            <form id="formFirma" novalidate>
-                <div class="campos">
-                    <span>*Todos los campos marcados son obligatorios</span>
-                </div>
+            <article class="cont2-input">
+              <div class="div-input1">
+                <h3>Dirección de correo electrónico:</h3>
+                <input placeholder="Correo Electrónico" type="text">
+              </div>
+              <div class="div-input2">
+                <h3>Número de teléfono:</h3>
+                <input placeholder="Número de teléfono" type="text">
+              </div>
 
-                <section class="section2">
-                    <article class="cont1-input">
-                        <div class="div-input1">
-                            <h3>Nombre:*</h3>
-                            <input name="nombre" placeholder="Nombre Completo" type="text" required
-                                pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+" minlength="3">
-                        </div>
-                        <div class="div-input2">
-                            <h3>Institución:*</h3>
-                            <input name="institucion" placeholder="Institución" type="text" required minlength="2">
-                        </div>
-                    </article>
+            </article>
 
-                    <article class="cont2-input">
-                        <div class="div-input1">
-                            <h3>Dirección de correo electrónico:*</h3>
-                            <input name="correo" placeholder="Correo Electrónico" type="email" required
-                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                        </div>
-                        <div class="div-input2">
-                            <h3>Número de teléfono:*</h3>
-                            <input name="telefono" placeholder="Número de teléfono" type="tel" required
-                                pattern="[0-9]{10}">
-                        </div>
-                    </article>
-                </section>
+          </section>
+          <section style="" class="cont3-input">
+            <h3>Mensaje:</h3>
+            <textarea placeholder="Asunto"
+              style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"></textarea>
+          </section>
 
-                <section class="cont3-input">
-                    <h3>Mensaje:*</h3>
-                    <textarea name="mensaje" placeholder="Escribe tu mensaje aquí"
-                        style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"
-                        required minlength="10"></textarea>
-                </section>
+          <div class="div-text">
+            <span>Formatos permitidos: PDF, DOCX</span>
+          </div>
+          <div class="div-text2">
+            <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en
+              este
+              sitio
+              web como indica nuestra Política de Privacidad </span>
+          </div>
+          <div style="padding: 20px;" class="div-text3">
+            <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de Firma
+              GOB?</span>
+            <div class="check">
+              <input class="checkbox" type="checkbox">
+              <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con
+                fines de
+                marketing/ventas directas como indica nuestra Política de Privacidad</span>
+            </div>
+          </div>
 
-                <div class="div-text">
-                    <span>Formatos permitidos: PDF, DOCX</span>
-                </div>
-                <div class="div-text2">
-                    <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu
-                        experiencia en este sitio web como indica nuestra Política de
-                        Privacidad.</span>
-                </div>
-                <div class="div-text3">
-                    <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de
-                        Firma GOB?</span>
-                    <div class="check">
-                        <input name="consentimiento" class="checkbox" type="checkbox">
-                        <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos
-                            personales con fines de marketing.</span>
-                    </div>
-                </div>
-
-                <div class="footer-modal">
-                    <button type="submit">Enviar</button>
-                </div>
-            </form>
-
-            <p id="respuesta" style="text-align:center; font-weight:bold; margin-top:10px;"></p>
-
-            <script>
-                const form = document.getElementById('formFirma');
-                const respuesta = document.getElementById('respuesta');
-
-                form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-
-                    const nombre = form.querySelector('[name="nombre"]');
-                    const institucion = form.querySelector('[name="institucion"]');
-                    const correo = form.querySelector('[name="correo"]');
-                    const telefono = form.querySelector('[name="telefono"]');
-                    const mensaje = form.querySelector('[name="mensaje"]');
-
-                    // VALIDACIONES
-                    if (!nombre.value.match(/^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/)) {
-                        respuesta.textContent = "❌ El nombre solo debe contener letras.";
-                        respuesta.style.color = "red";
-                        nombre.focus();
-                        return;
-                    }
-                    if (!institucion.value || institucion.value.trim().length < 2) {
-                        respuesta.textContent = "❌ Por favor indica una institución válida.";
-                        respuesta.style.color = "red";
-                        institucion.focus();
-                        return;
-                    }
-
-                    if (!correo.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
-                        respuesta.textContent = "❌ Por favor ingresa un correo electrónico válido.";
-                        respuesta.style.color = "red";
-                        correo.focus();
-                        return;
-                    }
-
-                    // Validar teléfono dominicano
-                    if (!telefono.value.match(/^(809|829|849)\d{7}$/)) {
-                        respuesta.textContent = "❌ El número debe tener 10 dígitos y comenzar con 809, 829 o 849.";
-                        respuesta.style.color = "red";
-                        telefono.focus();
-                        return;
-                    }
-
-                    if (!mensaje.value || mensaje.value.trim().length < 10) {
-                        respuesta.textContent = "❌ Por favor escribe un mensaje de al menos 10 caracteres.";
-                        respuesta.style.color = "red";
-                        mensaje.focus();
-                        return;
-                    }
-
-                    // Enviar usando EmailJS - enviamos el formulario completo
-                    // Asegúrate de que 'service_nkl6pqb' y 'template_f2e38lr' existan en tu cuenta EmailJS
-                    emailjs.sendForm('service_nkl6pqb', 'template_f2e38lr', form)
-                        .then(() => {
-                            respuesta.textContent = "✅ ¡Gracias por tu mensaje! Se ha enviado correctamente.";
-                            respuesta.style.color = "green";
-                            form.reset();
-                            // cerrar modal tras envío exitoso
-                            if (typeof closeContactModal === 'function') closeContactModal();
-                        })
-                        .catch((error) => {
-                            console.error('EmailJS error:', error);
-                            respuesta.textContent = "❌ Error al enviar. Intenta nuevamente más tarde.";
-                            respuesta.style.color = "red";
-                        });
-                });
-            </script>
+          <div class="footer-modal">
+            <button type="submit">Enviar</button>
+          </div>
         </article>
-    </section>
-
+      </section>
     </div>
-    </div>
+  </div>
 
-    <script>
-        // Funciones para controlar el modal
-        function openContactModal() {
-            const m = document.getElementById('contactModal');
-            if (!m) return;
-            m.style.display = 'flex';
-            m.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden';
+  <script>
+    // Funciones para controlar el modal
+    function openContactModal() {
+      const m = document.getElementById('contactModal');
+      if (!m) return;
+      m.style.display = 'flex';
+      m.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeContactModal() {
+      const m = document.getElementById('contactModal');
+      if (!m) return;
+      m.style.display = 'none';
+      m.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cerrar modal al hacer clic fuera
+    (function () {
+      const m = document.getElementById('contactModal');
+      if (!m) return;
+      m.addEventListener('click', function (e) {
+        if (e.target === this) closeContactModal();
+      });
+    })();
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeContactModal();
+    });
+
+    // Prevenir envío del formulario (ejemplo)
+    (function () {
+      const submitBtn = document.querySelector('#contactModal button[type="submit"]');
+      if (!submitBtn) return;
+
+      submitBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        // Validación básica
+        const inputs = document.querySelectorAll('#contactModal input[type="text"], #contactModal input[type="email"], #contactModal input[type="tel"], #contactModal textarea');
+        let isValid = true;
+
+        for (const input of inputs) {
+          if (!input.value.trim()) {
+            input.style.borderColor = '#dc2626';
+            isValid = false;
+          } else {
+            input.style.borderColor = '#22c55e';
+          }
         }
 
-        function closeContactModal() {
-            const m = document.getElementById('contactModal');
-            if (!m) return;
-            m.style.display = 'none';
-            m.setAttribute('aria-hidden', 'true');
-            document.body.style.overflow = 'auto';
+        if (isValid) {
+          alert('¡Formulario enviado correctamente!');
+          closeContactModal();
+        } else {
+          alert('Por favor, completa todos los campos obligatorios.');
         }
+      });
+    })();
 
-        // Cerrar modal al hacer clic fuera
-        (function () {
-            const m = document.getElementById('contactModal');
-            if (!m) return;
-            m.addEventListener('click', function (e) {
-                if (e.target === this) closeContactModal();
-            });
-        })();
-
-        // Cerrar con tecla Escape
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeContactModal();
+    // Resetear colores al escribir
+    (function () {
+      const inputs = document.querySelectorAll('#contactModal input, #contactModal textarea');
+      for (const element of inputs) {
+        element.addEventListener('input', function () {
+          if (this.value.trim()) this.style.borderColor = '#22c55e';
         });
+      }
+    })();
+  </script>
 
-        // Eliminado script que interceptaba el botón de enviar para permitir
-        // que el manejador de submit del propio formulario procese el envío.
-        // El envío real se realiza en el listener de 'submit' del formulario
-        // (más arriba). No se necesita código adicional aquí.
+  <style>
+    :root {
+      --primary: #003579;
+      --primary-dark: #002147;
+      --accent: #7CC713
+    }
 
-        // Resetear colores al escribir
-        (function () {
-            const inputs = document.querySelectorAll('#contactModal input, #contactModal textarea');
-            for (const element of inputs) {
-                element.addEventListener('input', function () {
-                    if (this.value.trim()) this.style.borderColor = '#22c55e';
-                });
-            }
-        })();
-    </script>
+    .btn-contact {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 32px);
+      font-size: clamp(14px, 2vw, 16px);
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transition: transform .12s, box-shadow .12s
+    }
 
-    <style>
-        :root {
-            --primary: #003579;
-            --primary-dark: #002147;
-            --accent: #7CC713
-        }
+    .btn-contact:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16)
+    }
 
-        .btn-contact {
-            background: var(--primary);
-            color: #fff;
-            border: none;
-            padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 32px);
-            font-size: clamp(14px, 2vw, 16px);
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            margin: 20px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-            transition: transform .12s, box-shadow .12s
-        }
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(16px, 4vw, 32px)
+    }
 
-        .btn-contact:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 36px rgba(0, 0, 0, 0.16)
-        }
+    .modal-backdrop[aria-hidden="false"] {
+      display: flex
+    }
 
-        .modal-backdrop {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-            padding: clamp(16px, 4vw, 32px)
-        }
+    .modal-panel {
+      background: #fff;
+      border-radius: clamp(12px, 3vw, 20px);
+      max-width: min(95%, 800px);
+      width: 100%;
+      max-height: min(95vh, 900px);
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3)
+    }
 
-        .modal-backdrop[aria-hidden="false"] {
-            display: flex
-        }
+    .modal-close {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      background: #fff;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08)
+    }
 
-        .modal-panel {
-            background: #fff;
-            border-radius: clamp(12px, 3vw, 20px);
-            max-width: min(95%, 800px);
-            width: 100%;
-            max-height: min(95vh, 900px);
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3)
-        }
+    .modal-close:hover {
+      background: #f3f4f6
+    }
 
-        .modal-close {
-            position: absolute;
-            right: 12px;
-            top: 12px;
-            background: #fff;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08)
-        }
+    .modal-panel .contenedor {
+      max-width: 720px;
+      margin: 0 auto
+    }
 
-        .modal-close:hover {
-            background: #f3f4f6
-        }
+    .campos span {
+      display: block;
+      color: #6b7280;
+      margin-bottom: 12px;
+      font-weight: 500
+    }
 
-        .modal-panel .contenedor {
-            max-width: 720px;
-            margin: 0 auto
-        }
+    .cont1-input,
+    .cont2-input {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
 
-        .campos span {
-            display: block;
-            color: #6b7280;
-            margin-bottom: 12px;
-            font-weight: 500
-        }
+    .div-input1,
+    .div-input2 {
+      flex: 1;
+      min-width: 200px
+    }
 
-        .cont1-input,
-        .cont2-input {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap
-        }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 14px
+    }
 
-        .div-input1,
-        .div-input2 {
-            flex: 1;
-            min-width: 200px
-        }
+    textarea {
+      min-height: 140px;
+      resize: none
+    }
 
-        input[type="text"],
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 14px
-        }
+    .div-text,
+    .div-text2 {
+      color: #374151;
+      margin-top: 12px
+    }
 
-        textarea {
-            min-height: 140px;
-            resize: none
-        }
+    .div-text3 {
+      padding: 20px;
+      border-top: 1px solid #e6e6e6;
+      margin-top: 16px
+    }
 
-        .div-text,
-        .div-text2 {
-            color: #374151;
-            margin-top: 12px
-        }
+    .footer-modal {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 18px
+    }
 
-        .div-text3 {
-            padding: 20px;
-            border-top: 1px solid #e6e6e6;
-            margin-top: 16px
-        }
+    .footer-modal button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12)
+    }
 
-        .footer-modal {
-            display: flex;
-            justify-content: flex-end;
-            padding-top: 18px
-        }
+    .footer-modal button:hover {
+      background: var(--primary-dark)
+    }
 
-        .footer-modal button {
-            background: var(--primary);
-            color: #fff;
-            border: none;
-            padding: 12px 22px;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12)
-        }
+    @media (max-width:768px) {
+      .modal-panel {
+        padding: 20px;
+        max-width: 92%
+      }
 
-        .footer-modal button:hover {
-            background: var(--primary-dark)
-        }
+      .cont1-input,
+      .cont2-input {
+        flex-direction: column
+      }
 
-        @media (max-width:768px) {
-            .modal-panel {
-                padding: 20px;
-                max-width: 92%
-            }
+      .modal-close {
+        right: 8px;
+        top: 8px
+      }
+    }
 
-            .cont1-input,
-            .cont2-input {
-                flex-direction: column
-            }
+    @media (hover:hover) {
+      .btn-contact:hover {
+        opacity: .95
+      }
 
-            .modal-close {
-                right: 8px;
-                top: 8px
-            }
-        }
+      .footer-modal button:hover {
+        transform: translateY(-1px)
+      }
+    }
 
-        @media (hover:hover) {
-            .btn-contact:hover {
-                opacity: .95
-            }
+    button:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px
+    }
 
-            .footer-modal button:hover {
-                transform: translateY(-1px)
-            }
-        }
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 1px
+    }
 
-        button:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 2px
-        }
+    /* Scroll personalizado para el panel */
+    #contactModal .modal-panel::-webkit-scrollbar {
+      width: 8px
+    }
 
-        input:focus-visible,
-        textarea:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 1px
-        }
+    #contactModal .modal-panel::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px
+    }
 
-        /* Scroll personalizado para el panel */
-        #contactModal .modal-panel::-webkit-scrollbar {
-            width: 8px
-        }
+    #contactModal .modal-panel::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 4px
+    }
+  </style>
 
-        #contactModal .modal-panel::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 4px
-        }
-
-        #contactModal .modal-panel::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 4px
-        }
-    </style>
-
-    <!-- Botones flotantes -->
-    <div style="display:flex; align-items: end; gap: 5px; justify-content:end; flex-direction: column;">
-        
-        <div
-            style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
-            <img src="../img/Vector 20.png" alt="Icono de vector">
-        </div>
+   <!-- Botones flotantes -->
+  <div style="display:flex; align-items: end; gap: 5px; justify-content:end; flex-direction: column;">
+    <div
+      style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
+      <img src="../img/icons8-mensaje-100 2.png" alt="Icono de mensaje">
     </div>
 
-    <!-- Sección principal del footer -->
-    <section class="container-fluid border-top border-bottom border-secondary px-2 py-5 mt-5"
-        style="color: white; width: 100%; background-color: #012E6C;">
+    <div
+      style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
+      <img src="../img/Vector 20.png" alt="Icono de vector">
+    </div>
+  </div>
 
-        <!-- Layout para dispositivos grandes -->
-        <div class="row align-items-center d-none d-lg-flex">
-            <!-- Logos -->
-            <div class="col-lg-4 d-flex justify-content-center align-items-center border-lg-end border-secondary gap-4 mb-4 mb-lg-0"
-                style="border-right: 0.15rem solid #D8D8D8;">
-                <div>
-                    <div class="d-flex align-items-center justify-content-center">
-                        <img src="../img/Figma-logo-blanco.png" alt="Logo 1" class="img-fluid"
-                            style="width: 500px; height: 200px; object-fit: contain;">
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center">
-                        <img src="../img/ogtic-logo-blanco.png" alt="Logo 2" class="img-fluid"
-                            style="width: 200px; height: 100px; object-fit: contain;">
-                        <img src="../img/gabinete-logo-blanco.png" alt="Logo 3" class="img-fluid"
-                            style="width: 500px; height: 200px; object-fit: contain;">
-                    </div>
-                </div>
-            </div>
+  <!-- Sección principal del footer -->
+  <section class="container-fluid border-top border-bottom border-secondary px-2 py-5 mt-5"
+    style="color: white; width: 100%; background-color: #012E6C;">
 
-            <!-- Información -->
-            <div class="col-lg-8" style="padding-left: 90px;">
-                <div class="row justify-content-lg-between g-4">
-                    <div class="col-lg-3">
-                        <h4 class="my-3">CONÓCENOS</h4>
-                        <p style="font-size: 0.9rem;">Firma GOB México</p>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4 class="my-3">CONTÁCTANOS</h4>
-                        <p style="font-size: 0.9rem;">
-                            Tel: (55) 1234-5678<br>
-                            Fax: (55) 8765-4321<br>
-                            contacto@firmagob.mx
-                        </p>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4 class="my-3">BÚSCANOS</h4>
-                        <p style="font-size: 0.9rem;">
-                            Av. Insurgentes Sur 1735,<br>
-                            Col. Guadalupe Inn, CDMX
-                        </p>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4 class="my-3">INFÓRMATE</h4>
-                        <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Términos de Uso</a>
-                        <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Políticas de
-                            Privacidad</a>
-                        <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Preguntas
-                            Frecuentes</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Layout para dispositivos grandes -->
+    <div class="row align-items-center d-none d-lg-flex">
+      <!-- Logos -->
+      <div
+        class="col-lg-4 d-flex justify-content-center align-items-center border-lg-end border-secondary gap-4 mb-4 mb-lg-0"
+        style="border-right: 0.15rem solid #D8D8D8;">
+        <div>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="../img/Figma-logo-blanco.png" alt="Logo 1" class="img-fluid"
+              style="width: 500px; height: 200px; object-fit: contain;">
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="../img/ogtic-logo-blanco.png" alt="Logo 2" class="img-fluid"
+              style="width: 200px; height: 100px; object-fit: contain;">
+            <img src="../img/gabinete-logo-blanco.png" alt="Logo 3" class="img-fluid"
+              style="width: 500px; height: 200px; object-fit: contain;">
+          </div>
         </div>
+      </div>
 
-        <!-- Layout para pantallas pequeñas -->
-        <div class="row d-flex d-lg-none text-center">
-            <!-- Columna 1 -->
-            <div class="col-6 mb-5">
-                <div class="mb-5">
-                    <img src="../img/Figma-logo-blanco.png" alt="Logo 1" class="img-fluid"
-                        style="width: 100%; max-width: 180px; height: 80px; object-fit: contain;">
-                </div>
-                <div style="margin: 20px;" class="mb-5">
-                    <h4 class="my-2">CONÓCENOS</h4>
-                    <p style="font-size: 0.85rem;">Firma GOB México</p>
-                </div>
-                <div class="mb-5">
-                    <h4 class="my-2">BÚSCANOS</h4>
-                    <p style="font-size: 0.85rem;">Av. Insurgentes Sur 1735, Col. Guadalupe Inn, CDMX</p>
-                </div>
-            </div>
-
-            <!-- Columna 2 -->
-            <div class="col-6 mb-5">
-                <div class="mb-5">
-                    <img src="../img/logos/logo2.png" alt="Logo 2" class="img-fluid"
-                        style="width: 100%; max-width: 180px; height: 80px; object-fit: contain;">
-                </div>
-                <div class="mb-5">
-                    <h4 class="my-2">CONTÁCTANOS</h4>
-                    <p style="font-size: 0.85rem;">
-                        Tel: (55) 1234-5678<br>
-                        Fax: (55) 8765-4321<br>
-                        contacto@firmagob.mx
-                    </p>
-                </div>
-                <div class="mb-5" style="font-size: 0.85rem; color:white;">
-                    <h4 class="my-2">INFÓRMATE</h4>
-                    <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Términos de Uso</a>
-                    <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Políticas de
-                        Privacidad</a>
-                    <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Preguntas Frecuentes</a>
-                </div>
-            </div>
+      <!-- Información -->
+      <div class="col-lg-8" style="padding-left: 90px;">
+        <div class="row justify-content-lg-between g-4">
+          <div class="col-lg-3">
+            <h4 class="my-3">CONÓCENOS</h4>
+            <p style="font-size: 0.9rem;">Firma GOB México</p>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="my-3">CONTÁCTANOS</h4>
+            <p style="font-size: 0.9rem;">
+              Tel: (55) 1234-5678<br>
+              Fax: (55) 8765-4321<br>
+              contacto@firmagob.mx
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="my-3">BÚSCANOS</h4>
+            <p style="font-size: 0.9rem;">
+              Av. Insurgentes Sur 1735,<br>
+              Col. Guadalupe Inn, CDMX
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="my-3">INFÓRMATE</h4>
+            <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Términos de Uso</a>
+            <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Políticas de
+              Privacidad</a>
+            <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Preguntas
+              Frecuentes</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-    <footer>
-        <!-- Certificaciones -->
-        <div class="px-3 px-md-5 pt-3 pt-md-4 pb-2" style="color: #003869;" id="certificaciones">
-            <span class="fw-bold fs-5">Certificaciones Obtenidas</span>
+    <!-- Layout para pantallas pequeñas -->
+    <div class="row d-flex d-lg-none text-center">
+      <!-- Columna 1 -->
+      <div class="col-6 mb-5">
+        <div class="mb-5">
+          <img src="../img/Figma-logo-blanco.png" alt="Logo 1" class="img-fluid"
+            style="width: 100%; max-width: 180px; height: 80px; object-fit: contain;">
+        </div>
+        <div style="margin: 20px;" class="mb-5">
+          <h4 class="my-2">CONÓCENOS</h4>
+          <p style="font-size: 0.85rem;">Firma GOB México</p>
+        </div>
+        <div class="mb-5">
+          <h4 class="my-2">BÚSCANOS</h4>
+          <p style="font-size: 0.85rem;">Av. Insurgentes Sur 1735, Col. Guadalupe Inn, CDMX</p>
+        </div>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="col-6 mb-5">
+        <div class="mb-5">
+          <img src="../img/logos/logo2.png" alt="Logo 2" class="img-fluid"
+            style="width: 100%; max-width: 180px; height: 80px; object-fit: contain;">
+        </div>
+        <div class="mb-5">
+          <h4 class="my-2">CONTÁCTANOS</h4>
+          <p style="font-size: 0.85rem;">
+            Tel: (55) 1234-5678<br>
+            Fax: (55) 8765-4321<br>
+            contacto@firmagob.mx
+          </p>
+        </div>
+        <div class="mb-5" style="font-size: 0.85rem; color:white;">
+          <h4 class="my-2">INFÓRMATE</h4>
+          <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Términos de Uso</a>
+          <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Políticas de
+            Privacidad</a>
+          <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Preguntas Frecuentes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <!-- Certificaciones -->
+    <div class="px-3 px-md-5 pt-3 pt-md-4 pb-2" style="color: #003869;" id="certificaciones">
+      <span class="fw-bold fs-5">Certificaciones Obtenidas</span>
+      <div class="mt-2 mt-md-3 d-flex flex-wrap gap-2">
+        <!-- Ejemplo de certificaciones -->
+        <div class="sellos">
+          <a href="#" target="_blank" title="Certificación 1" class="stamp-link">
+            <div class="iframe-wrapper">
+              <img src="../img/certificaciones/cert1.png" alt="Certificación 1" style="width: 100px; height: 100px;">
+            </div>
+          </a>
+        </div>
+        <div class="sellos">
+          <a href="#" target="_blank" title="Certificación 2" class="stamp-link">
+            <div class="iframe-wrapper">
+              <img src="../img/certificaciones/cert2.png" alt="Certificación 2" style="width: 100px; height: 100px;">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificaciones móvil -->
+    <div class="accordion accordion-flush" id="certificaciones-movil">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Certificaciones Obtenidas
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#certificaciones-movil">
+          <div class="accordion-body">
             <div class="mt-2 mt-md-3 d-flex flex-wrap gap-2">
-                <!-- Ejemplo de certificaciones -->
-                <div class="sellos">
-                    <a href="#" target="_blank" title="Certificación 1" class="stamp-link">
-                        <div class="iframe-wrapper">
-                            <img src="../img/certificaciones/cert1.png" alt="Certificación 1"
-                                style="width: 100px; height: 100px;">
-                        </div>
-                    </a>
-                </div>
-                <div class="sellos">
-                    <a href="#" target="_blank" title="Certificación 2" class="stamp-link">
-                        <div class="iframe-wrapper">
-                            <img src="../img/certificaciones/cert2.png" alt="Certificación 2"
-                                style="width: 100px; height: 100px;">
-                        </div>
-                    </a>
-                </div>
+              <!-- Mismo contenido que arriba -->
+              <div class="sellos">
+                <a href="#" target="_blank" title="Certificación 1" class="stamp-link">
+                  <div class="iframe-wrapper">
+                    <img src="../img/certificaciones/cert1.png" alt="Certificación 1"
+                      style="width: 100px; height: 100px;">
+                  </div>
+                </a>
+              </div>
+              <div class="sellos">
+                <a href="#" target="_blank" title="Certificación 2" class="stamp-link">
+                  <div class="iframe-wrapper">
+                    <img src="../img/certificaciones/cert2.png" alt="Certificación 2"
+                      style="width: 100px; height: 100px;">
+                  </div>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Certificaciones móvil -->
-        <div class="accordion accordion-flush" id="certificaciones-movil">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        Certificaciones Obtenidas
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                    data-bs-parent="#certificaciones-movil">
-                    <div class="accordion-body">
-                        <div class="mt-2 mt-md-3 d-flex flex-wrap gap-2">
-                            <!-- Mismo contenido que arriba -->
-                            <div class="sellos">
-                                <a href="#" target="_blank" title="Certificación 1" class="stamp-link">
-                                    <div class="iframe-wrapper">
-                                        <img src="../img/certificaciones/cert1.png" alt="Certificación 1"
-                                            style="width: 100px; height: 100px;">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="sellos">
-                                <a href="#" target="_blank" title="Certificación 2" class="stamp-link">
-                                    <div class="iframe-wrapper">
-                                        <img src="../img/certificaciones/cert2.png" alt="Certificación 2"
-                                            style="width: 100px; height: 100px;">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Derechos / Redes Sociales -->
+    <div class="py-3" style="background-color: #003869; color: white;">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
+        <p class="mb-2 mb-md-0 text-center text-md-start">© 2025 Todos los Derechos Reservados. Desarrollado por
+          Firma GOB</p>
+        <div class="d-flex align-items-center fw-bold flex-wrap justify-content-center">
+          <p class="mb-0 me-3">SÍGUENOS</p>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-linkedin"></i></a>
         </div>
-
-        <!-- Derechos / Redes Sociales -->
-        <div class="py-3" style="background-color: #003869; color: white;">
-            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
-                <p class="mb-2 mb-md-0 text-center text-md-start">© 2025 Todos los Derechos Reservados. Desarrollado por
-                    Firma GOB</p>
-                <div class="d-flex align-items-center fw-bold flex-wrap justify-content-center">
-                    <p class="mb-0 me-3">SÍGUENOS</p>
-                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-youtube"></i></a>
-                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+      </div>
+    </div>
+  </footer>
 
 
 </body>
 
 
 </body>
+
+
+
+
+    
+
+
+
