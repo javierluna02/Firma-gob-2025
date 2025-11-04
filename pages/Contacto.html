@@ -96,7 +96,7 @@
                         </i>
                     </div>
 
-                 
+
                 </div>
             </div>
         </div>
@@ -153,72 +153,140 @@
             </p>
         </div>
 
-
         <section style="display: flex; justify-content: center;">
-            <article id="" class="contenedor">
-                <div class="campos">
-                    <span>*Todos los campos marcados son obligatorios</span>
-                </div>
+            <article class="contenedor">
 
-                <section class="section2">
-                    <article class="cont1-input">
-                        <div class="div-input1">
-                            <h3>Nombre:</h3>
-                            <input placeholder="Nombre Completo" type="text">
-                        </div>
-                        <div class="div-input2">
-                            <h3>Institución</h3>
-                            <input placeholder="Institución" type="text">
-                        </div>
-                    </article>
+                <!-- EmailJS -->
+                <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                <script>
+                    (function () {
+                        emailjs.init("k_dj0q-aMGtiKRBzT"); // Tu PUBLIC KEY
+                    })();
+                </script>
 
-                    <article class="cont2-input">
-                        <div class="div-input1">
-                            <h3>Dirección de correo electrónico:</h3>
-                            <input placeholder="Correo Electrónico" type="text">
-                        </div>
-                        <div class="div-input2">
-                            <h3>Número de teléfono:</h3>
-                            <input placeholder="Número de teléfono" type="text">
-                        </div>
-
-                    </article>
-
-                </section>
-                <section style="" class="cont3-input">
-                    <h3>Mensaje:</h3>
-                    <textarea placeholder="Asunto"
-                        style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"></textarea>
-                </section>
-
-                <div class="div-text">
-                    <span>Formatos permitidos: PDF, DOCX</span>
-                </div>
-                <div class="div-text2">
-                    <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu
-                        experiencia en
-                        este
-                        sitio
-                        web como indica nuestra Política de Privacidad </span>
-                </div>
-                <div style="padding: 20px;" class="div-text3">
-                    <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de
-                        Firma
-                        GOB?</span>
-                    <div class="check">
-                        <input class="checkbox" type="checkbox">
-                        <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos
-                            personales con
-                            fines de
-                            marketing/ventas directas como indica nuestra Política de Privacidad</span>
+                <form id="formFirma" novalidate>
+                    <div class="campos">
+                        <span>*Todos los campos marcados son obligatorios</span>
                     </div>
-                </div>
 
-                <div class="footer-modal">
-                    <button type="submit">Enviar</button>
-                </div>
+                    <section class="section2">
+                        <article class="cont1-input">
+                            <div class="div-input1">
+                                <h3>Nombre:*</h3>
+                                <input name="nombre" placeholder="Nombre Completo" type="text" required
+                                    pattern="[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+" minlength="3">
+                            </div>
+                            <div class="div-input2">
+                                <h3>Institución:*</h3>
+                                <input name="institucion" placeholder="Institución" type="text" required minlength="2">
+                            </div>
+                        </article>
+
+                        <article class="cont2-input">
+                            <div class="div-input1">
+                                <h3>Dirección de correo electrónico:*</h3>
+                                <input name="correo" placeholder="Correo Electrónico" type="email" required
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </div>
+                            <div class="div-input2">
+                                <h3>Número de teléfono:*</h3>
+                                <input name="telefono" placeholder="Número de teléfono" type="tel" required
+                                    pattern="[0-9]{10}">
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="cont3-input">
+                        <h3>Mensaje:*</h3>
+                        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí"
+                            style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"
+                            required minlength="10"></textarea>
+                    </section>
+
+                    <div class="div-text">
+                        <span>Formatos permitidos: PDF, DOCX</span>
+                    </div>
+                    <div class="div-text2">
+                        <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu
+                            experiencia en este sitio web como indica nuestra Política de
+                            Privacidad.</span>
+                    </div>
+                    <div class="div-text3">
+                        <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de
+                            Firma GOB?</span>
+                        <div class="check">
+                            <input name="consentimiento" class="checkbox" type="checkbox">
+                            <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos
+                                personales con fines de marketing.</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-modal">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+
+                <p id="respuesta" style="text-align:center; font-weight:bold; margin-top:10px;"></p>
+
+                <script>
+                    const form = document.getElementById('formFirma');
+                    const respuesta = document.getElementById('respuesta');
+
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+
+                        const nombre = form.querySelector('[name="nombre"]');
+                        const institucion = form.querySelector('[name="institucion"]');
+                        const correo = form.querySelector('[name="correo"]');
+                        const telefono = form.querySelector('[name="telefono"]');
+                        const mensaje = form.querySelector('[name="mensaje"]');
+
+                        // VALIDACIONES
+                        if (!nombre.value.match(/^[A-Za-zÁáÉéÍíÓóÚúÑñ\s]+$/)) {
+                            respuesta.textContent = "❌ El nombre solo debe contener letras.";
+                            respuesta.style.color = "red";
+                            nombre.focus();
+                            return;
+                        }
+
+                        if (!correo.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
+                            respuesta.textContent = "❌ Por favor ingresa un correo electrónico válido.";
+                            respuesta.style.color = "red";
+                            correo.focus();
+                            return;
+                        }
+
+                        // Validar teléfono dominicano
+                        if (!telefono.value.match(/^(809|829|849)\d{7}$/)) {
+                            respuesta.textContent = "❌ El número debe tener 10 dígitos y comenzar con 809, 829 o 849.";
+                            respuesta.style.color = "red";
+                            telefono.focus();
+                            return;
+                        }
+
+                        // Enviar usando tu plantilla real
+                        emailjs.send('service_nkl6pqb', 'template_f2e38lr', {
+                            nombre: nombre.value,
+                            institucion: institucion.value,
+                            email: correo.value,
+                            telefono: telefono.value,
+                            mensaje: mensaje.value,
+                            link: `Nuevo mensaje de ${nombre.value} (${institucion.value}) - Tel: ${telefono.value}`
+                        })
+                            .then(() => {
+                                respuesta.textContent = "✅ ¡Gracias por tu mensaje! Se ha enviado correctamente.";
+                                respuesta.style.color = "green";
+                                form.reset();
+                            })
+                            .catch((error) => {
+                                respuesta.textContent = "❌ Error al enviar: " + error.text;
+                                respuesta.style.color = "red";
+                            });
+                    });
+                </script>
             </article>
         </section>
+
 
         <section class="REDES"
             style="width: 100%; align-items: center; gap: 20px; padding: 20px;  display: flex; justify-content: center; background: #003579; height: 493px;">
@@ -246,10 +314,10 @@
                 <div>¿Deseas recibir información sobre las promociones de Firma GOB?</div>
                 <div
                     style=" flex-wrap: wrap; display: flex; align-items: center; justify-content: center; text-align: center; ">
-                    <img style="   " src="../img/Rectangle 119.png" alt="">
-                    <img style="   " src="../img/Rectangle 118.png" alt="">
-                    <img style="   " src="../img/Rectangle 117.png" alt="">
-                    <img style="   " src="../img/Rectangle 116.png" alt="">
+                    <img src="../img/Rectangle 119.png" alt="Red social 1">
+                    <img src="../img/Rectangle 118.png" alt="Red social 2">
+                    <img src="../img/Rectangle 117.png" alt="Red social 3">
+                    <img src="../img/Rectangle 116.png" alt="Red social 4">
 
 
 
