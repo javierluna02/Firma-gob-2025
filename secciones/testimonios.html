@@ -1,0 +1,198 @@
+<!-- Asegúrate de que estos enlaces estén en el head de tu documento -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+    .section-11 {
+        background-image: url('../img/Group 107.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem 0;
+    }
+
+    .Cards {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .Cards .header {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .Cards .header img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .Cards .text h3 {
+        margin: 0;
+        color: #003579;
+        font-size: 1.25rem;
+    }
+
+    .Cards .text p {
+        margin: 0.5rem 0 0;
+        color: #666;
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 768px) {
+        .section-11 {
+            padding: 1rem;
+        }
+
+        .Cards {
+            padding: 1.5rem;
+            margin: 0 1rem;
+        }
+
+        .Cards .header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .Cards .header img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    /* Personalización de los indicadores del carrusel */
+    .carousel-indicators [data-bs-target] {
+        width: 30px;
+        height: 3px;
+        background-color: #003579;
+    }
+</style>
+
+<section class="section-11">
+    <div class="section11-div1">
+        <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicadores rectangulares -->
+            <div class="carousel-indicators" id="testimoniosIndicators">
+                <!-- Se generarán dinámicamente -->
+            </div>
+
+            <!-- Items -->
+            <div class="carousel-inner">
+                <!-- Se generarán dinámicamente -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Datos de testimonios
+        const testimonios = [
+            {
+                imagen: '../img/testimonios/persona1.jpg',
+                titulo: 'Juan Pérez - Director de Sistemas',
+                texto_principal: 'Secretaría de Educación Pública',
+                texto_extra: 'La implementación de la firma electrónica ha revolucionado nuestros procesos administrativos, reduciendo significativamente los tiempos de gestión.'
+            },
+            {
+                imagen: '../img/testimonios/persona2.jpg',
+                titulo: 'María González - Coordinadora de Procesos',
+                texto_principal: 'CONACYT',
+                texto_extra: 'La facilidad de uso y la seguridad que ofrece el sistema han sido fundamentales para nuestra transformación digital.'
+            },
+            {
+                imagen: '../img/testimonios/persona3.jpg',
+                titulo: 'Roberto Ramírez - Jefe de Departamento',
+                texto_principal: 'Instituto Nacional Electoral',
+                texto_extra: 'Hemos logrado una mayor eficiencia en nuestras operaciones gracias a la firma electrónica avanzada.'
+            }
+        ];
+
+        const carouselInner = document.querySelector('.carousel-inner');
+        const indicatorsContainer = document.querySelector('#testimoniosIndicators');
+
+        // Generar indicadores y slides
+        testimonios.forEach((testimonio, index) => {
+            // Crear indicador
+            const indicator = document.createElement('button');
+            indicator.type = 'button';
+            indicator.setAttribute('data-bs-target', '#testimoniosCarousel');
+            indicator.setAttribute('data-bs-slide-to', index.toString());
+            if (index === 0) {
+                indicator.classList.add('active');
+                indicator.setAttribute('aria-current', 'true');
+            }
+            indicator.setAttribute('aria-label', `Slide ${index + 1}`);
+            indicatorsContainer.appendChild(indicator);
+
+            // Crear slide
+            const slide = document.createElement('div');
+            slide.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+            slide.innerHTML = `
+                <div class="div-2">
+                    <article class="Cards">
+                        <div class="header">
+                            <img src="${testimonio.imagen}" alt="${testimonio.titulo}">
+                            <div class="text">
+                                <h3>${testimonio.titulo}</h3>
+                                <p>${testimonio.texto_principal}</p>
+                            </div>
+                        </div>
+                        <p>${testimonio.texto_extra}</p>
+                    </article>
+                </div>
+            `;
+            carouselInner.appendChild(slide);
+        });
+
+        // Inicializar el carrusel
+        new bootstrap.Carousel(document.querySelector('#testimoniosCarousel'), {
+            interval: 5000,
+            pause: 'hover'
+        });
+    });
+</script>
+
+
+<!-- <div style="padding:  0; position: absolute;left:  0px;  bottom: 135px;" class="div-3">
+        <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 16.svg"
+            alt="Vector decorativo">
+        <img style="padding: 0; position: relative; top: -1px;"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 15.svg" alt="Vector decorativo">
+    </div>
+
+    <div style="padding:  0; position: absolute; right:  0px;   bottom: 135px;" class="div-3">
+        <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 18.svg"
+            alt="Vector decorativo">
+        <img style="padding: 0; position: relative; top: -1px;"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 13.svg" alt="Vector decorativo">
+    </div>
+
+    <div style="padding:  0; position: absolute; left:  0px;;   bottom: -91px;" class="div-3">
+        <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 14.svg"
+            alt="Vector decorativo">
+        <img style="padding: 0; position: relative; top: -1px;z-index: 1;"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 17.svg" alt="Vector decorativo">
+    </div>
+
+    <div style="padding:  0; position: absolute; right:  0px;;   bottom: -121px;" class="div-3">
+        <img style="padding: 0;" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 12.svg"
+            alt="Vector decorativo">
+        <img style="padding: 0; position: relative; top: -1px; z-index: 1;"
+            src="<?php echo esc_url(get_template_directory_uri()); ?>/img/Vector 19.svg" alt="Vector decorativo">
+    </div>
+ -->
+
+</section>

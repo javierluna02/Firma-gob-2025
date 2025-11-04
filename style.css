@@ -404,13 +404,6 @@ License: MIT
 }
 
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  position: relative;
-}
-
 /* Section Header */
 .section-header {
   display: flex;
@@ -1468,12 +1461,13 @@ padding-left: 0px;
 }
 
 .search-bar button {
-  padding: 10px 15px;
+  padding: 0;
   border-radius: 20px;
   background-color: #0057b7;
   color: white;
   border: none;
   cursor: pointer;
+  width: 60px;
 }
 
 .news-grid-archive {
@@ -1487,7 +1481,6 @@ padding-left: 0px;
   position: relative;
   width: 308px;
   height: 260px;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1791,7 +1784,12 @@ nav {
   padding: 10.3125px 9.625px;
   cursor: pointer;
   border-radius: 50rem;
+  width: 36px;
+  height: 36px;
   margin-left: -45px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
 
 .search-bar button:hover {
@@ -1821,7 +1819,7 @@ nav {
 
 .menu-icon {
   cursor: pointer;
-  padding: 0.625rem;
+  width: 2.5rem;
 }
 
 .menu-container-interes {

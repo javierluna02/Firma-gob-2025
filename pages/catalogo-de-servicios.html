@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Firma GOB</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../style.css?v=1" />
+
+    <script src="https://cdn.jsdelivr.net/gh/ogticrd/official-header/main.js" defer theme="light"></script>
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/responsive-base.css">
+    <link rel="stylesheet" href="../css/catalogo-de-servicios.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/detalles-de-servicios.css">
+    <link rel="stylesheet" href="../css/css/home/home.css">
+    <link rel="stylesheet" href="../css/css/home/section-12.css">
+
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Bundle with Popper   -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        // Mover las funciones fuera del event listener para que sean globales
+        function toggleMenu(event) {
+            event.stopPropagation();
+            if ($(".showOnlyMobile").is(":visible")) {
+                document.querySelector('#mainMenu').classList.toggle('show');
+            } else {
+                const menu = document.getElementById("menu");
+                if (menu) menu.classList.toggle("active");
+            }
+        }
+
+        function closeMenu(event) {
+            let menu = document.getElementById("menu");
+            if (menu && !menu.contains(event.target) && !document.querySelector(".menu-icon").contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            $('.top-header-mobile-interes').on('click', function () {
+                this.classList.toggle('show');
+                this.classList.toggle('collapsed');
+                const acc = document.querySelector('.navbar-interes .accordion.accordion-flush');
+                if (acc) acc.classList.toggle('show');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <official-header></official-header>
+
+    <nav class="navbar navbar-expand-lg" style="padding-left: 0px; background-color: #003579;">
+        <div class="container-md">
+            <a class="navbar-brand d-flex align-items-center " href="home.html">
+                <img src="../img/Figma-logo-blanco.png" alt="Firma GOB"
+                    style="height:80px; border-right: 1px solid #D8D8D8;">
+                <img src="../img/ogtic-logo-blanco.png" alt="" style="height: 70px;">
+
+            </a>
+
+            <div class="search-bar ms-auto d-flex align-items-center my-1">
+                <form role="search" class="search-form" method="get" action="/">
+                    <input type="search" class="form-control" placeholder="¿Qué quieres buscar?" name="s" value="">
+                    <button class="btn btn-outline-secondary submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+
+                <div class="divisor-search-menu"></div>
+
+                <div onclick="closeMenu(event)">
+                    <div class="menu-icon" onclick="toggleMenu(event)">
+                        <i class="svg-icon">
+                            <svg stroke="white" fill="white" stroke-width="0" version="1.1" viewBox="0 0 17 17"
+                                height="36px" width="36px" xmlns="http://www.w3.org/2000/svg">
+                                <g></g>
+                                <path
+                                    d="M0 0h5v5h-5v-5zM6 5h5v-5h-5v5zM12 0v5h5v-5h-5zM0 11h5v-5h-5v5zM6 11h5v-5h-5v5zM12 11h5v-5h-5v5zM0 17h5v-5h-5v5zM6 17h5v-5h-5v5zM12 17h5v-5h-5v5z">
+                                </path>
+                            </svg>
+                        </i>
+                    </div>
+
+                 
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Section -->
+    <span class="showOnlyMobile sensorState">.</span>
+    <nav class="container-md navbar navbar-expand-lg bg-white w-100" style="padding-left: 0px;">
+        <div class="container-fluid">
+            <div class="container-fluid collapse navbar-collapse pd-l-none" id="mainMenu">
+                <!-- Reemplazo estático del menú de WordPress -->
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo-de-servicios.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalles-de-servicio.html">Servicios</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+  <div style="position: relative; width: 100%;">
+    <img src="../img/Group_108_(2)[1].png" alt="imagen-del-banner" style="width: 100%; height: auto; display: block;">
+
+
+
+
+
+
+
+    <article class="article-section3">
+
+      <section class="section2 ">
+        <article class="article-2">
+          <span>BUSCA DE MANERA PRECISA AQUELLO QUE NECESITAS CONOCER</span>
+          <h1>Todos nuestros servicios</h1>
+          <div style="display: flex; align-items: center; padding: 20px;" class="div1-section-2">
+            <button><img style="padding: 10px;" src="/img/icons8-filtrar-100 1.svg" alt="">FILTRAR SERVICIOS</button>
+            <input placeholder="Búsqueda..." type="text">
+            <div class="search"><img src="/img/search-solid.svg" alt=""></div>
+          </div>
+        </article>
+      </section>
+      <Section class="section3">
+        <div class="div-titulo">
+          <h1>Servicios </h1>
+        </div>
+        <section class="section4">
+
+          <article class="article-3">
+            <div>
+              <img src="/img/Sin título-1_Mesa de trabajo 1 copia 7 1.png" alt="">
+            </div>
+
+            <div class="div3-section-3">
+              <span>
+                OGTIC
+              </span>
+              <h1>Portafirmas Firma GOB</h1>
+              <p>Consiste en proveer a los organismos gubernamentales de un portafirmas altamente efectivo
+                para
+                administrar de manera eficiente el flujo de documentos que requieren ser firmados
+                digitalmente.
+              </p>
+
+            </div>
+          </article>
+
+          <article class="article-3-1">
+            <img src="/img/icons8-próximamente-100 1.svg" alt="">
+            <div class="div-article-3-1">
+
+              <img src="/img/icons8-nube-96 1.svg" alt="">
+            </div>
+
+            <h1>PRÓXIMAMENTE</h1>
+  </div>
+  </article>
+  </section>
+  <div class="select-pagination">
+    <div class="div3-section-3-select ">
+      <select name="1" id="">
+        <option value="1">1</option>
+        <option value="1">2</option>
+        <option value="1">3</option>
+        <option value="1">4</option>
+        <option value="1">5</option>
+        <option value="1">6</option>
+      </select>
+    </div>
+    <div>
+      <ul class="pagination">
+        <li><a href="#">&lt;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li class="dots">...</li>
+        <li class="active"><a href="#">8</a></li>
+        <li><a href="#">9</a></li>
+        <li><a href="#">&gt;</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  </article>
+
+  <!-- Botones flotantes -->
+  <div style="display:flex; align-items: end; gap: 5px; justify-content:end; flex-direction: column;">
+    <div
+      style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
+      <img src="../img/icons8-mensaje-100 2.png" alt="Icono de mensaje">
+    </div>
+
+    <div
+      style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
+      <img src="../img/Vector 20.png" alt="Icono de vector">
+    </div>
+  </div>
+
+  <!-- Sección principal del footer -->
+  <section class="container-fluid border-top border-bottom border-secondary px-2 py-5 mt-5"
+    style="color: white; width: 100%; background-color: #012E6C;">
+
+    <!-- Layout para dispositivos grandes -->
+    <div class="row align-items-center d-none d-lg-flex">
+      <!-- Logos -->
+      <div
+        class="col-lg-4 d-flex justify-content-center align-items-center border-lg-end border-secondary gap-4 mb-4 mb-lg-0"
+        style="border-right: 0.15rem solid #D8D8D8;">
+        <div>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="../img/Figma-logo-blanco.png" alt="Logo 1" class="img-fluid"
+              style="width: 500px; height: 200px; object-fit: contain;">
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="../img/ogtic-logo-blanco.png" alt="Logo 2" class="img-fluid"
+              style="width: 200px; height: 100px; object-fit: contain;">
+            <img src="../img/gabinete-logo-blanco.png" alt="Logo 3" class="img-fluid"
+              style="width: 500px; height: 200px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Información -->
+      <div class="col-lg-8" style="padding-left: 90px;">
+        <div class="row justify-content-lg-between g-4">
+          <div class="col-lg-3">
+            <h4 class="my-3">CONÓCENOS</h4>
+            <p style="font-size: 0.9rem;">Firma GOB México</p>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="my-3">CONTÁCTANOS</h4>
+            <p style="font-size: 0.9rem;">
+              Tel: (55) 1234-5678<br>
+              Fax: (55) 8765-4321<br>
+              contacto@firmagob.mx
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="my-3">BÚSCANOS</h4>
+            <p style="font-size: 0.9rem;">
+              Av. Insurgentes Sur 1735,<br>
+              Col. Guadalupe Inn, CDMX
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="my-3">INFÓRMATE</h4>
+            <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Términos de Uso</a>
+            <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Políticas de
+              Privacidad</a>
+            <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Preguntas
+              Frecuentes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout para pantallas pequeñas -->
+    <div class="row d-flex d-lg-none text-center">
+      <!-- Columna 1 -->
+      <div class="col-6 mb-5">
+        <div class="mb-5">
+          <img src="../img/Figma-logo-blanco.png" alt="Logo 1" class="img-fluid"
+            style="width: 100%; max-width: 180px; height: 80px; object-fit: contain;">
+        </div>
+        <div style="margin: 20px;" class="mb-5">
+          <h4 class="my-2">CONÓCENOS</h4>
+          <p style="font-size: 0.85rem;">Firma GOB México</p>
+        </div>
+        <div class="mb-5">
+          <h4 class="my-2">BÚSCANOS</h4>
+          <p style="font-size: 0.85rem;">Av. Insurgentes Sur 1735, Col. Guadalupe Inn, CDMX</p>
+        </div>
+      </div>
+
+      <!-- Columna 2 -->
+      <div class="col-6 mb-5">
+        <div class="mb-5">
+          <img src="../img/logos/logo2.png" alt="Logo 2" class="img-fluid"
+            style="width: 100%; max-width: 180px; height: 80px; object-fit: contain;">
+        </div>
+        <div class="mb-5">
+          <h4 class="my-2">CONTÁCTANOS</h4>
+          <p style="font-size: 0.85rem;">
+            Tel: (55) 1234-5678<br>
+            Fax: (55) 8765-4321<br>
+            contacto@firmagob.mx
+          </p>
+        </div>
+        <div class="mb-5" style="font-size: 0.85rem; color:white;">
+          <h4 class="my-2">INFÓRMATE</h4>
+          <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Términos de Uso</a>
+          <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Políticas de
+            Privacidad</a>
+          <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Preguntas Frecuentes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <!-- Certificaciones -->
+    <div class="px-3 px-md-5 pt-3 pt-md-4 pb-2" style="color: #003869;" id="certificaciones">
+      <span class="fw-bold fs-5">Certificaciones Obtenidas</span>
+      <div class="mt-2 mt-md-3 d-flex flex-wrap gap-2">
+        <!-- Ejemplo de certificaciones -->
+        <div class="sellos">
+          <a href="#" target="_blank" title="Certificación 1" class="stamp-link">
+            <div class="iframe-wrapper">
+              <img src="../img/certificaciones/cert1.png" alt="Certificación 1" style="width: 100px; height: 100px;">
+            </div>
+          </a>
+        </div>
+        <div class="sellos">
+          <a href="#" target="_blank" title="Certificación 2" class="stamp-link">
+            <div class="iframe-wrapper">
+              <img src="../img/certificaciones/cert2.png" alt="Certificación 2" style="width: 100px; height: 100px;">
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certificaciones móvil -->
+    <div class="accordion accordion-flush" id="certificaciones-movil">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Certificaciones Obtenidas
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+          data-bs-parent="#certificaciones-movil">
+          <div class="accordion-body">
+            <div class="mt-2 mt-md-3 d-flex flex-wrap gap-2">
+              <!-- Mismo contenido que arriba -->
+              <div class="sellos">
+                <a href="#" target="_blank" title="Certificación 1" class="stamp-link">
+                  <div class="iframe-wrapper">
+                    <img src="../img/certificaciones/cert1.png" alt="Certificación 1"
+                      style="width: 100px; height: 100px;">
+                  </div>
+                </a>
+              </div>
+              <div class="sellos">
+                <a href="#" target="_blank" title="Certificación 2" class="stamp-link">
+                  <div class="iframe-wrapper">
+                    <img src="../img/certificaciones/cert2.png" alt="Certificación 2"
+                      style="width: 100px; height: 100px;">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Derechos / Redes Sociales -->
+    <div class="py-3" style="background-color: #003869; color: white;">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
+        <p class="mb-2 mb-md-0 text-center text-md-start">© 2025 Todos los Derechos Reservados. Desarrollado por
+          Firma GOB</p>
+        <div class="d-flex align-items-center fw-bold flex-wrap justify-content-center">
+          <p class="mb-0 me-3">SÍGUENOS</p>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>

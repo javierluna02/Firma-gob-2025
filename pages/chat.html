@@ -1,0 +1,193 @@
+<!-- Botón para abrir el modal -->
+<button onclick="openContactModal()" style="background: #003579; color: white; border: none; padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 32px); font-size: clamp(14px, 2vw, 16px); font-weight: 600; border-radius: 8px; cursor: pointer; margin: 20px;">
+    Contactar
+</button>
+
+<!-- Modal -->
+<div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center; padding: clamp(16px, 4vw, 32px);">
+    <div style="background: white; border-radius: clamp(12px, 3vw, 20px); padding: clamp(20px, 5vw, 40px); max-width: min(95%, 800px); width: 100%; max-height: min(95vh, 900px); overflow-y: auto; position: relative; box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);">
+        
+        <!-- Botón cerrar -->
+        <button onclick="closeContactModal()" style="position: absolute; top: clamp(12px, 3vw, 20px); right: clamp(12px, 3vw, 20px); background: none; border: none; font-size: clamp(20px, 4vw, 28px); cursor: pointer; color: #666; width: clamp(30px, 6vw, 40px); height: clamp(30px, 6vw, 40px); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all 0.3s ease; z-index: 10;">
+            &times;
+        </button>
+
+        <!-- Encabezado del modal -->
+    
+            <section style="display: flex; justify-content: center;">
+                <article id="" class="contenedor">
+                    <div class="campos">
+                        <span>*Todos los campos marcados son obligatorios</span>
+                    </div>
+
+                    <section class="section2">
+                        <article class="cont1-input">
+                            <div class="div-input1">
+                                <h3>Nombre:</h3>
+                                <input placeholder="Nombre Completo" type="text">
+                            </div>
+                            <div class="div-input2">
+                                <h3>Institución</h3>
+                                <input placeholder="Institución" type="text">
+                            </div>
+                        </article>
+
+                        <article class="cont2-input">
+                            <div class="div-input1">
+                                <h3>Dirección de correo electrónico:</h3>
+                                <input placeholder="Correo Electrónico" type="text">
+                            </div>
+                            <div class="div-input2">
+                                <h3>Número de teléfono:</h3>
+                                <input placeholder="Número de teléfono" type="text">
+                            </div>
+
+                        </article>
+
+                    </section>
+                    <section style="" class="cont3-input">
+                        <h3>Mensaje:</h3>
+                        <textarea placeholder="Asunto"
+                            style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"></textarea>
+                    </section>
+
+                    <div class="div-text">
+                        <span>Formatos permitidos: PDF, DOCX</span>
+                    </div>
+                    <div class="div-text2">
+                        <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en
+                            este
+                            sitio
+                            web como indica nuestra Política de Privacidad </span>
+                    </div>
+                    <div style="padding: 20px;" class="div-text3">
+                        <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de Firma
+                            GOB?</span>
+                        <div class="check">
+                            <input class="checkbox" type="checkbox">
+                            <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con
+                                fines de
+                                marketing/ventas directas como indica nuestra Política de Privacidad</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-modal">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </article>
+            </section>
+                    </div>
+                </div>
+
+                <script>
+                    // Funciones para controlar el modal
+                    function openContactModal() {
+                        const m = document.getElementById('contactModal');
+                        if (!m) return;
+                        m.style.display = 'flex';
+                        m.setAttribute('aria-hidden', 'false');
+                        document.body.style.overflow = 'hidden';
+                    }
+
+                    function closeContactModal() {
+                        const m = document.getElementById('contactModal');
+                        if (!m) return;
+                        m.style.display = 'none';
+                        m.setAttribute('aria-hidden', 'true');
+                        document.body.style.overflow = 'auto';
+                    }
+
+                    // Cerrar modal al hacer clic fuera
+                    (function () {
+                        const m = document.getElementById('contactModal');
+                        if (!m) return;
+                        m.addEventListener('click', function (e) {
+                            if (e.target === this) closeContactModal();
+                        });
+                    })();
+
+                    // Cerrar con tecla Escape
+                    document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape') closeContactModal();
+                    });
+
+                    // Prevenir envío del formulario (ejemplo)
+                    (function () {
+                        const submitBtn = document.querySelector('#contactModal button[type="submit"]');
+                        if (!submitBtn) return;
+
+                        submitBtn.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            // Validación básica
+                            const inputs = document.querySelectorAll('#contactModal input[type="text"], #contactModal input[type="email"], #contactModal input[type="tel"], #contactModal textarea');
+                            let isValid = true;
+
+                            for (const input of inputs) {
+                                if (!input.value.trim()) {
+                                    input.style.borderColor = '#dc2626';
+                                    isValid = false;
+                                } else {
+                                    input.style.borderColor = '#22c55e';
+                                }
+                            }
+
+                            if (isValid) {
+                                alert('¡Formulario enviado correctamente!');
+                                closeContactModal();
+                            } else {
+                                alert('Por favor, completa todos los campos obligatorios.');
+                            }
+                        });
+                    })();
+
+                    // Resetear colores al escribir
+                    (function () {
+                        const inputs = document.querySelectorAll('#contactModal input, #contactModal textarea');
+                        for (const element of inputs) {
+                            element.addEventListener('input', function () {
+                                if (this.value.trim()) this.style.borderColor = '#22c55e';
+                            });
+                        }
+                    })();
+                </script>
+
+                <style>
+                    :root{--primary:#003579;--primary-dark:#002147;--accent:#7CC713}
+
+                    .btn-contact{background:var(--primary);color:#fff;border:none;padding:clamp(12px,2vw,16px) clamp(24px,4vw,32px);font-size:clamp(14px,2vw,16px);font-weight:600;border-radius:8px;cursor:pointer;margin:20px;box-shadow:0 8px 24px rgba(0,0,0,0.12);transition:transform .12s,box-shadow .12s}
+                    .btn-contact:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,0,0,0.16)}
+
+                    .modal-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000;align-items:center;justify-content:center;padding:clamp(16px,4vw,32px)}
+                    .modal-backdrop[aria-hidden="false"]{display:flex}
+
+                    .modal-panel{background:#fff;border-radius:clamp(12px,3vw,20px);padding:clamp(20px,5vw,40px);max-width:min(95%,800px);width:100%;max-height:min(95vh,900px);overflow-y:auto;position:relative;box-shadow:0 10px 50px rgba(0,0,0,0.3)}
+
+                    .modal-close{position:absolute;right:12px;top:12px;background:#fff;border:none;width:40px;height:40px;border-radius:8px;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,0.08)}
+                    .modal-close:hover{background:#f3f4f6}
+
+                    .modal-panel .contenedor{max-width:720px;margin:0 auto}
+                    .campos span{display:block;color:#6b7280;margin-bottom:12px;font-weight:500}
+                    .cont1-input,.cont2-input{display:flex;gap:12px;flex-wrap:wrap}
+                    .div-input1,.div-input2{flex:1;min-width:200px}
+                    input[type="text"],textarea{width:100%;padding:12px;border:1px solid #d1d5db;border-radius:8px;font-size:14px}
+                    textarea{min-height:140px;resize:none}
+                    .div-text,.div-text2{color:#374151;margin-top:12px}
+                    .div-text3{padding:20px;border-top:1px solid #e6e6e6;margin-top:16px}
+
+                    .footer-modal{display:flex;justify-content:flex-end;padding-top:18px}
+                    .footer-modal button{background:var(--primary);color:#fff;border:none;padding:12px 22px;border-radius:10px;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.12)}
+                    .footer-modal button:hover{background:var(--primary-dark)}
+
+                    @media (max-width:768px){.modal-panel{padding:20px;max-width:92%}.cont1-input,.cont2-input{flex-direction:column}.modal-close{right:8px;top:8px}}
+
+                    @media (hover:hover){.btn-contact:hover{opacity:.95}.footer-modal button:hover{transform:translateY(-1px)}}
+
+                    button:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+                    input:focus-visible,textarea:focus-visible{outline:2px solid var(--primary);outline-offset:1px}
+
+                    /* Scroll personalizado para el panel */
+                    #contactModal .modal-panel::-webkit-scrollbar{width:8px}
+                    #contactModal .modal-panel::-webkit-scrollbar-track{background:#f1f1f1;border-radius:4px}
+                    #contactModal .modal-panel::-webkit-scrollbar-thumb{background:var(--primary);border-radius:4px}
+                </style>

@@ -179,6 +179,8 @@ img[src*="vector 28"] {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-3 .div-2 .containerCards .Cards {
@@ -1626,6 +1628,8 @@ px;
     flex-direction: column;
     gap: 30px;
     padding: 0 20px;
+    justify-content: center;
+    align-items: center;
   }
 
   .inBar {
@@ -1719,7 +1723,7 @@ px;
 }
 
 /* Mobile pequeño (320px - 480px) */
-@media (max-width: 480px) {
+@media (max-width: 710px) {
 
   /* ----------- TEXTO ----------- */
   .home-section-1 .div-2 .div-2_div {
@@ -1727,6 +1731,7 @@ px;
     flex-direction: column;
     /* apila el h1 y otros elementos */
     justify-content: center;
+    align-items: center;
     /* centra vertical */
   }
 
@@ -1862,8 +1867,9 @@ px;
   .section-3 .div-2 .containerCards .bar-1,
   .section-3 .div-2 .containerCards .bar-2 {
     width: 100%;
-    max-width: 300px;
     height: 8px;
+    justify-content: center;
+    align-items: center;
   }
 
   .bar-2 .inBar {

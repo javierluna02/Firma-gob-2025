@@ -1,107 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/CSS/css/home/home.css">
-    <link rel="stylesheet" href="/CSS/header.css">
-    <link rel="stylesheet" href="/CSS/responsive-base.css">
-    <link rel="stylesheet" href="/CSS/navigation.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/header.css">
-    <link rel="stylesheet" href="/CSS/footer.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Firma GOB</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../style.css?v=1" />
+
+    <script src="https://cdn.jsdelivr.net/gh/ogticrd/official-header/main.js" defer theme="light"></script>
+
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/responsive-base.css">
+    <link rel="stylesheet" href="../css/catalogo-de-servicios.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/detalles-de-servicios.css">
+    <link rel="stylesheet" href="../css/css/home/home.css">
+    <link rel="stylesheet" href="../css/css/home/section-12.css">
+
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap Bundle with Popper   -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        // Mover las funciones fuera del event listener para que sean globales
+        function toggleMenu(event) {
+            event.stopPropagation();
+            if ($(".showOnlyMobile").is(":visible")) {
+                document.querySelector('#mainMenu').classList.toggle('show');
+            } else {
+                const menu = document.getElementById("menu");
+                if (menu) menu.classList.toggle("active");
+            }
+        }
+
+        function closeMenu(event) {
+            let menu = document.getElementById("menu");
+            if (menu && !menu.contains(event.target) && !document.querySelector(".menu-icon").contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            $('.top-header-mobile-interes').on('click', function () {
+                this.classList.toggle('show');
+                this.classList.toggle('collapsed');
+                const acc = document.querySelector('.navbar-interes .accordion.accordion-flush');
+                if (acc) acc.classList.toggle('show');
+            });
+        });
+    </script>
 </head>
 
 <body>
+    <official-header></official-header>
 
-    <header>
-        <section class="primera-seccion-header">
-            <img style="width: 1rem;" src="/img/do.png" alt="">
-            <p>Este es una web oficial del Gobierno de la República Dominicana</p>
+    <nav class="navbar navbar-expand-lg" style="padding-left: 0px; background-color: #003579;">
+        <div class="container-md">
+            <a class="navbar-brand d-flex align-items-center " href="home.html">
+                <img src="../img/Figma-logo-blanco.png" alt="Firma GOB"
+                    style="height:80px; border-right: 1px solid #D8D8D8;">
+                <img src="../img/ogtic-logo-blanco.png" alt="" style="height: 70px;">
+
+            </a>
+
+            <div class="search-bar ms-auto d-flex align-items-center my-1">
+                <form role="search" class="search-form" method="get" action="/">
+                    <input type="search" class="form-control" placeholder="¿Qué quieres buscar?" name="s" value="">
+                    <button class="btn btn-outline-secondary submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+
+                <div class="divisor-search-menu"></div>
+
+                <div onclick="closeMenu(event)">
+                    <div class="menu-icon" onclick="toggleMenu(event)">
+                        <i class="svg-icon">
+                            <svg stroke="white" fill="white" stroke-width="0" version="1.1" viewBox="0 0 17 17"
+                                height="36px" width="36px" xmlns="http://www.w3.org/2000/svg">
+                                <g></g>
+                                <path
+                                    d="M0 0h5v5h-5v-5zM6 5h5v-5h-5v5zM12 0v5h5v-5h-5zM0 11h5v-5h-5v5zM6 11h5v-5h-5v5zM12 11h5v-5h-5v5zM0 17h5v-5h-5v5zM6 17h5v-5h-5v5zM12 17h5v-5h-5v5z">
+                                </path>
+                            </svg>
+                        </i>
+                    </div>
+
+                 
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Section -->
+    <span class="showOnlyMobile sensorState">.</span>
+    <nav class="container-md navbar navbar-expand-lg bg-white w-100" style="padding-left: 0px;">
+        <div class="container-fluid">
+            <div class="container-fluid collapse navbar-collapse pd-l-none" id="mainMenu">
+                <!-- Reemplazo estático del menú de WordPress -->
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo-de-servicios.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalles-de-servicio.html">Servicios</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div style="position: relative; width: 100%;">
+        <img src="../img/Group 105.png" alt="imagen-del-banner" style="width: 100%; height: auto; display: block;">
+
+        <section
+            style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%); width: 70%; max-width: 50%; padding: 20px;">
+            <h2
+                style="font-weight: 600; color: white; line-height: 1.3; font-size: clamp(1.5rem, 4vw, 2rem); margin: 0;">
+                En OGTIC estamos comprometidos para brindarte el mejor servicio de plataforma portafirmas
+            </h2>
         </section>
+    </div>
 
-        <article class="segunda-seccion-header">
-            <div class="logo">
-                <a href="/pages/home.html">
-                    <img style=" border-right: 1px solid gray;" src="/img/firma_Mesa de trabajo 1 copia 6 3.svg"
-                        alt="firma-gob">
-                    <img src="/img/Sin título-1-03 1.svg" alt="Ogtic">
-                </a>
-            </div>
-
-            <section class="tercera-seccion-header">
-                <div class="buscador">
-                    <input placeholder="¿Qué quieres buscar?" type="text">
-                    <div class="i"><img src="/img/search-solid.svg" alt=""></div>
-                </div>
-                <div class="menu">
-                    <img src="/img/Icon open-grid-three-up.svg" alt="" id="menuButton" style="cursor: pointer;">
-                </div>
-                <div class="div-button-header">
-                    <a href="/pages/Contacto.html">
-                        <button class="button-header"><img src="/img/Grupo 3790.svg" alt="">CONTACTO</button>
-                    </a>
-                </div>
-            </section>
-        </article>
-        <article class="cuarta-seccion-header ">
-            <select name="Nosotros" id="">
-                <option value="acerca de ">Acerca de </option>
-                <option value="beneficios">beneficios</option>
-                <option value="institucion">institucion</option>
-                <option value="disponibilidad"> disponibilidad</option>
-            </select>
-            <div>
-                <a href="/pages/soporte.html">soporte</a>
-            </div>
-        </article>
-    </header>
-
-    <section class="section-1">
-        <div class="div-1">
-            <img src="/img/9479378e080c060d5c155b7fc1381ac84d50a61b.png" alt="backImg">
-        </div>
-        <div class="div-2">
-            <img class="img-div-2" src="/img/Vector 1.svg" alt="">
-            <div class="div-2_div">
-                <h1>
-                    En OGTIC
-                    estamos comprometidos
-                    para brindarte el mejor
-                    servicio de plataforma <span style="color: #FFC000;">
-                        portafirmas
-                    </span>
-                </h1>
-                <div class="logo-section1">
-                    <img src="/img/firma_Mesa de trabajo 1 copia 6 3.svg" alt="Img Firma">
-                </div>
-            </div>
-        </div>
     </section>
+
     <section class="section-2">
         <button>ACERCA DE</button>
-        <a href="/pages/Detalles-de-servicios.html">
+        <a href="detalles-de-servicio.html">
             <button>BENEFICIOS</button>
         </a>
-        <a href="/pages/Catalogo-de-servicios.html">
+        <a href="catalogo-de-servicios.html">
             <button>INSTITUCIONES</button>
         </a>
         <button>INTEGRACIÓN</button>
         <button>DISPONIBILIDAD</button>
     </section>
 
-
-
     <section class="section-3">
         <div class="div-1">
             <h3>IMPULSAMOS LA TRANSFORMACIÓN DIGITAL DE TU INSTITUCIÓN</h3>
             <h2>Conoce un poco más</h2>
         </div>
-
 
         <div class="div-2">
             <div class="containerCards">
@@ -110,30 +163,36 @@
                 </div>
                 <article class="Cards">
                     <div class="header">
-                        <img src="/img/Rectangle 18.svg" alt="">
+                        <img src="../img/Rectangle 18.svg" alt="">
                     </div>
                     <div class="body">
                         <span class="T1">¿QUÉ ES?</span>
-                        <p>Es una plataforma de portafirmas que facilita la gestión de documentos pendientes por firmar,
+                        <p>
+                            Es una plataforma de portafirmas que facilita la gestión de documentos pendientes por
+                            firmar,
                             dotándolos de un flujo de firmas y/o visto bueno, permitiendo la visualización, firma
-                            digital, validación y custodia de todo tipo de documentos en formato electrónico.</p>
+                            digital,
+                            validación y custodia de todo tipo de documentos en formato electrónico.
+                        </p>
                     </div>
                 </article>
             </div>
 
             <div class="div-2">
-                <img class="flecha" src="/img/Vector 28.svg" alt="">
+                <img src="../img/Vector 28.svg" alt="">
             </div>
             <div class="containerCards">
                 <article class="Cards">
                     <div class="header">
-                        <img src="/img/Rectangle 24.svg" alt="">
+                        <img src="../img/Rectangle 24.svg" alt="">
                     </div>
                     <div class="body">
                         <span class="T2">OBJETIVOS</span>
                         <p>Proveer organismos gubernamentales de un sistema de gestión de solicitudes de firmas. Firma
-                            Gob ofrece un todo incluido de firma digital segura-cualificada en la nube y un gestor de
-                            documentos digitales firmados, garantizando la seguridad e integridad de los datos.</p>
+                            Gob
+                            ofrece un todo incluido de firma digital segura-cualificada en la nube y un gestor de
+                            documentos
+                            digitales firmados, garantizando la seguridad e integridad de los datos.</p>
                     </div>
                 </article>
                 <div class="bar-1">
@@ -142,733 +201,587 @@
             </div>
         </div>
         <div class="div-3">
-            <!-- <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                    class="bi bi-chevron-up" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
-                </svg>
-            </button> -->
         </div>
-
     </section>
 
-
-    <div class="section-4">
-        <div class="div-1">
-            <h3>LA FIRMA DIGITAL ADAPTADA A CUALQUIER NECESIDAD</h3>
-            <h2>¿Por qué Firma GOB?</h2>
-        </div>
+    <div style=" text-align:center; margin: 50px; " class="section-5">
+        <h3 style="color: #5eaeff;">LA FIRMA DIGITAL ADAPTADA A CUALQUIER NECESIDAD</h3>
+        <h2 style="color: #003579;">¿Por qué Firma GOB?</h2>
     </div>
 
-
-
-
-
-    <section style="display: flex; margin-left: 20px;" class="container-grid">
+    <section style="display: flex; " class="container-grid">
         <div class="card-grid">
             <div class="card">
-                <img src="/img/icons8-nube-96 1.svg" alt="Nube" />
+                <img src="../img/icon-nube.svg" alt="Nube" />
                 <h3>NUBE</h3>
                 <p>Se puede firmar con Certificado en la nube.</p>
             </div>
             <div class="card">
-                <img src="/img/Group 22.svg" alt="Organización" />
+                <img src="../img/check.svg" alt="Organización" />
                 <h3>ORGANIZACIÓN</h3>
                 <p>Organización por cargos de acuerdo a la institución.</p>
             </div>
             <div class="card">
-                <img src="/img/Group 22.svg" alt="QR" />
+                <img src="../img/check.svg" alt="QR" />
                 <h3>QR</h3>
                 <p>Código QR para verificación de documentos.</p>
             </div>
             <div class="card">
-                <img src="/img/Group 22.svg" alt="Colectividad" />
+                <img src="../img/check.svg" alt="Colectividad" />
                 <h3>COLECTIVIDAD</h3>
                 <p>Alertas y notificaciones a los diferentes firmantes.</p>
             </div>
             <div class="card">
-                <img src="/img/Group 22.svg" alt="Firma" />
+                <img src="../img/check.svg" alt="Firma" />
                 <h3>FIRMA</h3>
                 <p>Permite la firma en lotes, delegada y desatendida.</p>
             </div>
             <div class="card">
-                <img src="/img/Group 22.svg" alt="Adaptación" />
+                <img src="../img/check.svg" alt="Adaptación" />
                 <h3>ADAPTACIÓN</h3>
                 <p>Se adapta a todos los flujos de firma.</p>
             </div>
             <div class="card">
-                <img src="/img/icons8-mensaje-de-telefono-50 1.png" alt="Facilidad" />
+                <img src="../img/icons8-mensaje-de-telefono-50 1.png" alt="Facilidad" />
                 <h3>FACILIDAD</h3>
                 <p>Funciona como tu bandeja de correo habitual.</p>
             </div>
 
             <div style="margin-right: 100px; width: 50px;" class="image-deco">
-                <img src="/img/Group 3.svg" alt="Persona usando teléfono">
-
+                <img src="../img/Group-3.svg" alt="Persona usando teléfono">
             </div>
-    </section>
+        </div> <!-- Cerré el div que faltaba -->
+    </section> <!-- Cerré la sección que faltaba -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="section-5" id="beneficios">
-        <div class="div-1">
-            <h3>ENFOCADOS EN HACER CRECER TU INSTITUCIÓN A NIVEL DIGITAL</h3>
-            <h2>Algunos de los beneficios</h2>
-        </div>
-        <div class="div-2">
-            <div class="div-2_div1">
-                <article class="Cards">
-                    <div class="header">
-                        <img src="/img/Group 22.svg " alt="">
-                    </div>
-                    <p><b>Flujos de Firma:</b> Creación de flujos de firmas en cascada, simultáneos y vistos buenos.
-                    </p>
-                </article>
-                <article class="Cards">
-                    <div class="header">
-                        <img src="/img/Group 22.svg" alt="">
-                    </div>
-                    <p><b>Firma desde cualquier lugar:</b> Plataforma adaptable a dispositivos móviles, permitiendo
-                        firmar desde donde se encuentre. </p>
-                </article>
-                <article class="Cards">
-                    <div class="header">
-                        <img src="/img/Group 22.svg" alt="">
-                    </div>
-                    <p><b>Seguridad e Integridad:</b> Los documentos firmados no pueden ser modificados, por lo que se
-                        garantiza la autenticidad de este. </p>
-                </article>
-                <article class="Cards">
-                    <div class="header">
-                        <img src="/img/Group 22.svg" alt="">
-                    </div>
-                    <p><b>Ahorro de papel:</b> El portafirmas evitar el uso de papel, costes de impresión, transporte de
-                        documentos, etc.</p>
-                </article>
+    <section style="width: 100%; background: white; border-radius: 20px; padding: 40px; margin: 20px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <div
+                style="display: inline-block; color: #003579A1; padding: 8px 20px; border-radius: 30px; font-size: 16px; font-weight: 500; margin-bottom: 15px; letter-spacing: 0.5px;">
+                ENFOCADOS EN HACER CRECER TU INSTITUCIÓN A NIVEL DIGITAL
             </div>
-            <div class="div-2_div2">
-                <img src="/img/Group 5.svg" alt="">
-            </div>
-
-        </div>
-    </section>
-
-    <article class="Polygon">
-        <img class="poly7" src="/img/Polygon 7.svg" alt="">
-        <img class="Poly8" src="/img/Polygon 8.svg" alt="">
-    </article>
-
-
-    <section class="section-6">
-        <img src="img/Group 6.svg" alt="">
-    </section>
-    <section class="section-7" id="instituciones">
-        <div class="div-1">
-            <h3>¿Estás inspirado? ¡Ponte en contacto con nosotros!</h3>
-            <h2>Instituciones que confían</h2>
-        </div>
-        <div class="div-2">
-            <button class="btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                </svg>
-            </button>
-            <div class="div-2_div1">
-                <article class="Logo">
-                    <img src="/img/image 2.svg" alt="">
-                </article>
-                <article class="Logo">
-                    <img src="/img/image 3.svg" alt="">
-                </article>
-                <article class="Logo">
-                    <img src="/img/image 4.svg" alt="">
-                </article>
-                <article class="Logo">
-                    <img src="/img/image 5.svg" alt="">
-                </article>
-                <article class="Logo">
-                    <img src="/img/logo-12-1-e1677264157702 1.svg" alt="">
-                </article>
-            </div>
-            <button class="btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>
-            </button>
-        </div>
-    </section>
-
-    <article class="Polygon2">
-        <img class="poly9" src="/img/Polygon 9.svg" alt="">
-        <img class="poly10" src="/img/Polygon 10.svg" alt="">
-    </article>
-
-
-    <section class="section-8">
-        <img src="/img/Group 7.svg" alt="">
-    </section>
-
-    <section class="section-9" id="integracion">
-
-        <article class="article-section-9">
-            <div class="div1-section-9">
-                <img src="/img/Ellipse 22.svg" alt="">
-
-            </div>
-            <div class="div2-section-9">Háblame sobre la capacidad de integración</div>
-
-        </article>
-
-        <article class="article2-section-9">
-            <div class="div3-section-9">
-                <h1>Capacidad de integración mediante
-                    Sistema API</h1>
-                <p>El portafirmas es integrable con aquellos gestores de documentos utilizados en la institución.</p>
-            </div>
-
-            <div class="div4-section-9"><img src="/img/Ellipse 21.svg" alt=""></div>
-        </article>
-        <div class="div5-section-9">
-            <button id="integrationBtn" onclick="scrollToTop()">
-                <img src="/img/Vector 20.svg" alt="">
-            </button>
-        </div>
-    </section>
-
-
-
-    <section class="section-10">
-        <div class="div-1">
-            <h3>TODOS AQUELLOS COMENTARIOS DE LAS INSTITUCIONES SON NUESTRA PRUEBA DE ÉXITO</h3>
-            <h2>Casos de éxito</h2>
-        </div>
-        <div class="div-2">
-            <img src="" alt="">
-            <img src="" alt="">
-        </div>
-    </section>
-    <section class="section-11">
-        <div class="section11-div1">
-
-
-            <div class="section-11-div1" style=" 
-    
-    height: 400px;
-    background: #8ce31b;
-    clip-path: polygon(0 0, 50% 0, 0 100%);
-   "></div>
-
-
-
-
-
-
+            <h1 style="font-size: 36px; color: #003579; margin-bottom: 15px; font-weight: 700;">Algunos de los
+                beneficios</h1>
         </div>
 
-
-        <div class="div-2">
-            <button class="btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                </svg>
-            </button>
-
-            <article class="Cards">
-                <div class="header">
-                    <img src="/img/Rectangle 18.svg " alt="">
-                    <div class="text">
-                        <h3>Lorem ipsum dolor sit</h3>
-                        <p>vehicula purus sit ametvehicula purus sit amet, dictum orci. Proin sit amet turpis sed turpis
-                            tempor dictum at eget orci. Mauris fermentum mollis risus, vitae dignissim sapien pharetra
-                            non.pharetra non., dictum orci. Proin sit amet turpis sed turpis </p>
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <div
+                    style="display: flex; align-items: flex-start; margin-bottom: 30px; padding: 15px; border-radius: 12px; transition: all 0.3s ease;">
+                    <img src="../img/check.svg" style="width: 28px; height: 28px; margin-right: 15px;" alt="">
+                    <div style="font-size: 16px; color: #444;">
+                        <span style="font-weight: 600; color: #003579;">Flujos de Firma:</span> Creación de flujos de
+                        firmas en cascada, simultáneos y vistos buenos.
                     </div>
                 </div>
-                <p>vehicula purus sit amet, dictum orci. Proin sit amet turpis sed turpis tempor dictum at eget orci.
-                    Mauris fermentum mollis risus, vitae dignissim sapien pharetra non.</p>
+
+                <div
+                    style="display: flex; align-items: flex-start; margin-bottom: 30px; padding: 15px; border-radius: 12px; transition: all 0.3s ease;">
+                    <img src="../img/check.svg" style="width: 28px; height: 28px; margin-right: 15px;" alt="">
+                    <div style="font-size: 16px; color: #444;">
+                        <span style="font-weight: 600; color: #003579;">Firma desde cualquier lugar:</span> Plataforma
+                        adaptable a dispositivos móviles, permitiendo firmar desde donde se encuentre.
+                    </div>
+                </div>
+
+                <div
+                    style="display: flex; align-items: flex-start; margin-bottom: 30px; padding: 15px; border-radius: 12px; transition: all 0.3s ease;">
+                    <img src="../img/check.svg" style="width: 28px; height: 28px; margin-right: 15px;" alt="">
+                    <div style="font-size: 16px; color: #444;">
+                        <span style="font-weight: 600; color: #003579;">Seguridad e Integridad:</span> Los documentos
+                        firmados no pueden ser modificados, por lo que se garantiza la autenticidad de este.
+                    </div>
+                </div>
+
+                <div
+                    style="display: flex; align-items: flex-start; margin-bottom: 30px; padding: 15px; border-radius: 12px; transition: all 0.3s ease;">
+                    <img src="../img/check.svg" style="width: 28px; height: 28px; margin-right: 15px;" alt="">
+                    <div style="font-size: 16px; color: #444;">
+                        <span style="font-weight: 600; color: #003579;">Ahorro de papel:</span> El portafirmas evita el
+                        uso de papel, costes de impresión, transporte de documentos, etc.
+                    </div>
+                </div>
+            </div>
+
+            <div style="flex: 1; min-width: 300px; display: flex; justify-content: center; align-items: center;">
+                <img src="../img/Group 5.svg" alt="Ilustración beneficios">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="py-5 text-center"
+        style="display: flex; align-items: center; justify-content: center; color:#fff; height: 80vh; background-image: url('../img/Group 106.png'); background-size: cover; background-position: end;">
+        <div class="container">
+            <h5 class="mb-2">¿ESTÁS INSPIRADO? ¡PONTE EN CONTACTO CON NOSOTROS!</h5>
+            <h3 style="color: white;" class="fw-bold mb-4">Instituciones que confían</h3>
+
+            <div id="logosCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Los slides se generarán dinámicamente con JavaScript -->
+                </div>
+
+                <!-- controles -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#logosCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#logosCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Array de logos con rutas reales
+            const logos = [
+                { url: '../img/image 2.svg', alt: 'Logo SEP' },
+                { url: '../img/image 3.svg', alt: 'Logo CONACYT' },
+                { url: '../img/image 4.svg', alt: 'Logo IMSS' },
+                { url: '../img/image 5.svg', alt: 'Logo SEDENA' },
+                { url: '../img/logo-12-1-e1677264157702 1.svg', alt: 'Logo INE' },
+                { url: '../img/image 2.svg', alt: 'Logo SEP' },
+                { url: '../img/image 3.svg', alt: 'Logo CONACYT' },
+                { url: '../img/image 4.svg', alt: 'Logo IMSS' },
+                { url: '../img/image 5.svg', alt: 'Logo SEDENA' },
+                { url: '../img/logo-12-1-e1677264157702 1.svg', alt: 'Logo INE' },
+            ];
+
+            const logosPerSlide = 5;
+            const logosCarouselInner = document.querySelector('#logosCarousel .carousel-inner');
+
+            // Dividir los logos en grupos
+            for (let i = 0; i < logos.length; i += logosPerSlide) {
+                const slideLogos = logos.slice(i, i + logosPerSlide);
+                const slide = document.createElement('div');
+                slide.className = `carousel-item ${i === 0 ? 'active' : ''}`;
+
+                const flexContainer = document.createElement('div');
+                flexContainer.className = 'd-flex justify-content-center gap-4 flex-wrap';
+
+                for (const logo of slideLogos) {
+                    const img = document.createElement('img');
+                    img.src = logo.url;
+                    img.alt = logo.alt;
+                    img.className = 'rounded-circle bg-white p-3';
+                    img.style.cssText = 'width:100px; height:100px; object-fit:contain;';
+                    flexContainer.appendChild(img);
+                }
+
+                slide.appendChild(flexContainer);
+                logosCarouselInner.appendChild(slide);
+            }
+
+            // Inicializar el carrusel de Bootstrap
+            new bootstrap.Carousel(document.querySelector('#logosCarousel'), {
+                interval: 3000,
+                pause: 'hover'
+            });
+        });
+    </script>
+
+
+    <aside style="padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 40px); background: white;">
+
+        <section
+            style="display: flex; flex-direction: column; gap: clamp(80px, 15vw, 150px); width: 100%; max-width: 1200px; margin: 0 auto;">
+
+            <!-- Primer artículo - Izquierda -->
+            <article
+                style="display: flex; justify-content: flex-start; align-items: center; gap: clamp(20px, 4vw, 40px); flex-wrap: wrap;">
+                <div
+                    style="width: clamp(150px, 25vw, 250px); height: clamp(150px, 25vw, 250px); border-radius: 50%; background-color: #A6D2FF63; display: flex; justify-content: center; align-items: center; flex-shrink: 0;">
+                    <div
+                        style="width: clamp(120px, 20vw, 200px); height: clamp(120px, 20vw, 200px); border-radius: 50%; background-color: #5EAEFF; display: flex; justify-content: center; align-items: center;">
+                        <img src="../img/Ellipse 22.svg" alt="Integración" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <div
+                    style="background-color: #F5F5F5; height: auto; min-height: 120px; display: flex; align-items: center; justify-content: center; padding: clamp(15px, 3vw, 20px) clamp(20px, 4vw, 30px); font-weight: 600; font-size: clamp(16px, 2.5vw, 18px); border-radius: 10px; min-width: min(300px, 90vw); text-align: center;">
+                    Háblame sobre la capacidad de integración
+                </div>
             </article>
 
-            <button class="btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                </svg>
-            </button>
-        </div>
+            <!-- Segundo artículo - Derecha -->
+            <article
+                style="display: flex; justify-content: flex-end; align-items: center; gap: clamp(20px, 4vw, 40px); flex-wrap: wrap-reverse;">
+                <div
+                    style="background-color: #EEF7FF; height: auto; min-height: 200px; width: min(400px, 90vw); padding: clamp(20px, 3vw, 25px); border-radius: 10px; display: flex; flex-direction: column; justify-content: center;">
+                    <h5
+                        style="color: #0066CC; font-weight: 600; font-size: clamp(18px, 3vw, 20px); margin-bottom: 15px;">
+                        Capacidad de integración mediante Sistema API</h5>
+                    <p style="color: #003579; line-height: 1.5; margin: 0; font-size: clamp(14px, 2vw, 16px);">El
+                        portafirmas es integrable con aquellos gestores de documentos utilizados en la institución.</p>
+                </div>
+                <div
+                    style="width: clamp(200px, 30vw, 340px); height: clamp(200px, 30vw, 340px); border-radius: 50%; background-color: #A6D2FF63; display: flex; justify-content: center; align-items: center; flex-shrink: 0;">
+                    <div
+                        style="width: clamp(170px, 25vw, 290px); height: clamp(170px, 25vw, 290px); border-radius: 50%; background-color: #5EAEFF; display: flex; justify-content: center; align-items: center;">
+                        <img src="../img/Ellipse 21.svg" alt="API Integration" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+            </article>
 
-        <div class="div-3">
-            <img src="icons/Vector 13.svg" alt="">
-            <img src="icons/Vector 12.svg" alt="">
+        </section>
+    </aside>
+
+
+
+    <div style="text-align: center; padding: 40px 20px 20px;">
+        <div style="color: #003579A1; font-size: 16px; font-weight: 500; margin-bottom: 10px;">
+            TODOS AQUELLOS COMENTARIOS DE LAS INSTITUCIONES SON NUESTRA PRUEBA DE ÉXITO
+        </div>
+        <h1 style="font-size: 36px; color: #003579; font-weight: 700; margin: 0;">
+            Casos de éxito
+        </h1>
+    </div>
+
+    <section
+        style="width: 100%; min-height: 80vh; background-image: url('/img/Group 107.png'); background-repeat: no-repeat; background-position: center; background-size: cover; display: flex; align-items: center; flex-direction: column; justify-content: center; padding: 40px 20px;">
+        <div style="width: 100%; max-width: 1200px;">
+            <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores rectangulares -->
+                <div class="carousel-indicators" id="testimoniosIndicators" style="bottom: -50px;">
+                    <!-- Se generarán dinámicamente -->
+                </div>
+
+                <!-- Items -->
+                <div class="carousel-inner" id="testimoniosCarouselInner">
+                    <!-- Se generarán dinámicamente -->
+                </div>
+
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarousel"
+                    data-bs-slide="prev" style="width: 5%; left: -50px;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel"
+                    data-bs-slide="next" style="width: 5%; right: -50px;">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Datos de testimonios
+            const testimonios = [
+                {
+                    imagen: 'https://randomuser.me/api/portraits/men/32.jpg',
+                    titulo: 'Juan Pérez - Director de Sistemas',
+                    texto_principal: 'Secretaría de Educación Pública',
+                    texto_extra: 'La implementación de la firma electrónica ha revolucionado nuestros procesos administrativos, reduciendo significativamente los tiempos de gestión.'
+                },
+                {
+                    imagen: 'https://randomuser.me/api/portraits/women/44.jpg',
+                    titulo: 'María González - Coordinadora de Procesos',
+                    texto_principal: 'CONACYT',
+                    texto_extra: 'La facilidad de uso y la seguridad que ofrece el sistema han sido fundamentales para nuestra transformación digital.'
+                },
+                {
+                    imagen: 'https://randomuser.me/api/portraits/men/67.jpg',
+                    titulo: 'Roberto Ramírez - Jefe de Departamento',
+                    texto_principal: 'Instituto Nacional Electoral',
+                    texto_extra: 'Hemos logrado una mayor eficiencia en nuestras operaciones gracias a la firma electrónica avanzada.'
+                },
+                {
+                    imagen: 'https://randomuser.me/api/portraits/women/68.jpg',
+                    titulo: 'Laura Sánchez - Gerente de TI',
+                    texto_principal: 'Secretaría de Hacienda',
+                    texto_extra: 'La solución de firma digital nos ha permitido agilizar los procesos internos y mejorar la experiencia de nuestros usuarios.'
+                }
+            ];
+
+            // Usar IDs específicos para evitar conflictos
+            const testimoniosCarouselInner = document.querySelector('#testimoniosCarouselInner');
+            const testimoniosIndicators = document.querySelector('#testimoniosIndicators');
+
+            // Generar indicadores y slides
+            testimonios.forEach((testimonio, index) => {
+                // Crear indicador
+                const indicator = document.createElement('button');
+                indicator.type = 'button';
+                indicator.setAttribute('data-bs-target', '#testimoniosCarousel');
+                indicator.setAttribute('data-bs-slide-to', index.toString());
+                indicator.style.width = '30px';
+                indicator.style.height = '3px';
+                indicator.style.backgroundColor = '#003579';
+                indicator.style.border = 'none';
+                indicator.style.margin = '0 5px';
+
+                if (index === 0) {
+                    indicator.classList.add('active');
+                    indicator.setAttribute('aria-current', 'true');
+                }
+                indicator.setAttribute('aria-label', `Slide ${index + 1}`);
+                testimoniosIndicators.appendChild(indicator);
+
+                // Crear slide
+                const slide = document.createElement('div');
+                slide.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+                slide.innerHTML = `
+                <div style="display: flex; justify-content: center; padding: 20px;">
+                    <article style="background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); max-width: 800px; width: 100%;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <img src="${testimonio.imagen}" alt="${testimonio.titulo}" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h3 style="margin: 0; color: #003579; font-size: 1.25rem;">${testimonio.titulo}</h3>
+                                <p style="margin: 0.5rem 0 0; color: #666;">${testimonio.texto_principal}</p>
+                            </div>
+                        </div>
+                        <p style="color: #444; line-height: 1.6;">${testimonio.texto_extra}</p>
+                    </article>
+                </div>
+            `;
+                testimoniosCarouselInner.appendChild(slide);
+            });
+
+            // Inicializar el carrusel de testimonios
+            new bootstrap.Carousel(document.querySelector('#testimoniosCarousel'), {
+                interval: 5000,
+                pause: 'hover'
+            });
+        });
+    </script>
+
+    <section class="mobile section-12"
+        style="justify-content: center; display: flex; flex-direction: column; align-items: center;"
+        id="disponibilidad">
+        <span>El portafirmas está disponible para dispositivos móviles en cualquier sistema operativo</span>
+
+        <div style="" class="div1-section-12">
+            <h1>Disponibilidad móvil</h1>
+            <article class="mobile-content">
+                <div class="div2-section-12">
+                    <img class="img" src="../img/smartmockups_lhkytam5 1.svg" alt="Mockup dispositivo móvil">
+
+                    <div class="platform-container">
+                        <div class="div4-section-12">ANDROID</div>
+                        <div class="div3-section-12">
+                            <div class="div5-section-12">
+                                <img src="../img/image 7.svg" alt="Logo Android">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="platform-container">
+                        <div class="div7-section-12">APPLE</div>
+                        <div class="div6-section-12">
+                            <div class="div8-section-12">
+                                <img src="../img/image 7.svg" alt="Logo Apple">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 style=" color: #0066CC; font-size: 34px; margin-top: 24px; ">¡Únete a Firma GOB hoy!</h2>
+
+            </article>
+
         </div>
     </section>
 
 
 
 
+    <!-- Botones flotantes -->
+    <div style="display:flex; align-items: end; gap: 5px; justify-content:end; flex-direction: column;">
+        <div
+            style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
+            <img src="../img/icons8-mensaje-100 2.png" alt="Icono de mensaje">
+        </div>
 
+        <div
+            style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
+            <img src="../img/Vector 20.png" alt="Icono de vector">
+        </div>
+    </div>
 
-    <Section style="display: flex; justify-content: center; align-items: center;" class="section-12" id="disponibilidad">
-        <span>El portafirmas estÁ disponible para dispositivos móviles en cualquier sistema operativo</h1>
-            <div class="div1-section-12">
-                <h1 class="">Disponibilidad móvil</h1>
+    <!-- Sección principal del footer -->
+    <section class="container-fluid border-top border-bottom border-secondary px-2 py-5 mt-5"
+        style="color: white; width: 100%; background-color: #012E6C;">
 
-
-                <article style="display: flex; justify-content: center; align-items: center;">
-                    <div class="div2-section-12">
-                        <img class="img" src="/img/smartmockups_lhkytam5 1.svg" alt="">
-
-
-                        <div style="display: flex; flex-direction: column;">
-                            <div class="div4-section-12">ANDROID</div>
-                            <div class="div3-section-12">
-                                <div class="div5-section-12"><img src="/img/image 7.svg" alt=""></div>
-                            </div>
-
-
-                            <h2 style="position: relative; bottom: -20px;">¡Únete a Firma GOB hoy!</h2>
-
-
-                        </div>
-
-
-
-
-
-                        <div style="display: flex; flex-direction: column;">
-                            <div class="div7-section-12">APPLE</div>
-
-                            <div class="div6-section-12">
-                                <div class="div8-section-12"><img src="/img/image 7.svg" alt=""></div>
-                            </div>
-                            <h1></h1>
-                        </div>
-
-                </article>
-
-                <article style="width: 100%; display: flex; justify-content: space-between ">
-                    <h1 style="color: transparent;"></h1>
-
-
-
-                    <div style="display: flex;  gap: 10px; flex-direction: column;  ">
-                        <button
-                            style="width: 72px ; height: 72px; background-color:#0066CC ; border: none; border-radius: 50%; "><img
-                                src="/img/icons8-mensaje-100 2.svg" alt=""></button>
-                        <button
-                            style="width: 72px ; height: 72px; background-color:#5EAEFF ; border: none; border-radius: 50%;"><img
-                                src="/img/Vector 20.svg" alt=""></button>
+        <!-- Layout para dispositivos grandes -->
+        <div class="row align-items-center d-none d-lg-flex">
+            <!-- Logos -->
+            <div class="col-lg-4 d-flex justify-content-center align-items-center border-lg-end border-secondary gap-4 mb-4 mb-lg-0"
+                style="border-right: 0.15rem solid #D8D8D8;">
+                <div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="../img/Figma-logo-blanco.png" alt="Logo 1" class="img-fluid"
+                            style="width: 500px; height: 200px; object-fit: contain;">
                     </div>
-
-                </article>
-
-
-
-
-
-
-
-    </Section>
-
-
-
-
-    <footer class="main-footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="footer-links-sections">
-                    <div class="footer-column footer-column-with-logos">
-                        <div class="footer-main-logos-group">
-                            <img src="/img/firma_Mesa de trabajo 1 copia 6 3.svg" alt="Firma GOB Logo"
-                                class="firma-gob-logo">
-                            <div class="ogtic-logos">
-                                <img class="footer-Ogtic" src="/img/Sin título-1-03 1.svg" alt="ogtic Logo"
-                                    class="ogtic-small-logo">
-                                <img src="/img/Sin título-1-02 1.svg" alt="Gobierno Digital Logo"
-                                    class="gobierno-digital-logo">
-                            </div>
-                        </div>
-
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="../img/ogtic-logo-blanco.png" alt="Logo 2" class="img-fluid"
+                            style="width: 200px; height: 100px; object-fit: contain;">
+                        <img src="../img/gabinete-logo-blanco.png" alt="Logo 3" class="img-fluid"
+                            style="width: 500px; height: 200px; object-fit: contain;">
                     </div>
+                </div>
+            </div>
 
-                    <div class="footer-column">
-                        <h4>AYUDA</h4>
-                        <ul>
-                            <li><a href="#">Términos de Uso</a></li>
-                            <li><a href="#">Política de Privacidad</a></li>
-                            <li><a href="#">Preguntas Frecuentes</a></li>
-                        </ul>
-
-                        <h4>INFORMACIÓN</h4>
-                        <ul>
-                            <li><a href="/pages/Detalles-de-servicios.html">Firma GOB</a></li>
-                            <li><a href="/pages/Catalogo-de-servicios.html">Portal Informativo</a></li>
-                        </ul>
+            <!-- Información -->
+            <div class="col-lg-8" style="padding-left: 90px;">
+                <div class="row justify-content-lg-between g-4">
+                    <div class="col-lg-3">
+                        <h4 class="my-3">CONÓCENOS</h4>
+                        <p style="font-size: 0.9rem;">Firma GOB México</p>
                     </div>
-                    <div class="footer-column">
-                        <h4>CONTÁCTANOS</h4>
-                        <ul>
-                            <li><a href="tel:8092861009">(809) 286-1009</a></li>
-                            <li><a href="/pages/Contacto.html">Formulario de contacto</a></li>
-                        </ul>
+                    <div class="col-lg-3">
+                        <h4 class="my-3">CONTÁCTANOS</h4>
+                        <p style="font-size: 0.9rem;">
+                            Tel: (55) 1234-5678<br>
+                            Fax: (55) 8765-4321<br>
+                            contacto@firmagob.mx
+                        </p>
                     </div>
-                    <div class="footer-column">
-                        <h4>VISÍTANOS</h4>
-                        <ul>
-                            <li>Edificio Vista, Av. Rómulo Betancourt 311, Santo Domingo</li>
-                        </ul>
+                    <div class="col-lg-3">
+                        <h4 class="my-3">BÚSCANOS</h4>
+                        <p style="font-size: 0.9rem;">
+                            Av. Insurgentes Sur 1735,<br>
+                            Col. Guadalupe Inn, CDMX
+                        </p>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4 class="my-3">INFÓRMATE</h4>
+                        <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Términos de Uso</a>
+                        <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Políticas de
+                            Privacidad</a>
+                        <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Preguntas
+                            Frecuentes</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom-logos">
-            <div class="container">
-                <div class="sector-logos">
-                    <img src="/img/Grupo 5830.svg" alt="">
+        <!-- Layout para pantallas pequeñas -->
+        <div class="row d-flex d-lg-none text-center">
+            <!-- Columna 1 -->
+            <div class="col-6 mb-5">
+                <div class="mb-5">
+                    <img src="../img/Figma-logo-blanco.png" alt="Logo 1" class="img-fluid"
+                        style="width: 100%; max-width: 180px; height: 80px; object-fit: contain;">
                 </div>
-                <div class="accreditation-logos">
-                    <img src="/img/Imagen 59.svg" alt="Accreditation Logo 1" class="accreditation-logo">
+                <div style="margin: 20px;" class="mb-5">
+                    <h4 class="my-2">CONÓCENOS</h4>
+                    <p style="font-size: 0.85rem;">Firma GOB México</p>
+                </div>
+                <div class="mb-5">
+                    <h4 class="my-2">BÚSCANOS</h4>
+                    <p style="font-size: 0.85rem;">Av. Insurgentes Sur 1735, Col. Guadalupe Inn, CDMX</p>
+                </div>
+            </div>
 
+            <!-- Columna 2 -->
+            <div class="col-6 mb-5">
+                <div class="mb-5">
+                    <img src="../img/logos/logo2.png" alt="Logo 2" class="img-fluid"
+                        style="width: 100%; max-width: 180px; height: 80px; object-fit: contain;">
+                </div>
+                <div class="mb-5">
+                    <h4 class="my-2">CONTÁCTANOS</h4>
+                    <p style="font-size: 0.85rem;">
+                        Tel: (55) 1234-5678<br>
+                        Fax: (55) 8765-4321<br>
+                        contacto@firmagob.mx
+                    </p>
+                </div>
+                <div class="mb-5" style="font-size: 0.85rem; color:white;">
+                    <h4 class="my-2">INFÓRMATE</h4>
+                    <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Términos de Uso</a>
+                    <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Políticas de
+                        Privacidad</a>
+                    <a href="#" class="text-decoration-none d-block mb-2" style="color: white;">Preguntas Frecuentes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Certificaciones -->
+        <div class="px-3 px-md-5 pt-3 pt-md-4 pb-2" style="color: #003869;" id="certificaciones">
+            <span class="fw-bold fs-5">Certificaciones Obtenidas</span>
+            <div class="mt-2 mt-md-3 d-flex flex-wrap gap-2">
+                <!-- Ejemplo de certificaciones -->
+                <div class="sellos">
+                    <a href="#" target="_blank" title="Certificación 1" class="stamp-link">
+                        <div class="iframe-wrapper">
+                            <img src="../img/certificaciones/cert1.png" alt="Certificación 1"
+                                style="width: 100px; height: 100px;">
+                        </div>
+                    </a>
+                </div>
+                <div class="sellos">
+                    <a href="#" target="_blank" title="Certificación 2" class="stamp-link">
+                        <div class="iframe-wrapper">
+                            <img src="../img/certificaciones/cert2.png" alt="Certificación 2"
+                                style="width: 100px; height: 100px;">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="footer-copyright-social">
-            <div class="container">
-                <div class="copyright-info">
-                    <p>© 2023 Todos los Derechos Reservados. Desarrollado por <img src="/img/Grupo 3827.svg" alt="ogtic"
-                            class="ogtic-inline-logo"></p>
+        <!-- Certificaciones móvil -->
+        <div class="accordion accordion-flush" id="certificaciones-movil">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Certificaciones Obtenidas
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#certificaciones-movil">
+                    <div class="accordion-body">
+                        <div class="mt-2 mt-md-3 d-flex flex-wrap gap-2">
+                            <!-- Mismo contenido que arriba -->
+                            <div class="sellos">
+                                <a href="#" target="_blank" title="Certificación 1" class="stamp-link">
+                                    <div class="iframe-wrapper">
+                                        <img src="../img/certificaciones/cert1.png" alt="Certificación 1"
+                                            style="width: 100px; height: 100px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sellos">
+                                <a href="#" target="_blank" title="Certificación 2" class="stamp-link">
+                                    <div class="iframe-wrapper">
+                                        <img src="../img/certificaciones/cert2.png" alt="Certificación 2"
+                                            style="width: 100px; height: 100px;">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="social-media">
-                    <span>SÍGUENOS</span>
-                    <img src="/img/Shape.svg" alt="">
-                    <img src="/img/youtube-brands.svg" alt="">
-                    <img src="/img/Shape2.svg" alt="">
-                    <img src="/img/Sustracción 1.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Derechos / Redes Sociales -->
+        <div class="py-3" style="background-color: #003869; color: white;">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center flex-wrap">
+                <p class="mb-2 mb-md-0 text-center text-md-start">© 2025 Todos los Derechos Reservados. Desarrollado por
+                    Firma GOB</p>
+                <div class="d-flex align-items-center fw-bold flex-wrap justify-content-center">
+                    <p class="mb-0 me-3">SÍGUENOS</p>
+                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white text-decoration-none me-2 fs-5"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- JavaScript para funcionalidades interactivas -->
-    <script>
-        // Función para mostrar que el JavaScript está funcionando
-        function showJSWorking() {
-            // Crear un indicador visual
-            const indicator = document.createElement('div');
-            indicator.style.cssText = `
-                position: fixed;
-                top: 10px;
-                left: 10px;
-                background: #012E6C;
-                color: white;
-                padding: 10px 15px;
-                border-radius: 5px;
-                font-size: 12px;
-                font-weight: bold;
-                z-index: 10000;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-                animation: pulse 2s infinite;
-            `;
-            indicator.textContent = 'Servicios Activos ';
-            document.body.appendChild(indicator);
-
-            // Mostrar indicador inmediatamente
-            showJSWorking();
-            // }
-            // ========================================
-            // FUNCIONALIDADES INTERACTIVAS DEL HOME
-            // ========================================
-
-            // 1. CAROUSEL DE INSTITUCIONES (Section 7)
-            class InstitutionCarousel {
-                constructor() {
-                    this.currentIndex = 0;
-                    this.logos = document.querySelectorAll('.section-7 .div-2_div1 .Logo');
-                    this.prevBtn = document.querySelector('.section-7 .btn:first-child');
-                    this.nextBtn = document.querySelector('.section-7 .btn:last-child');
-                    this.totalLogos = this.logos.length;
-
-                    this.init();
-                }
-
-                init() {
-                    if (this.prevBtn && this.nextBtn) {
-                        this.prevBtn.addEventListener('click', () => this.prev());
-                        this.nextBtn.addEventListener('click', () => this.next());
-                    }
-
-                    // Auto-rotación cada 5 segundos
-                    setInterval(() => this.next(), 5000);
-
-                    this.updateVisibility();
-                }
-
-                next() {
-                    this.currentIndex = (this.currentIndex + 1) % this.totalLogos;
-                    this.updateVisibility();
-                }
-
-                prev() {
-                    this.currentIndex = (this.currentIndex - 1 + this.totalLogos) % this.totalLogos;
-                    this.updateVisibility();
-                }
-
-                updateVisibility() {
-                    this.logos.forEach((logo, index) => {
-                        if (index === this.currentIndex) {
-                            logo.style.opacity = '1';
-                            logo.style.transform = 'scale(1.1)';
-                        } else {
-                            logo.style.opacity = '0.6';
-                            logo.style.transform = 'scale(1)';
-                        }
-                    });
-                }
-            }
-
-            // 2. CAROUSEL DE CASOS DE ÉXITO (Section 11)
-            class SuccessCarousel {
-                constructor() {
-                    this.currentIndex = 0;
-                    this.cards = document.querySelectorAll('.section-11 .div-2 .Cards');
-                    this.prevBtn = document.querySelector('.section-11 .btn:first-child');
-                    this.nextBtn = document.querySelector('.section-11 .btn:last-child');
-                    this.totalCards = this.cards.length;
-
-                    this.init();
-                }
-
-                init() {
-                    if (this.prevBtn && this.nextBtn) {
-                        this.prevBtn.addEventListener('click', () => this.prev());
-                        this.nextBtn.addEventListener('click', () => this.next());
-                    }
-
-                    this.updateVisibility();
-                }
-
-                next() {
-                    this.currentIndex = (this.currentIndex + 1) % this.totalCards;
-                    this.updateVisibility();
-                }
-
-                prev() {
-                    this.currentIndex = (this.currentIndex - 1 + this.totalCards) % this.totalCards;
-                    this.updateVisibility();
-                }
-
-                updateVisibility() {
-                    this.cards.forEach((card, index) => {
-                        if (index === this.currentIndex) {
-                            card.style.display = 'block';
-                            card.style.animation = 'fadeIn 0.5s ease-in';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                }
-            }
-
-            // 3. ANIMACIONES DE SCROLL
-            class ScrollAnimations {
-                constructor() {
-                    this.observerOptions = {
-                        threshold: 0.1,
-                        rootMargin: '0px 0px -50px 0px'
-                    };
-
-                    this.init();
-                }
-
-                init() {
-                    // Observar elementos para animaciones
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('animate-in');
-                            }
-                        });
-                    }, this.observerOptions);
-
-                    // Elementos a animar
-                    const animatedElements = document.querySelectorAll('.card, .Cards, .section-5 .Cards');
-                    animatedElements.forEach(el => observer.observe(el));
-                }
-            }
-
-            // 4. INTERACTIVIDAD DE LAS TARJETAS
-            class CardInteractions {
-                constructor() {
-                    this.init();
-                }
-
-                init() {
-                    // Efecto hover en las tarjetas de beneficios
-                    const benefitCards = document.querySelectorAll('.section-5 .Cards');
-                    benefitCards.forEach(card => {
-                        card.addEventListener('mouseenter', () => {
-                            card.style.transform = 'translateY(-10px)';
-                            card.style.boxShadow = '0 15px 35px rgba(0,0,0,0.2)';
-                            card.style.border = '2px solid #003579';
-                        });
-
-                        card.addEventListener('mouseleave', () => {
-                            card.style.transform = 'translateY(0)';
-                            card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-                            card.style.border = '2px solid transparent';
-                        });
-
-                        // Efecto click
-                        card.addEventListener('click', () => {
-                            card.style.transform = 'scale(0.98)';
-                            setTimeout(() => {
-                                card.style.transform = 'translateY(-10px)';
-                            }, 150);
-                            showNotification('¡Beneficio seleccionado! 🎯', 'info');
-                        });
-                    });
-
-                    // Efecto click en las tarjetas del grid
-                    const gridCards = document.querySelectorAll('.card');
-                    gridCards.forEach(card => {
-                        card.addEventListener('click', () => {
-                            // Efecto de pulso al hacer clic
-                            card.style.transform = 'scale(0.95)';
-                            card.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
-                            setTimeout(() => {
-                                card.style.transform = '';
-                                card.style.boxShadow = '';
-                            }, 300);
-
-                            // Mostrar información de la característica
-                            const title = card.querySelector('h3').textContent;
-                            showNotification(`Característica: ${title} ✨`, 'success');
-                        });
-                    });
-
-                    // Efecto hover en botones de navegación
-                    const navButtons = document.querySelectorAll('.section-2 button');
-                    navButtons.forEach(button => {
-                        button.addEventListener('mouseenter', () => {
-                            button.style.transform = 'translateY(-3px)';
-                            button.style.boxShadow = '0 8px 20px rgba(0, 53, 121, 0.3)';
-                            button.style.display = 'display: flex;';
-                            button.style.display = 'justify-content: center;';
-                        });
-
-                        button.addEventListener('mouseleave', () => {
-                            button.style.transform = 'translateY(0)';
-                            button.style.boxShadow = '';
-                        });
-                    });
-                }
-            }
-
-            // 5. NAVEGACIÓN SUAVE
-            class SmoothNavigation {
-                constructor() {
-                    this.init();
-                }
-
-                init() {
-                    // Navegación suave para los botones de la sección 2
-                    const navButtons = document.querySelectorAll('.section-2 button');
-                    navButtons.forEach(button => {
-                        button.addEventListener('click', (e) => {
-                            const targetId = button.textContent.toLowerCase();
-                            const targetSection = document.querySelector(`.section-${this.getSectionNumber(targetId)}`);
-
-                            if (targetSection) {
-                                e.preventDefault();
-                                targetSection.scrollIntoView({
-                                    behavior: 'smooth',
-                                    block: 'start'
-                                });
-                            }
-                        });
-                    });
-                }
-
-                getSectionNumber(targetId) {
-                    const sectionMap = {
-                        'beneficios': '5',
-                        'instituciones': '7',
-                        'integración': '9',
-                        'disponibilidad': '12'
-                    };
-                    return sectionMap[targetId] || '1';
-                }
-            }
-
-
-
-
-
-
-
-            // Función para volver arriba
-            function scrollToTop() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-
-            // Inicializar botón de volver arriba y otros botones que usan scrollToTop
-            document.addEventListener('DOMContentLoaded', function () {
-                const integrationBtn = document.getElementById('integrationBtn');
-
-                // Mostrar/ocultar botón según el scroll
-                // (backToTopBtn is not defined in your code, so this block is commented out or can be removed)
-                // window.addEventListener('scroll', () => {
-                //     if (backToTopBtn) {
-                //         if (window.pageYOffset > 300) {
-                //             backToTopBtn.style.display = 'flex';
-                //             backToTopBtn.style.opacity = '1';
-                //         } else {
-                //             backToTopBtn.style.opacity = '0';
-                //             setTimeout(() => {
-                //                 if (window.pageYOffset <= 300) {
-                //                     backToTopBtn.style.display = 'none';
-                //                 }
-                //             }, 300);
-                //         }
-                //     }
-                // });
-
-                // Asignar evento click a los botones
-                if (integrationBtn) {
-                    integrationBtn.addEventListener('click', scrollToTop);
-                }
-            });
-        } // <-- Add this closing brace to end the showJSWorking function
-    </script>
-
-</body>
-
-</html>
