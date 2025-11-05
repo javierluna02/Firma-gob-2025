@@ -462,7 +462,6 @@
                 style="background-color: #ED2024; border:none; border-radius: 50px; color: white; width: 156px; height: 35px ; ">Descargar
                 PDF</button>
             </a>
-            </button>
 
             <script src="../js/home/descargar.js"></script>
           </div>
@@ -472,104 +471,102 @@
     </section>
 
     <!-- Botón para abrir el modal -->
-    <button onclick="openContactModal()" style="width: 198px; height: 43px   
-    ;  color: #0066CC; border: 1px solid #0066CC; border-radius:50px; background-color: white; "">
-    servicios
-  </button>
-    
-    </div>
-
-
-  <!-- Modal -->
-  <div id=" contactModal"
-      style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center; ">
-
-      <div
-        style="background: white; display: flex; flex-direction: column; border-radius: clamp(12px, 3vw, 20px);  max-width: min(95%, 1200px); width: 100%; max-height: min(95vh, 900px); overflow-y: auto; position: relative; box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);">
-        <div
-          style=" background-color: #003579; width: 100%; height: 100px; padding: 10px; display: flex; justify-content: space-between;">
-          <div>
-            <h1 style="color: white;">Solicitud de servicio</h1>
-            <span style="color: white;">> Ambiente de prueba</span>
-          </div>
-
-
-
-          <button onclick="closeContactModal()"
-            style="  color: #0066CC; display: flex;  height: 47px; width:196px ;  font-size:20px; border-radius:50px;   border: 1px solid #0066CC  ; background: white; justify-content: center; align-items: center; gap: 5px;"
-            class=""><img style=" height: 80%;  " src="../img/3c706ae16f6df13449764633b36a3f780e49c408.png"
-              alt="">Servicios</button>
-
+    <button onclick="openContactModal()"
+      style="width: 198px; height: 43px; color: #0066CC; border: 1px solid #0066CC; border-radius:50px; background-color: white;">
+      servicios
     </button>
 
   </div>
 
 
-  <!-- Encabezado del modal -->
+  <!-- Modal -->
+  <div id="contactModal"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center; ">
 
-  <section style="display: flex; justify-content: center;">
-    <article id="" class="contenedor">
-      <div class="campos">
-        <span>*Todos los campos marcados son obligatorios</span>
-      </div>
-
-      <section class="section2">
-        <article class="cont1-input">
-          <div class="div-input1">
-            <h3>Nombre:</h3>
-            <input placeholder="Nombre Completo" type="text">
-          </div>
-          <div class="div-input2">
-            <h3>Institución</h3>
-            <input placeholder="Institución" type="text">
-          </div>
-        </article>
-
-        <article class="cont2-input">
-          <div class="div-input1">
-            <h3>Dirección de correo electrónico:</h3>
-            <input placeholder="Correo Electrónico" type="text">
-          </div>
-          <div class="div-input2">
-            <h3>Número de teléfono:</h3>
-            <input placeholder="Número de teléfono" type="text">
-          </div>
-
-        </article>
-
-      </section>
-      <section style="" class="cont3-input">
-        <h3>Mensaje:</h3>
-        <textarea placeholder="Asunto"
-          style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"></textarea>
-      </section>
-
-      <div class="div-text">
-        <span>Formatos permitidos: PDF, DOCX</span>
-      </div>
-      <div class="div-text2">
-        <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en
-          este
-          sitio
-          web como indica nuestra Política de Privacidad </span>
-      </div>
-      <div style="padding: 20px;" class="div-text3">
-        <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de Firma
-          GOB?</span>
-        <div class="check">
-          <input class="checkbox" type="checkbox">
-          <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con
-            fines de
-            marketing/ventas directas como indica nuestra Política de Privacidad</span>
+    <div
+      style="background: white; display: flex; flex-direction: column; border-radius: clamp(12px, 3vw, 20px);  max-width: min(95%, 1200px); width: 100%; max-height: min(95vh, 900px); overflow-y: auto; position: relative; box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);">
+      <div
+        style=" background-color: #003579; width: 100%; height: 100px; padding: 10px; display: flex; justify-content: space-between;">
+        <div>
+          <h1 style="color: white;">Solicitud de servicio</h1>
+          <span style="color: white;">> Ambiente de prueba</span>
         </div>
+
+
+
+        <button onclick="closeContactModal()"
+          style="  color: #0066CC; display: flex;  height: 47px; width:196px ;  font-size:20px; border-radius:50px;   border: 1px solid #0066CC  ; background: white; justify-content: center; align-items: center; gap: 5px;"
+          class=""><img style=" height: 80%;  " src="../img/3c706ae16f6df13449764633b36a3f780e49c408.png"
+            alt="">Servicios</button>
+
       </div>
 
-      <div class="footer-modal">
-        <button type="submit">Enviar</button>
-      </div>
-    </article>
-  </section>
-  </div>
+
+      <!-- Encabezado del modal -->
+
+      <section style="display: flex; justify-content: center;">
+        <article id="" class="contenedor">
+          <div class="campos">
+            <span>*Todos los campos marcados son obligatorios</span>
+          </div>
+
+          <section class="section2">
+            <article class="cont1-input">
+              <div class="div-input1">
+                <h3>Nombre:</h3>
+                <input placeholder="Nombre Completo" type="text">
+              </div>
+              <div class="div-input2">
+                <h3>Institución</h3>
+                <input placeholder="Institución" type="text">
+              </div>
+            </article>
+
+            <article class="cont2-input">
+              <div class="div-input1">
+                <h3>Dirección de correo electrónico:</h3>
+                <input placeholder="Correo Electrónico" type="text">
+              </div>
+              <div class="div-input2">
+                <h3>Número de teléfono:</h3>
+                <input placeholder="Número de teléfono" type="text">
+              </div>
+
+            </article>
+
+          </section>
+          <section style="" class="cont3-input">
+            <h3>Mensaje:</h3>
+            <textarea placeholder="Asunto"
+              style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"></textarea>
+          </section>
+
+          <div class="div-text">
+            <span>Formatos permitidos: PDF, DOCX</span>
+          </div>
+          <div class="div-text2">
+            <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en
+              este
+              sitio
+              web como indica nuestra Política de Privacidad </span>
+          </div>
+          <div style="padding: 20px;" class="div-text3">
+            <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de Firma
+              GOB?</span>
+            <div class="check">
+              <input class="checkbox" type="checkbox">
+              <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con
+                fines de
+                marketing/ventas directas como indica nuestra Política de Privacidad</span>
+            </div>
+          </div>
+
+          <div class="footer-modal">
+            <button type="submit">Enviar</button>
+          </div>
+        </article>
+      </section>
+    </div>
   </div>
 
   <script>
