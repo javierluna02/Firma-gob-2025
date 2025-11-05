@@ -2,63 +2,63 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Firma GOB</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Firma GOB</title>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="../style.css?v=1" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="../style.css?v=1" />
 
-    <script src="https://cdn.jsdelivr.net/gh/ogticrd/official-header/main.js" defer theme="light"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ogticrd/official-header/main.js" defer theme="light"></script>
 
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/navigation.css">
-    <link rel="stylesheet" href="../css/responsive-base.css">
-    <link rel="stylesheet" href="../css/catalogo-de-servicios.css">
-    <link rel="stylesheet" href="../css/contacto.css">
-    <link rel="stylesheet" href="../css/detalles-de-servicios.css">
-    <link rel="stylesheet" href="../css/css/home/home.css">
-    <link rel="stylesheet" href="../css/css/home/section-12.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/navigation.css">
+  <link rel="stylesheet" href="../css/responsive-base.css">
+  <link rel="stylesheet" href="../css/catalogo-de-servicios.css">
+  <link rel="stylesheet" href="../css/contacto.css">
+  <link rel="stylesheet" href="../css/detalles-de-servicios.css">
+  <link rel="stylesheet" href="../css/css/home/home.css">
+  <link rel="stylesheet" href="../css/css/home/section-12.css">
 
-    <!-- Google Fonts - Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Bootstrap Bundle with Popper   -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts - Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Bootstrap Bundle with Popper   -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <script type="text/javascript">
-        // Mover las funciones fuera del event listener para que sean globales
-        function toggleMenu(event) {
-            event.stopPropagation();
-            if ($(".showOnlyMobile").is(":visible")) {
-                document.querySelector('#mainMenu').classList.toggle('show');
-            } else {
-                const menu = document.getElementById("menu");
-                if (menu) menu.classList.toggle("active");
-            }
-        }
+  <script type="text/javascript">
+    // Mover las funciones fuera del event listener para que sean globales
+    function toggleMenu(event) {
+      event.stopPropagation();
+      if ($(".showOnlyMobile").is(":visible")) {
+        document.querySelector('#mainMenu').classList.toggle('show');
+      } else {
+        const menu = document.getElementById("menu");
+        if (menu) menu.classList.toggle("active");
+      }
+    }
 
-        function closeMenu(event) {
-            let menu = document.getElementById("menu");
-            if (menu && !menu.contains(event.target) && !document.querySelector(".menu-icon").contains(event.target)) {
-                menu.classList.remove("active");
-            }
-        }
+    function closeMenu(event) {
+      let menu = document.getElementById("menu");
+      if (menu && !menu.contains(event.target) && !document.querySelector(".menu-icon").contains(event.target)) {
+        menu.classList.remove("active");
+      }
+    }
 
-        document.addEventListener('DOMContentLoaded', function () {
-            $('.top-header-mobile-interes').on('click', function () {
-                this.classList.toggle('show');
-                this.classList.toggle('collapsed');
-                const acc = document.querySelector('.navbar-interes .accordion.accordion-flush');
-                if (acc) acc.classList.toggle('show');
-            });
-        });
-    </script>
+    document.addEventListener('DOMContentLoaded', function () {
+      $('.top-header-mobile-interes').on('click', function () {
+        this.classList.toggle('show');
+        this.classList.toggle('collapsed');
+        const acc = document.querySelector('.navbar-interes .accordion.accordion-flush');
+        if (acc) acc.classList.toggle('show');
+      });
+    });
+  </script>
 </head>
 
 
@@ -73,145 +73,146 @@
 
 
 
-  <style>
-    /* 🔹 Ajustes generales responsivos */
-    img {
-      max-width: 100%;
+<style>
+  /* 🔹 Ajustes generales responsivos */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  section {
+    flex-wrap: wrap;
+  }
+
+  /* 🔹 Estructura responsive para secciones principales */
+  section[style*="display:flex"] {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 992px) {
+    .navbar-brand img:first-child {
+      height: 60px !important;
+    }
+
+    .navbar-brand img:last-child {
+      height: 50px !important;
+    }
+
+    section[style*="display:flex"]>div {
+      width: 100% !important;
+      padding: 15px !important;
+    }
+
+    .home-section-1 img {
+      width: 100%;
       height: auto;
     }
+  }
 
-    section {
-      flex-wrap: wrap;
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
     }
 
-    /* 🔹 Estructura responsive para secciones principales */
-    section[style*="display:flex"] {
-      flex-wrap: wrap;
+    h2 {
+      text-align: center;
     }
 
-    @media (max-width: 992px) {
-      .navbar-brand img:first-child {
-        height: 60px !important;
-      }
-
-      .navbar-brand img:last-child {
-        height: 50px !important;
-      }
-
-      section[style*="display:flex"] > div {
-        width: 100% !important;
-        padding: 15px !important;
-      }
-
-      .home-section-1 img {
-        width: 100%;
-        height: auto;
-      }
+    .div-1 img {
+      width: 100%;
     }
 
-    @media (max-width: 768px) {
-      body {
-        font-size: 15px;
-      }
-
-      h2 {
-        text-align: center;
-      }
-
-      .div-1 img {
-        width: 100%;
-      }
-
-      .footer-modal button {
-        width: 100%;
-      }
-
-      .container-md,
-      .container-fluid {
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-      }
-
-      /* Ajuste modal en móvil */
-      #contactModal > div {
-        width: 95% !important;
-        height: auto !important;
-      }
-
-      #contactModal h1 {
-        font-size: 1.2rem;
-      }
+    .footer-modal button {
+      width: 100%;
     }
 
-    /* 🔹 Botones flotantes adaptativos */
+    .container-md,
+    .container-fluid {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+
+    /* Ajuste modal en móvil */
+    #contactModal>div {
+      width: 95% !important;
+      height: auto !important;
+    }
+
+    #contactModal h1 {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* 🔹 Botones flotantes adaptativos */
+  .floating-btn {
+    background-color: #0066CC;
+    border-radius: 50%;
+    width: 77px;
+    height: 77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .floating-btn img {
+    width: 50%;
+    height: 50%;
+  }
+
+  @media (max-width: 576px) {
     .floating-btn {
-      background-color: #0066CC;
-      border-radius: 50%;
-      width: 77px;
-      height: 77px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 999;
+      width: 60px;
+      height: 60px;
     }
+  }
 
-    .floating-btn img {
-      width: 50%;
-      height: 50%;
-    }
+  /* 🔹 Ajustes visuales del modal */
+  #contactModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 10px;
+  }
 
-    @media (max-width: 576px) {
-      .floating-btn {
-        width: 60px;
-        height: 60px;
-      }
-    }
+  #contactModal>div {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: clamp(12px, 3vw, 20px);
+    max-width: min(95%, 1200px);
+    width: 100%;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  }
 
-    /* 🔹 Ajustes visuales del modal */
-    #contactModal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      overflow-y: auto;
-      padding: 10px;
-    }
+  /* 🔹 Footer responsive */
+  footer img {
+    max-width: 100%;
+    height: auto;
+  }
 
-    #contactModal > div {
-      background: white;
-      display: flex;
-      flex-direction: column;
-      border-radius: clamp(12px, 3vw, 20px);
-      max-width: min(95%, 1200px);
-      width: 100%;
-      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
-    }
+  @media (max-width: 992px) {
 
-    /* 🔹 Footer responsive */
-    footer img {
-      max-width: 100%;
-      height: auto;
+    footer .col-lg-3,
+    footer .col-lg-4,
+    footer .col-lg-8 {
+      text-align: center;
+      padding-left: 0 !important;
     }
-
-    @media (max-width: 992px) {
-      footer .col-lg-3,
-      footer .col-lg-4,
-      footer .col-lg-8 {
-        text-align: center;
-        padding-left: 0 !important;
-      }
-    }
-  </style>
+  }
+</style>
 
 
 
@@ -224,257 +225,254 @@
 
 
 <body>
-    <official-header></official-header>
+  <official-header></official-header>
 
-    <nav class="navbar navbar-expand-lg" style="padding-left: 0px; background-color: #003579;">
-        <div class="container-md">
-            <a class="navbar-brand d-flex align-items-center " href="home.html">
-                <img src="../img/Figma-logo-blanco.png" alt="Firma GOB"
-                    style="height:80px; border-right: 1px solid #D8D8D8;">
-                <img src="../img/ogtic-logo-blanco.png" alt="" style="height: 70px;">
+  <nav class="navbar navbar-expand-lg" style="padding-left: 0px; background-color: #003579;">
+    <div class="container-md">
+      <a class="navbar-brand d-flex align-items-center " href="home.html">
+        <img src="../img/Figma-logo-blanco.png" alt="Firma GOB" style="height:80px; border-right: 1px solid #D8D8D8;">
+        <img src="../img/ogtic-logo-blanco.png" alt="" style="height: 70px;">
 
-            </a>
+      </a>
 
-            <div class="search-bar ms-auto d-flex align-items-center my-1">
-                <form role="search" class="search-form" method="get" action="/">
-                    <input type="search" class="form-control" placeholder="¿Qué quieres buscar?" name="s" value="">
-                    <button class="btn btn-outline-secondary submit">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </form>
+      <div class="search-bar ms-auto d-flex align-items-center my-1">
+        <form role="search" class="search-form" method="get" action="/">
+          <input type="search" class="form-control" placeholder="¿Qué quieres buscar?" name="s" value="">
+          <button class="btn btn-outline-secondary submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
 
-                <div class="divisor-search-menu"></div>
+        <div class="divisor-search-menu"></div>
 
-                <div onclick="closeMenu(event)">
-                    <div class="menu-icon" onclick="toggleMenu(event)">
-                        <i class="svg-icon">
-                            <svg stroke="white" fill="white" stroke-width="0" version="1.1" viewBox="0 0 17 17"
-                                height="36px" width="36px" xmlns="http://www.w3.org/2000/svg">
-                                <g></g>
-                                <path
-                                    d="M0 0h5v5h-5v-5zM6 5h5v-5h-5v5zM12 0v5h5v-5h-5zM0 11h5v-5h-5v5zM6 11h5v-5h-5v5zM12 11h5v-5h-5v5zM0 17h5v-5h-5v5zM6 17h5v-5h-5v5zM12 17h5v-5h-5v5z">
-                                </path>
-                            </svg>
-                        </i>
-                    </div>
+        <div onclick="closeMenu(event)">
+          <div class="menu-icon" onclick="toggleMenu(event)">
+            <i class="svg-icon">
+              <svg stroke="white" fill="white" stroke-width="0" version="1.1" viewBox="0 0 17 17" height="36px"
+                width="36px" xmlns="http://www.w3.org/2000/svg">
+                <g></g>
+                <path
+                  d="M0 0h5v5h-5v-5zM6 5h5v-5h-5v5zM12 0v5h5v-5h-5zM0 11h5v-5h-5v5zM6 11h5v-5h-5v5zM12 11h5v-5h-5v5zM0 17h5v-5h-5v5zM6 17h5v-5h-5v5zM12 17h5v-5h-5v5z">
+                </path>
+              </svg>
+            </i>
+          </div>
 
-                 
-                </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <span class="showOnlyMobile sensorState">.</span>
+  <nav class="container-md navbar navbar-expand-lg bg-white w-100" style="padding-left: 0px;">
+    <div class="container-fluid">
+      <div class="container-fluid collapse navbar-collapse pd-l-none" id="mainMenu">
+        <!-- Reemplazo estático del menú de WordPress -->
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo-de-servicios.html">Catalogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
+          <li class="nav-item"><a class="nav-link" href="detalles-de-servicio.html">Servicios</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <section class="home-section-1">
+    <div class="div-1">
+      <img class="" src="../img/Group_109[1].png" alt="Banner">
+    </div>
+    <div class="div-2">
+      <div class="div-2_div">
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <div style="display: flex; justify-content: center; align-items:center; flex-direction: column; ">
+
+    <div style="display: flex; padding:20px; color: #003579;
+ flex-direction: column; gap:20px; align-items: center; justify-content: center;">
+      <h2>
+        Portafirmas Firma Gob
+      </h2>
+      <p style="color: #003579;">BUSCA DE MANERA PRECISA AQUELLO QUE NECESITAS CONOCER</p>
+
+      <div style="display: flex; flex-direction: row; align-items:center; gap: 10px;">
+        <span style="color: #94AAC7;"> <img class="" src="/img/icons8-analytics-64 (1) 19.svg" alt="">
+          SEGURO</span>
+        <span style="color: #94AAC7;"> <img class="" src="/img/icons8-analytics-64 (1) 19.svg" alt="">
+          OPTIMO <span style="color: #94AAC7;"> <img class="" src="../img/icons8-analytics-64 (1) 19.svg" alt="">
+            EFICAZ</span>
+      </div>
+      <p style="width: 80%; color: #003579; font-weight: 500; font-size:18px;">Consiste en proveer a los
+        organismos
+        gubernamentales de un portafirmas altamente efectivo para administrar de manera eficiente el flujo de
+        documentos que requieren ser firmados digitalmente. Esta solución tecnológica permite a las
+        instituciones
+        públicas agilizar y automatizar el proceso de firma, reduciendo la dependencia del papel y optimizando
+        la
+        gestión documental.</p>
+    </div>
+
+    <section style=" display:flex; justify-content: center; align-items: center; ">
+      <div style="width: 50%; display: flex; flex-direction: column; gap: 20px;">
+        <div
+          style="width:196px;   font-weight: 600; color: white; display:flex; align-items:center; justify-content: center; height: 47px; background-color: #7CC713; border-radius: 23px ;   ">
+          Beneficios
+        </div>
+
+        <div style="display: flex; gap: 15px; align-items: flex-start;">
+          <img src="../img/check.svg" alt="check icon" style="width: 20px; height: 20px;">
+          <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
+            <strong>Flujos de Firma:</strong> Creación de flujos de firmas en cascada, simultáneos y vistos
+            buenos.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 15px; align-items: flex-start;">
+          <img src="/img/check.svg" alt="check icon" style="width: 20px; height: 20px;">
+          <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
+            <strong>Firma desde cualquier lugar:</strong> Plataforma adaptable a dispositivos móviles,
+            permitiendo firmar desde donde se encuentre.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 15px; align-items: flex-start;">
+          <img src="/img/check.svg" alt="check icon" style="width: 20px; height: 20px;">
+          <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
+            <strong>Seguridad e Integridad:</strong> Los documentos firmados no pueden ser modificados, por
+            lo
+            que se garantiza la autenticidad de este.
+          </p>
+        </div>
+
+      </div>
+
+
+
+      <div style=" padding:30px; width:40%;">
+
+        <div style=" padding: 20px; width: 520px; border-radius: 20px;  box-shadow: 0px 0px 10px 0px ;
+         height: 340px ; display: flex;
+         flex-direction: column; justify-content: center; ">
+          <div style="display: flex; align-items: center; justify-content: center; ">
+            <div style=" width:100%;  background-color: #A6D2FF63;">
+              <img class="" style=" width: 100%;" src="../img/Group 5.svg" alt="Grupo 5">
             </div>
-        </div>
-    </nav>
 
-    <!-- Menu Section -->
-    <span class="showOnlyMobile sensorState">.</span>
-    <nav class="container-md navbar navbar-expand-lg bg-white w-100" style="padding-left: 0px;">
-        <div class="container-fluid">
-            <div class="container-fluid collapse navbar-collapse pd-l-none" id="mainMenu">
-                <!-- Reemplazo estático del menú de WordPress -->
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="catalogo-de-servicios.html">Catalogo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
-                    <li class="nav-item"><a class="nav-link" href="detalles-de-servicio.html">Servicios</a></li>
-
-
-                </ul>
+            <div>
+              <h4>
+                Información adicional
+              </h4>
+              <ol>
+                <li style=" color: #0066CC; ">Para tramitar este servicio, es necesario que el
+                  solicitante
+                  haya enviado la carta de solicitud firmada, sellada e inicialada por la máxima
+                  autoridad.</li>
+              </ol>
             </div>
+
+          </div>
+
+          <ul style=" color: #0066CC; ">
+            Toda documentación adjuntada en el sistema será almacenada en los servidores de la OGTIC (Data
+            Center)
+          </ul>
+          <div style=" display:flex; justify-content: center;">
+            <a href="">conocer mas</a>
+
+          </div>
+
         </div>
-    </nav>
+
+      </div>
 
 
 
-    <section class="home-section-1">
-        <div class="div-1">
-            <img class="" src="/img/Group_109[1].png" alt="Banner">
-        </div>
-        <div class="div-2">
-            <div class="div-2_div">
-
-            </div>
-        </div>
     </section>
 
-  
-
-    <div style="display: flex; justify-content: center; align-items:center; flex-direction: column; ">
-
-        <div style="display: flex; padding:20px; color: #003579;
- flex-direction: column; gap:20px; align-items: center; justify-content: center;">
-            <h2>
-                Portafirmas Firma Gob
-            </h2>
-            <p style="color: #003579;">BUSCA DE MANERA PRECISA AQUELLO QUE NECESITAS CONOCER</p>
-
-            <div style="display: flex; flex-direction: row; align-items:center; gap: 10px;">
-                <span style="color: #94AAC7;"> <img class="" src="/img/icons8-analytics-64 (1) 19.svg" alt="">
-                    SEGURO</span>
-                <span style="color: #94AAC7;"> <img class="" src="/img/icons8-analytics-64 (1) 19.svg" alt="">
-                    OPTIMO <span style="color: #94AAC7;"> <img class="" src="/img/icons8-analytics-64 (1) 19.svg"
-                            alt="">
-                        EFICAZ</span>
-            </div>
-            <p style="width: 80%; color: #003579; font-weight: 500; font-size:18px;">Consiste en proveer a los
-                organismos
-                gubernamentales de un portafirmas altamente efectivo para administrar de manera eficiente el flujo de
-                documentos que requieren ser firmados digitalmente. Esta solución tecnológica permite a las
-                instituciones
-                públicas agilizar y automatizar el proceso de firma, reduciendo la dependencia del papel y optimizando
-                la
-                gestión documental.</p>
+    <section style=" display:flex;  justify-content: center; align-items: center; ">
+      <div style=" display: flex ; gap:20px; border: 1px solid #0000; flex-direction:column;  width: 50%; ">
+        <div style="width:196px;   font-weight: 600; color: white; display:flex; align-items:center; justify-content: center;
+         height: 47px; background-color: #0080FF; border-radius: 23px ;   ">
+          Requisitos
         </div>
 
-        <section style=" display:flex; justify-content: center; align-items: center; ">
-            <div style="width: 50%; display: flex; flex-direction: column; gap: 20px;">
-                <div
-                    style="width:196px;   font-weight: 600; color: white; display:flex; align-items:center; justify-content: center; height: 47px; background-color: #7CC713; border-radius: 23px ;   ">
-                    Beneficios
-                </div>
 
-                <div style="display: flex; gap: 15px; align-items: flex-start;">
-                    <img src="/img/check.svg" alt="check icon" style="width: 20px; height: 20px;">
-                    <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
-                        <strong>Flujos de Firma:</strong> Creación de flujos de firmas en cascada, simultáneos y vistos
-                        buenos.
-                    </p>
-                </div>
+        <div style="display: flex; gap: 15px; align-items: center;">
+          <div
+            style="width: 5%; height: 5%; border-radius: 50%; color: white; background-color: #0080FF ; justify-content: center; display: flex; align-items: center; ">
+            1</div>
+          <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
+            <strong>Flujos de Firma:</strong> Creación de flujos de firmas en cascada, simultáneos y vistos
+            buenos.
+          </p>
+        </div>
 
-                <div style="display: flex; gap: 15px; align-items: flex-start;">
-                    <img src="/img/check.svg" alt="check icon" style="width: 20px; height: 20px;">
-                    <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
-                        <strong>Firma desde cualquier lugar:</strong> Plataforma adaptable a dispositivos móviles,
-                        permitiendo firmar desde donde se encuentre.
-                    </p>
-                </div>
+        <div style="display: flex; gap: 15px; align-items: center;">
+          <div
+            style="width: 5%; height: 5%; border-radius: 50%; color: white; background-color: #0080FF ; justify-content: center; display: flex; align-items: center; ">
+            2</div>
 
-                <div style="display: flex; gap: 15px; align-items: flex-start;">
-                    <img src="/img/check.svg" alt="check icon" style="width: 20px; height: 20px;">
-                    <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
-                        <strong>Seguridad e Integridad:</strong> Los documentos firmados no pueden ser modificados, por
-                        lo
-                        que se garantiza la autenticidad de este.
-                    </p>
-                </div>
+          <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
+            <strong>Firma desde cualquier lugar:</strong> Plataforma adaptable a dispositivos móviles,
+            permitiendo firmar desde donde se encuentre.
+          </p>
+        </div>
 
-            </div>
+        <div style="display: flex; gap: 15px; align-items: center;">
+          <div
+            style="width: 5%; height:5%; border-radius: 50%; color: white; background-color: #0080FF ; justify-content: center; display: flex; align-items: center; ">
+            3</div>
+
+          <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
+            <strong>Seguridad e Integridad:</strong> Los documentos firmados no pueden ser modificados, por
+            lo
+            que se garantiza la autenticidad de este.
+          </p>
+        </div>
 
 
 
-            <div style=" padding:30px; width:40%;">
+      </div>
 
-                <div style=" padding: 20px; width: 520px; border-radius: 20px;  box-shadow: 0px 0px 10px 0px ;
+
+      <div style=" padding:30px; width:40%;">
+        <div
+          style="background-color: #0080FF; position:relative; bottom:-20px; width: 140px; height:36px; color: white; display: flex; justify-content: center; align-items: center; border-radius: 50px;  ">
+          Documentos</div>
+
+        <div style=" border-radius: 20px; box-shadow: 0px 0px 1px 0px;  padding: 20px; width: 520px; border:1px solid  #0080FF;
          height: 340px ; display: flex;
          flex-direction: column; justify-content: center; ">
-                    <div style="display: flex; align-items: center; justify-content: center; ">
-                        <div style=" width:100%;  background-color: #A6D2FF63;">
-                            <img class="" style=" width: 100%;" src="/img/Group 5.svg" alt="Grupo 5">
-                        </div>
+          <div style="display: flex; flex-direction:column; align-items: center; justify-content: center; ">
+            <img class="" src="../img/Group 83.svg" alt="">
+            <a href="miarchivo.pdf" download="MiDocumento.pdf">
+              <button
+                style="background-color: #ED2024; border:none; border-radius: 50px; color: white; width: 156px; height: 35px ; ">Descargar
+                PDF</button>
+            </a>
+            </button>
 
-                        <div>
-                            <h4>
-                                Información adicional
-                            </h4>
-                            <ol>
-                                <li style=" color: #0066CC; ">Para tramitar este servicio, es necesario que el
-                                    solicitante
-                                    haya enviado la carta de solicitud firmada, sellada e inicialada por la máxima
-                                    autoridad.</li>
-                            </ol>
-                        </div>
-
-                    </div>
-
-                    <ul style=" color: #0066CC; ">
-                        Toda documentación adjuntada en el sistema será almacenada en los servidores de la OGTIC (Data
-                        Center)
-                    </ul>
-                    <div style=" display:flex; justify-content: center;">
-                        <a href="">conocer mas</a>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <script src="../js/home/descargar.js"></script>
+          </div>
 
 
 
-        </section>
+    </section>
 
-        <section style=" display:flex;  justify-content: center; align-items: center; ">
-            <div style=" display: flex ; gap:20px; border: 1px solid #0000; flex-direction:column;  width: 50%; ">
-                <div style="width:196px;   font-weight: 600; color: white; display:flex; align-items:center; justify-content: center;
-         height: 47px; background-color: #0080FF; border-radius: 23px ;   ">
-                    Requisitos
-                </div>
-
-
-                <div style="display: flex; gap: 15px; align-items: center;">
-                    <div
-                        style="width: 5%; height: 5%; border-radius: 50%; color: white; background-color: #0080FF ; justify-content: center; display: flex; align-items: center; ">
-                        1</div>
-                    <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
-                        <strong>Flujos de Firma:</strong> Creación de flujos de firmas en cascada, simultáneos y vistos
-                        buenos.
-                    </p>
-                </div>
-
-                <div style="display: flex; gap: 15px; align-items: center;">
-                    <div
-                        style="width: 5%; height: 5%; border-radius: 50%; color: white; background-color: #0080FF ; justify-content: center; display: flex; align-items: center; ">
-                        2</div>
-
-                    <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
-                        <strong>Firma desde cualquier lugar:</strong> Plataforma adaptable a dispositivos móviles,
-                        permitiendo firmar desde donde se encuentre.
-                    </p>
-                </div>
-
-                <div style="display: flex; gap: 15px; align-items: center;">
-                    <div
-                        style="width: 5%; height:5%; border-radius: 50%; color: white; background-color: #0080FF ; justify-content: center; display: flex; align-items: center; ">
-                        3</div>
-
-                    <p style="margin: 0; font-size: 15px; line-height: 22px; color: #002060;">
-                        <strong>Seguridad e Integridad:</strong> Los documentos firmados no pueden ser modificados, por
-                        lo
-                        que se garantiza la autenticidad de este.
-                    </p>
-                </div>
-
-
-
-            </div>
-
-
-            <div style=" padding:30px; width:40%;">
-                <div
-                    style="background-color: #0080FF; position:relative; bottom:-20px; width: 140px; height:36px; color: white; display: flex; justify-content: center; align-items: center; border-radius: 50px;  ">
-                    Documentos</div>
-
-                <div style=" border-radius: 20px; box-shadow: 0px 0px 1px 0px;  padding: 20px; width: 520px; border:1px solid  #0080FF;
-         height: 340px ; display: flex;
-         flex-direction: column; justify-content: center; ">
-                    <div style="display: flex; flex-direction:column; align-items: center; justify-content: center; ">
-                        <img class="" src="/img/Group 83.svg" alt="">
-                        <a href="miarchivo.pdf" download="MiDocumento.pdf">
-                            <button
-                                style="background-color: #ED2024; border:none; border-radius: 50px; color: white; width: 156px; height: 35px ; ">Descargar
-                                PDF</button>
-                        </a>
-                        </button>
-
-                        <script src="/js/home/descargar.js"></script>
-                    </div>
-
-
-
-        </section>
-        
-  <!-- Botón para abrir el modal -->
-  <button onclick="openContactModal()"
-    style="width: 198px; height: 43px   
+    <!-- Botón para abrir el modal -->
+    <button onclick="openContactModal()" style="width: 198px; height: 43px   
     ;  color: #0066CC; border: 1px solid #0066CC; border-radius:50px; background-color: white; "">
     servicios
   </button>
@@ -483,93 +481,95 @@
 
 
   <!-- Modal -->
-  <div id="contactModal"
-    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center; ">
-    
-    <div
-      style="background: white; display: flex; flex-direction: column; border-radius: clamp(12px, 3vw, 20px);  max-width: min(95%, 1200px); width: 100%; max-height: min(95vh, 900px); overflow-y: auto; position: relative; box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);">
-      <div style=" background-color: #003579; width: 100%; height: 100px; padding: 10px; display: flex; justify-content: space-between;" >
-        <div>
-            <h1 style="color: white;" >Solicitud de servicio</h1>
-           <span style="color: white;">> Ambiente de prueba</span>
-        </div>
-           
+  <div id=" contactModal"
+      style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center; ">
+
+      <div
+        style="background: white; display: flex; flex-direction: column; border-radius: clamp(12px, 3vw, 20px);  max-width: min(95%, 1200px); width: 100%; max-height: min(95vh, 900px); overflow-y: auto; position: relative; box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);">
+        <div
+          style=" background-color: #003579; width: 100%; height: 100px; padding: 10px; display: flex; justify-content: space-between;">
+          <div>
+            <h1 style="color: white;">Solicitud de servicio</h1>
+            <span style="color: white;">> Ambiente de prueba</span>
+          </div>
 
 
-            <button onclick="closeContactModal()"
+
+          <button onclick="closeContactModal()"
             style="  color: #0066CC; display: flex;  height: 47px; width:196px ;  font-size:20px; border-radius:50px;   border: 1px solid #0066CC  ; background: white; justify-content: center; align-items: center; gap: 5px;"
-            class="" ><img style=" height: 80%;  " src="/img/3c706ae16f6df13449764633b36a3f780e49c408.png" alt="">Servicios</button>
-            
-      </button>
+            class=""><img style=" height: 80%;  " src="../img/3c706ae16f6df13449764633b36a3f780e49c408.png"
+              alt="">Servicios</button>
 
-       </div>
+    </button>
+
+  </div>
 
 
-      <!-- Encabezado del modal -->
-       
-      <section style="display: flex; justify-content: center;">
-        <article id="" class="contenedor">
-          <div class="campos">
-            <span>*Todos los campos marcados son obligatorios</span>
+  <!-- Encabezado del modal -->
+
+  <section style="display: flex; justify-content: center;">
+    <article id="" class="contenedor">
+      <div class="campos">
+        <span>*Todos los campos marcados son obligatorios</span>
+      </div>
+
+      <section class="section2">
+        <article class="cont1-input">
+          <div class="div-input1">
+            <h3>Nombre:</h3>
+            <input placeholder="Nombre Completo" type="text">
           </div>
-
-          <section class="section2">
-            <article class="cont1-input">
-              <div class="div-input1">
-                <h3>Nombre:</h3>
-                <input placeholder="Nombre Completo" type="text">
-              </div>
-              <div class="div-input2">
-                <h3>Institución</h3>
-                <input placeholder="Institución" type="text">
-              </div>
-            </article>
-
-            <article class="cont2-input">
-              <div class="div-input1">
-                <h3>Dirección de correo electrónico:</h3>
-                <input placeholder="Correo Electrónico" type="text">
-              </div>
-              <div class="div-input2">
-                <h3>Número de teléfono:</h3>
-                <input placeholder="Número de teléfono" type="text">
-              </div>
-
-            </article>
-
-          </section>
-          <section style="" class="cont3-input">
-            <h3>Mensaje:</h3>
-            <textarea placeholder="Asunto"
-              style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"></textarea>
-          </section>
-
-          <div class="div-text">
-            <span>Formatos permitidos: PDF, DOCX</span>
-          </div>
-          <div class="div-text2">
-            <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en
-              este
-              sitio
-              web como indica nuestra Política de Privacidad </span>
-          </div>
-          <div style="padding: 20px;" class="div-text3">
-            <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de Firma
-              GOB?</span>
-            <div class="check">
-              <input class="checkbox" type="checkbox">
-              <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con
-                fines de
-                marketing/ventas directas como indica nuestra Política de Privacidad</span>
-            </div>
-          </div>
-
-          <div class="footer-modal">
-            <button type="submit">Enviar</button>
+          <div class="div-input2">
+            <h3>Institución</h3>
+            <input placeholder="Institución" type="text">
           </div>
         </article>
+
+        <article class="cont2-input">
+          <div class="div-input1">
+            <h3>Dirección de correo electrónico:</h3>
+            <input placeholder="Correo Electrónico" type="text">
+          </div>
+          <div class="div-input2">
+            <h3>Número de teléfono:</h3>
+            <input placeholder="Número de teléfono" type="text">
+          </div>
+
+        </article>
+
       </section>
-    </div>
+      <section style="" class="cont3-input">
+        <h3>Mensaje:</h3>
+        <textarea placeholder="Asunto"
+          style="width:100%; height:140px; border:1px solid #d1d5db; border-radius:8px; padding:10px; resize:none;"></textarea>
+      </section>
+
+      <div class="div-text">
+        <span>Formatos permitidos: PDF, DOCX</span>
+      </div>
+      <div class="div-text2">
+        <span>Tus datos personales se utilizarán para procesar la solicitud y apoyar tu experiencia en
+          este
+          sitio
+          web como indica nuestra Política de Privacidad </span>
+      </div>
+      <div style="padding: 20px;" class="div-text3">
+        <span class="deseas-recibir">¿Deseas recibir información sobre las promociones de Firma
+          GOB?</span>
+        <div class="check">
+          <input class="checkbox" type="checkbox">
+          <span>Marca esta casilla para dar tu consentimiento al tratamiento de datos personales con
+            fines de
+            marketing/ventas directas como indica nuestra Política de Privacidad</span>
+        </div>
+      </div>
+
+      <div class="footer-modal">
+        <button type="submit">Enviar</button>
+      </div>
+    </article>
+  </section>
+  </div>
   </div>
 
   <script>
@@ -844,10 +844,11 @@
     }
   </style>
 
-   <!-- Botones flotantes -->
+  <!-- Botones flotantes -->
   <div style="display:flex; align-items: end; gap: 5px; justify-content:end; flex-direction: column;">
-  
-    <a href="#" style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
+
+    <a href="#"
+      style="background-color: #0066CC; border-radius:50%; width: 77px; height: 77px; display: flex; justify-content: center; align-items: center;">
       <img src="../img/Vector 20.png" alt="Icono de vector">
     </a>
   </div>
@@ -1034,11 +1035,3 @@
 
 
 </body>
-
-
-
-
-    
-
-
-
