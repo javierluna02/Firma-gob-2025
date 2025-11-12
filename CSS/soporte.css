@@ -573,6 +573,7 @@
     padding: 0 20px;
     height: auto;
     gap: 15px;
+    margin-bottom: 300px;
   }
 
   .accordion-header {
@@ -673,6 +674,7 @@
 
   .accordion {
     width: 100%;
+    margin-bottom: 200px;
   }
   .aside-soporte .chica-img {
     width: 0%;
